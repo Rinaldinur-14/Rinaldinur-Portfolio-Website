@@ -6,6 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   build: {
     rollupOptions: {
+      external: ['react-router-dom', 'set-cookie-parser', 'turbo-stream'],
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
