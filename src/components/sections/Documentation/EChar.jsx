@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import es from "/src/assets/docum/char/e1.jpg";
-import ed from "/src/assets/docum/char/e2.jpg";
+import ed from "/src/assets/docum/char/e2.JPG";
 import et from "/src/assets/docum/char/e3.jpg";
 
 const EChar = ({ onClose }) => {
