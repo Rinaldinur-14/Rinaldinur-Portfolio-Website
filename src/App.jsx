@@ -10,7 +10,7 @@ import { Contact } from "/src/components/sections/Contact.jsx";
 import { Footer } from "/src/components/sections/Footer.jsx";
 import ParticleBackground from "/src/components/ParticleBackground.jsx";
 import QuickScroll from "/src/components/QuickScroll.jsx";
-import "/src/index.CSS";
+import "/src/index.css";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
