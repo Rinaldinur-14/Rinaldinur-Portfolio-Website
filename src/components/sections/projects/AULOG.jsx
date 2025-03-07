@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import VAULOG from "src/assets/projects/AULOG/VAULOG.png";
 import va from "src/assets/projects/PYXE/PY_LOGO.png";
-import vb from "src/assets/projects/AULOG/Selenium_LOGO.png";
+import vb from "src/assets/projects/AULOG/Selenium_Logo.png";
 import vc from "src/assets/projects/PYXE/VS_LOGO.png";
 import vd from "src/assets/projects/CMS/VEYON_LOGO.png";
 import ve from "src/assets/projects/PYXE/PN_LOGO.png";
