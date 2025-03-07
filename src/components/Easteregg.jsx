@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import mu from "src/assets/mm.png"; // Image for the top position
+import mu from "/src/assets/mm.PNG"; // Image for the top position
 
 
-// eslint-disable-next-line react/prop-types
 const MemoryGame = ({ onClose, isLightMode }) => {
   const [cards, setCards] = useState([]);
   const [flippedCards, setFlippedCards] = useState([]);
@@ -12,7 +11,6 @@ const MemoryGame = ({ onClose, isLightMode }) => {
   const [gameStarted, setGameStarted] = useState(false);
 
   // Card data (6 pairs)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const cardData = [
     { id: 1, value: "🧶" },
     { id: 2, value: "🐈" },
@@ -33,7 +31,7 @@ const MemoryGame = ({ onClose, isLightMode }) => {
       setMatchedCards([]);
       setGameCompleted(false);
     }
-  }, [cardData, gameStarted]);
+  }, [gameStarted]);
 
   // Handle card click
   const handleCardClick = (id) => {
@@ -148,7 +146,7 @@ const MemoryGame = ({ onClose, isLightMode }) => {
               <div className="bg-white/10 p-4 rounded-lg text-center">
                 <h2 className="text-sm md:text-2xl font-bold mb-4">🎉 Congratulations 🎉</h2>
                 <h3 className="text-base md:text-3xl font-bold mb-4">{playerName}!</h3>
-                <p className="text-sm md:text-xl mb-4">You won! Here&apos;s your surprise:</p>
+                <p className="text-sm md:text-xl mb-4">You won! Here's your surprise:</p>
                 <p className="text-base md:text-3xl">🌟 You have been blessed by Mochi and Milo! 🌟</p>
                 <p className="text-sm md:text-lg mt-4">The modal will close in 5 seconds...</p>
                 <div className="flex justify-center items-center mt-8">
