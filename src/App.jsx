@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
-import { LoadingScreen } from "/src/components/LoadingScreen.JSX";
-import { Navbar } from "/src/components/Navbar.JSX";
-import { MobileMenu } from "/src/components/MobileMenu.JSX";
-import { Home } from "/src/components/sections/Home.JSX";
-import { About } from "/src/components/sections/About.JSX";
-import { Projects } from "/src/components/sections/Projects.JSX";
-import { Certifications } from "/src/components/sections/Certifications.JSX";
-import { Contact } from "/src/components/sections/Contact.JSX";
-import { Footer } from "/src/components/sections/Footer.JSX";
-import ParticleBackground from "/src/components/ParticleBackground.JSX";
-import QuickScroll from "/src/components/QuickScroll.JSX";
+import { LoadingScreen } from "/src/components/LoadingScreen.jsx";
+import { Navbar } from "/src/components/Navbar.jsx";
+import { MobileMenu } from "/src/components/MobileMenu.jsx";
+import { Home } from "/src/components/sections/Home.jsx";
+import { About } from "/src/components/sections/About.jsx";
+import { Projects } from "/src/components/sections/Projects.jsx";
+import { Certifications } from "/src/components/sections/Certifications.jsx";
+import { Contact } from "/src/components/sections/Contact.jsx";
+import { Footer } from "/src/components/sections/Footer.jsx";
+import ParticleBackground from "/src/components/ParticleBackground.jsx";
+import QuickScroll from "/src/components/QuickScroll.jsx";
 import "/src/index.CSS";
 
 function App() {
