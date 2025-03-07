@@ -8,7 +8,7 @@ import ve from "src/assets/projects/PORT_W/TWCSS.png"; // Replace with your imag
 import vf from "src/assets/projects/PORT_W/EMAILJS.png"; // Replace with your image path
 import vh from "src/assets/projects/PORT_W/VERCEL.png"; // Replace with your image path
 import vg from "src/assets/projects/RUW/GH.png";
-import vi from "src/assets/projects/PYXE/DS_lOGO.png";
+import vi from "src/assets/projects/PYXE/DS_LOGO.png";
 import imp from "src/assets/projects/PORT_W/imp.png";
 
 
