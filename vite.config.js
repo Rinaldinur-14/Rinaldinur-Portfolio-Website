@@ -5,6 +5,8 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
       external: ['react-router-dom', 'set-cookie-parser', 'turbo-stream'],
       output: {
@@ -25,3 +27,5 @@ export default defineConfig({
     },
   },
 });
+
+
