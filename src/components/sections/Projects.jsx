@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { RevealOnScroll } from "../RevealOnScroll";
+import { RevealOnScroll } from "/src/components/RevealOnScroll.JSX";
 import pw from "/src/assets/projects/PORT_W/VPORT_W.PNG";
 import ml from "/src/assets/projects/DB_ML/VDB_ML.PNG";
 import vru from "/src/assets/projects/RUW/VRUW.PNG";
@@ -9,15 +9,15 @@ import ad from "/src/assets/projects/AAD/VAAD.PNG";
 import pyk from "/src/assets/projects/PYXEK/VPYXEK.PNG";
 import pyx from "/src/assets/projects/PYXE/VPYXE.PNG";
 import aul from "/src/assets/projects/AULOG/VAULOG.PNG";
-import DB_ML from "./projects/DB_ML";
-import RUW from "./projects/RUW";
-import PYXE from "./projects/PYXE";
-import AULOG from "./projects/AULOG";
-import PYXEK from "./projects/PYXEK";
-import APT from "/src/components/sections/projects/APT";
-import AAD from "/src/components/sections/projects/AAD";
-import CMS from "/src/components/sections/projects/CMS";
-import PORT_W from "/src/components/sections/projects/PORT_W";
+import DB_ML from "/src/components/sections//projects/DB_ML.JSX";
+import RUW from "/src/components/sections//projects/RUW.JSX";
+import PYXE from "/src/components/sections//projects/PYXE.JSX";
+import AULOG from "/src/components/sections//projects/AULOG.JSX";
+import PYXEK from "/src/components/sections//projects/PYXEK.JSX";
+import APT from "/src/components/sections/projects/APT.JSX";
+import AAD from "/src/components/sections/projects/AAD.JSX";
+import CMS from "/src/components/sections/projects/CMS.JSX";
+import PORT_W from "/src/components/sections/projects/PORT_W.JSX";
 
 const projects = [
   // {

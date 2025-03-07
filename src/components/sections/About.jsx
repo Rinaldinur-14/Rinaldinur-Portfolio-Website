@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { RevealOnScroll } from "../RevealOnScroll";
-import Education from "./Documentation/Education";
-import Lab from "./Documentation/Lab";
-import FFI from "./Documentation/FFI";
-import IES from "./Documentation/IES";
-import Accreditation from "./Documentation/Accreditation";
-import GIEF from "./Documentation/GIEF";
-import BKSTI from "./Documentation/BKSTI";
-import EChar from "./Documentation/EChar";
+import { RevealOnScroll } from "/src/components/RevealOnScroll.JSX";
+import Education from "/src/components/sections/Documentation/Education.JSX";
+import Lab from "/src/components/sections/Documentation/Lab.JSX";
+import FFI from "/src/components/sections/Documentation/FFI.JSX";
+import IES from "/src/components/sections/Documentation/IES.JSX";
+import Accreditation from "/src/components/sections/Documentation/Accreditation.JSX";
+import GIEF from "/src/components/sections/Documentation/GIEF.JSX";
+import BKSTI from "/src/components/sections/Documentation/BKSTI.JSX";
+import EChar from "/src/components/sections/Documentation/EChar.JSX";
 
 export const About = ({ isLightMode }) => {
   const SoftSkills = [

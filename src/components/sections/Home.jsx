@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { RevealOnScroll } from "../RevealOnScroll";
-import heroBanner from "../../assets/herobanner.png";
-import MemoryGame from "../Easteregg"; // Import the MemoryGame component
-import "../../index.css";
-import "./Home.css";
+import { RevealOnScroll } from "/src/components/RevealOnScroll.JSX";
+import heroBanner from "/src/assets/herobanner.png";
+import MemoryGame from "/src/components/Easteregg.JSX"; // Import the MemoryGame component
+import "/src/index.CSS";
+import "/src/components/sections/Home.CSS";
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);

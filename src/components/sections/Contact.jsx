@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { RevealOnScroll } from "../RevealOnScroll";
+import { RevealOnScroll } from "/src/components/RevealOnScroll.JSX";
 import emailjs from "emailjs-com";
 
 export const Contact = ({ isLightMode }) => {

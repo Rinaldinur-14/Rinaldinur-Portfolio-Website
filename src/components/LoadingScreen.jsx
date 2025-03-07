@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import favicon from "../assets/favicon.png";
+import favicon from "/src/assets/favicon.PNG";
 
 export const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
