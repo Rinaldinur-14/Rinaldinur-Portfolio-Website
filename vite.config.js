@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/rinaldinur-portfolio",
+  base: "/rinaldinur-portfolio/",
   assetsInclude: ["**/*.JPG"],
   resolve: {
     alias: {
