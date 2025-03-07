@@ -3,7 +3,7 @@ import ffiLogo from "/src/assets/docum/exp/FFI.png";
 import fs from "/src/assets/docum/exp/f1.png";
 import fd from "/src/assets/docum/exp/f2.jpg";
 import ft from "/src/assets/docum/exp/f3.jpg";
-import fe from "/src/assets/docum/exp/f4.jpg";
+import fe from "/src/assets/docum/exp/f4.JPG";
 
 const FFI = ({ onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
