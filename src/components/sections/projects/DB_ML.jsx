@@ -6,7 +6,7 @@ import vc from "src/assets/projects/DB_ML/PD.png";
 import vd from "src/assets/projects/DB_ML/NP.png";
 import ve from "src/assets/projects/DB_ML/MP.png";
 import vf from "src/assets/projects/DB_ML/SN.png";
-import vg from "src/assets/projects/PYXE/VS_lOGO.png";
+import vg from "src/assets/projects/PYXE/VS_LOGO.png";
 import sa from "src/assets/projects/DB_ML/aa.png";
 import sb from "src/assets/projects/DB_ML/ab.png";
 import sc from "src/assets/projects/DB_ML/ca.png";
