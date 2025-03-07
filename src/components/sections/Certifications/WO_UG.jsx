@@ -1,6 +1,6 @@
 import React from 'react';
-import promodel from "/src/assets/certificates/UG/wa.PNG";
-import iso from "/src/assets/certificates/UG/wb.PNG";
+import promodel from "/src/assets/certificates/UG/wa.png";
+import iso from "/src/assets/certificates/UG/wb.png";
 
 const WO_UG = ({ onClose }) => {
   return (

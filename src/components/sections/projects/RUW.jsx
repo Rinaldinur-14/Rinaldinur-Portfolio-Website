@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import VRUW from "/src/assets/projects/RUW/VRUW.PNG";
-import va from "/src/assets/projects/RUW/HTML.PNG";
-import vb from "/src/assets/projects/RUW/CSS.PNG";
-import vc from "/src/assets/projects/RUW/JS.PNG";
-import vd from "/src/assets/projects/PYXE/VS_lOGO.PNG";
-import ve from "/src/assets/projects/RUW/GH.PNG";
-import vf from "/src/assets/projects/PYXE/DS_lOGO.PNG";
-import ru_fd from "/src/assets/certificates/RU_FD/RU_FD.PNG";
-import pfd from "/src/assets/projects/RUW/PRUW.PNG";
+import VRUW from "/src/assets/projects/RUW/VRUW.png";
+import va from "/src/assets/projects/RUW/HTML.png";
+import vb from "/src/assets/projects/RUW/CSS.png";
+import vc from "/src/assets/projects/RUW/JS.png";
+import vd from "/src/assets/projects/PYXE/VS_lOGO.png";
+import ve from "/src/assets/projects/RUW/GH.png";
+import vf from "/src/assets/projects/PYXE/DS_lOGO.png";
+import ru_fd from "/src/assets/certificates/RU_FD/RU_FD.png";
+import pfd from "/src/assets/projects/RUW/PRUW.png";
 
 const RUW = ({ onClose }) => {
   const [currentCertIndex, setCurrentCertIndex] = useState(0);

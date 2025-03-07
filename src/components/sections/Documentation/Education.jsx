@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import ugLogo from "/src/assets/docum/edu/UG.PNG";
-import us from "/src/assets/docum/edu/u1.PNG";
-import ud from "/src/assets/docum/edu/u2.PNG";
-import ut from "/src/assets/docum/edu/u3.JPEG";
-import ue from "/src/assets/docum/edu/u4.JPEG";
-import ul from "/src/assets/docum/edu/u5.JPEG";
-import un from "/src/assets/docum/edu/u6.JPG";
-import uu from "/src/assets/docum/edu/u7.JPG";
-import ua from "/src/assets/docum/edu/u8.JPG";
-import da from "/src/assets/docum/edu/da.JPG"
-import db from "/src/assets/docum/edu/db.JPG"
-import dc from "/src/assets/docum/edu/dc.JPG"
+import ugLogo from "/src/assets/docum/edu/UG.png";
+import us from "/src/assets/docum/edu/u1.png";
+import ud from "/src/assets/docum/edu/u2.png";
+import ut from "/src/assets/docum/edu/u3.jpeg";
+import ue from "/src/assets/docum/edu/u4.jpeg";
+import ul from "/src/assets/docum/edu/u5.jpeg";
+import un from "/src/assets/docum/edu/u6.jpg";
+import uu from "/src/assets/docum/edu/u7.jpg";
+import ua from "/src/assets/docum/edu/u8.jpg";
+import da from "/src/assets/docum/edu/da.jpg"
+import db from "/src/assets/docum/edu/db.jpg"
+import dc from "/src/assets/docum/edu/dc.jpg"
 
 const Education = ({ onClose }) => {
   const [currentAccreditationIndex, setCurrentAccreditationIndex] = useState(0);

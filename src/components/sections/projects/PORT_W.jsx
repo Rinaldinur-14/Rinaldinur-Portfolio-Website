@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import VPORT_W from "/src/assets/projects/PORT_W/VPORT_W.PNG"; // Replace with your image path
-import va from "/src/assets/projects/RUW/HTML.PNG";
-import vb from "/src/assets/projects/PORT_W/REACT.PNG"; // Replace with your image path
-import vc from "/src/assets/projects/PORT_W/VITE.PNG"; // Replace with your image path
-import vd from "/src/assets/projects/RUW/JS.PNG";
-import ve from "/src/assets/projects/PORT_W/TWCSS.PNG"; // Replace with your image path
-import vf from "/src/assets/projects/PORT_W/EMAILJS.PNG"; // Replace with your image path
-import vh from "/src/assets/projects/PORT_W/VERCEL.PNG"; // Replace with your image path
-import vg from "/src/assets/projects/RUW/GH.PNG";
-import vi from "/src/assets/projects/PYXE/DS_lOGO.PNG";
-import imp from "/src/assets/projects/PORT_W/imp.PNG";
+import VPORT_W from "/src/assets/projects/PORT_W/VPORT_W.png"; // Replace with your image path
+import va from "/src/assets/projects/RUW/HTML.png";
+import vb from "/src/assets/projects/PORT_W/REACT.png"; // Replace with your image path
+import vc from "/src/assets/projects/PORT_W/VITE.png"; // Replace with your image path
+import vd from "/src/assets/projects/RUW/JS.png";
+import ve from "/src/assets/projects/PORT_W/TWCSS.png"; // Replace with your image path
+import vf from "/src/assets/projects/PORT_W/EMAILJS.png"; // Replace with your image path
+import vh from "/src/assets/projects/PORT_W/VERCEL.png"; // Replace with your image path
+import vg from "/src/assets/projects/RUW/GH.png";
+import vi from "/src/assets/projects/PYXE/DS_lOGO.png";
+import imp from "/src/assets/projects/PORT_W/imp.png";
 
 
 const PORT_W = ({ onClose }) => {

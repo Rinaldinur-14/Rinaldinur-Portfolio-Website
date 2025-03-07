@@ -1,5 +1,5 @@
 import React from 'react';
-import tdl from "/src/assets/certificates/SINAU_TDL/tdl.PNG";
+import tdl from "/src/assets/certificates/SINAU_TDL/tdl.png";
 
 const SINAU_TDL = ({ onClose }) => {
   return (

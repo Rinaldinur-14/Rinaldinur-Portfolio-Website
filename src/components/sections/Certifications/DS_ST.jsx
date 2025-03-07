@@ -1,9 +1,9 @@
 import React from 'react';
-import dss from "/src/assets/certificates/DS_ST/ds1.PNG";
-import dsd from "/src/assets/certificates/DS_ST/ds2.PNG";
-import dst from "/src/assets/certificates/DS_ST/ds3.PNG";
-import dse from "/src/assets/certificates/DS_ST/ds4.PNG";
-import dsf from "/src/assets/certificates/DS_ST/ds5.PNG"; 
+import dss from "/src/assets/certificates/DS_ST/ds1.png";
+import dsd from "/src/assets/certificates/DS_ST/ds2.png";
+import dst from "/src/assets/certificates/DS_ST/ds3.png";
+import dse from "/src/assets/certificates/DS_ST/ds4.png";
+import dsf from "/src/assets/certificates/DS_ST/ds5.png"; 
 
 const DS_ST = ({ onClose }) => {
   return (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RevealOnScroll } from "/src/components/RevealOnScroll.jsx";
-import heroBanner from "/src/assets/herobanner.PNG";
+import heroBanner from "/src/assets/herobanner.png";
 import MemoryGame from "/src/components/Easteregg.jsx"; // Import the MemoryGame component
 import "/src/index.css";
 import "/src/components/sections/Home.css";

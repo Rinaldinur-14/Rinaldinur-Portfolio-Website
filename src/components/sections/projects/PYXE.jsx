@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import VPYXE from "/src/assets/projects/PYXE/VPYXE.PNG";
-import GUI from "/src/assets/projects/PYXE/GUI.PNG";
-import va from "/src/assets/projects/PYXE/PY_lOGO.PNG";
-import vb from "/src/assets/projects/PYXE/TK_lOGO.PNG";
-import vc from "/src/assets/projects/PYXE/PI_lOGO.PNG";
-import vd from "/src/assets/projects/PYXE/PN_lOGO.PNG";
-import ve from "/src/assets/projects/PYXE/VS_lOGO.PNG";
-import vf from "/src/assets/projects/PYXE/DS_lOGO.PNG";
-import MPYXE from "/src/assets/projects/PYXE/MPYXE.MP4";
+import VPYXE from "/src/assets/projects/PYXE/VPYXE.png";
+import GUI from "/src/assets/projects/PYXE/GUI.png";
+import va from "/src/assets/projects/PYXE/PY_lOGO.png";
+import vb from "/src/assets/projects/PYXE/TK_lOGO.png";
+import vc from "/src/assets/projects/PYXE/PI_lOGO.png";
+import vd from "/src/assets/projects/PYXE/PN_lOGO.png";
+import ve from "/src/assets/projects/PYXE/VS_lOGO.png";
+import vf from "/src/assets/projects/PYXE/DS_lOGO.png";
+import MPYXE from "/src/assets/projects/PYXE/MPYXE.mp4";
 
 
 const PYXE = ({ onClose }) => {
@@ -198,7 +198,7 @@ const PYXE = ({ onClose }) => {
                 <strong>Graphical User Interface (GUI):</strong> The GUI was built using <strong>Tkinter</strong>, Python’s standard GUI library. It provides an intuitive interface for users to input the Python script, specify the output .exe name, and customize the icon. The GUI also includes options to require admin privileges and open the output folder after generation.
               </li>
               <li>
-                <strong>Input Validation:</strong> The tool validates user inputs to ensure the Python file is valid, the output name does not contain invalid characters, and the icon file is in a supported format (PNG, JPG, SVG, or ICO). If the icon is not in ICO format, the <strong>Pillow</strong> library is used to convert it.
+                <strong>Input Validation:</strong> The tool validates user inputs to ensure the Python file is valid, the output name does not contain invalid characters, and the icon file is in a supported format (png, jpg, SVG, or ICO). If the icon is not in ICO format, the <strong>Pillow</strong> library is used to convert it.
               </li>
               <li>
                 <strong>PyInstaller Integration:</strong> The core functionality of converting the Python script to a standalone .exe file is handled by <strong>PyInstaller</strong>. The tool constructs a command with parameters such as <code>--onefile</code> (to create a single executable), <code>--noconsole</code> (to hide the console window), and <code>--uac-admin</code> (to require admin privileges).
@@ -302,7 +302,7 @@ const PYXE = ({ onClose }) => {
                 controls
                 className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
               >
-                <source src={MPYXE} type="video/MP4" />
+                <source src={MPYXE} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

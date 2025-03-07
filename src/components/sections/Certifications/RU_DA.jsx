@@ -1,5 +1,5 @@
 import React from 'react';
-import ru_da from "/src/assets/certificates/RU_DA/ru_da.PNG";
+import ru_da from "/src/assets/certificates/RU_DA/ru_da.png";
 
 const RU_DA = ({ onClose }) => {
   return (

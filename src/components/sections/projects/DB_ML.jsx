@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
-import VL from "/src/assets/projects/DB_ML/VDB_ML.PNG";
-import va from "/src/assets/projects/PYXE/PY_lOGO.PNG";
-import vb from "/src/assets/projects/DB_ML/SK.PNG";
-import vc from "/src/assets/projects/DB_ML/PD.PNG";
-import vd from "/src/assets/projects/DB_ML/NP.PNG";
-import ve from "/src/assets/projects/DB_ML/MP.PNG";
-import vf from "/src/assets/projects/DB_ML/SN.PNG";
-import vg from "/src/assets/projects/PYXE/VS_lOGO.PNG";
-import sa from "/src/assets/projects/DB_ML/aa.PNG";
-import sb from "/src/assets/projects/DB_ML/ab.PNG";
-import sc from "/src/assets/projects/DB_ML/ca.PNG";
-import sd from "/src/assets/projects/DB_ML/cb.PNG";
-import se from "/src/assets/projects/DB_ML/cc.PNG";
-import sf from "/src/assets/projects/DB_ML/cd.PNG";
-import sg from "/src/assets/projects/DB_ML/task.JPG"
-import sh from "/src/assets/projects/DB_ML/dataset.PNG";
+import VL from "/src/assets/projects/DB_ML/VDB_ML.png";
+import va from "/src/assets/projects/PYXE/PY_lOGO.png";
+import vb from "/src/assets/projects/DB_ML/SK.png";
+import vc from "/src/assets/projects/DB_ML/PD.png";
+import vd from "/src/assets/projects/DB_ML/NP.png";
+import ve from "/src/assets/projects/DB_ML/MP.png";
+import vf from "/src/assets/projects/DB_ML/SN.png";
+import vg from "/src/assets/projects/PYXE/VS_lOGO.png";
+import sa from "/src/assets/projects/DB_ML/aa.png";
+import sb from "/src/assets/projects/DB_ML/ab.png";
+import sc from "/src/assets/projects/DB_ML/ca.png";
+import sd from "/src/assets/projects/DB_ML/cb.png";
+import se from "/src/assets/projects/DB_ML/cc.png";
+import sf from "/src/assets/projects/DB_ML/cd.png";
+import sg from "/src/assets/projects/DB_ML/task.jpg"
+import sh from "/src/assets/projects/DB_ML/dataset.png";
 
 
 const DB_ML = ({ onClose }) => {

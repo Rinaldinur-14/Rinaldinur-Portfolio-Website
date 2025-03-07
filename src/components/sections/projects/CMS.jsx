@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import VL from "/src/assets/projects/CMS/VEYON_LOGO.PNG";
-import VCMS from "/src/assets/projects/CMS/VCMS.PNG";
-import vcb from "/src/assets/projects/CMS/vcb.JPG";
-import vcc from "/src/assets/projects/CMS/vcc.JPG";
-import vc from "/src/assets/projects/CMS/vc.JPG";
-import ia from "/src/assets/projects/CMS/ia.JPG";
-import ib from "/src/assets/projects/CMS/ib.JPG";
-import ic from "/src/assets/projects/CMS/ic.JPG";
-import id from "/src/assets/projects/CMS/id.JPG";
-import ie from "/src/assets/projects/CMS/ie.JPG";
-import vz from "/src/assets/projects/CMS/vz.MP4";
+import VL from "/src/assets/projects/CMS/VEYON_LOGO.png";
+import VCMS from "/src/assets/projects/CMS/VCMS.png";
+import vcb from "/src/assets/projects/CMS/vcb.jpg";
+import vcc from "/src/assets/projects/CMS/vcc.jpg";
+import vc from "/src/assets/projects/CMS/vc.jpg";
+import ia from "/src/assets/projects/CMS/ia.jpg";
+import ib from "/src/assets/projects/CMS/ib.jpg";
+import ic from "/src/assets/projects/CMS/ic.jpg";
+import id from "/src/assets/projects/CMS/id.jpg";
+import ie from "/src/assets/projects/CMS/ie.jpg";
+import vz from "/src/assets/projects/CMS/vz.mp4";
 
 const CMS = ({ onClose }) => {
   const [currentCertIndex, setCurrentCertIndex] = useState(0);
@@ -390,7 +390,7 @@ const CMS = ({ onClose }) => {
                             controls
                             className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
                           >
-                            <source src={vz} type="video/MP4" />
+                            <source src={vz} type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
                         </div>

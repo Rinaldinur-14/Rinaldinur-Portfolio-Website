@@ -1,6 +1,6 @@
 import React from 'react';
-import ru_fd from "/src/assets/certificates/RU_FD/RU_FD.PNG";
-import pfd from "/src/assets/projects/RUW/PRUW.PNG";
+import ru_fd from "/src/assets/certificates/RU_FD/RU_FD.png";
+import pfd from "/src/assets/projects/RUW/PRUW.png";
 
 const RU_FD = ({ onClose }) => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import ss_da from "/src/assets/certificates/SS_DA/ss_da.PNG";
+import ss_da from "/src/assets/certificates/SS_DA/ss_da.png";
 
 const SS_DA = ({ onClose }) => {
   return (

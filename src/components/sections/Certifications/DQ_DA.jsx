@@ -1,8 +1,8 @@
 import React from 'react';
-import dq_daa from "/src/assets/certificates/DQ_DA/DQ_DAA.PNG";
-import dq_dae from "/src/assets/certificates/DQ_DA/DQ_DAE.PNG";
-import dq_daml from "/src/assets/certificates/DQ_DA/DQ_DAML.PNG";
-import dqa from "/src/assets/certificates/DQ_DA/DQAA.PNG";
+import dq_daa from "/src/assets/certificates/DQ_DA/DQ_DAA.png";
+import dq_dae from "/src/assets/certificates/DQ_DA/DQ_DAE.png";
+import dq_daml from "/src/assets/certificates/DQ_DA/DQ_DAML.png";
+import dqa from "/src/assets/certificates/DQ_DA/DQAA.png";
 
 const DQ_DA = ({ onClose }) => {
   return (

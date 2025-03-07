@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import isp from "/src/assets/certificates/ISP/ISP.PNG";
+import isp from "/src/assets/certificates/ISP/ISP.png";
 
 const ISP_LMS = ({ onClose }) => {
   useEffect(() => {

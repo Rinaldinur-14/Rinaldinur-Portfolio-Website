@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import fIES from "/src/assets/docum/organz/5IES.PNG";
-import sIES from "/src/assets/docum/organz/6IES.PNG";
-import dsies from "/src/assets/docum/organz/d1ies.JPEG";
-import ddies from "/src/assets/docum/organz/d2ies.JPEG";
+import fIES from "/src/assets/docum/organz/5IES.png";
+import sIES from "/src/assets/docum/organz/6IES.png";
+import dsies from "/src/assets/docum/organz/d1ies.jpeg";
+import ddies from "/src/assets/docum/organz/d2ies.jpeg";
 
 
 const IES = ({ onClose }) => {

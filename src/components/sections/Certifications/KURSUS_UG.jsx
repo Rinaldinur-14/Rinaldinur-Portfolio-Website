@@ -1,12 +1,12 @@
 import React from 'react';
-import ka from "/src/assets/certificates/UG/ka.PNG";
-import kb from "/src/assets/certificates/UG/kb.PNG";
-import kc from "/src/assets/certificates/UG/kc.PNG";
-import kd from "/src/assets/certificates/UG/kd.PNG";
-import ke from "/src/assets/certificates/UG/ke.PNG";
-import kf from "/src/assets/certificates/UG/kf.PNG";
-import kg from "/src/assets/certificates/UG/kg.PNG";
-import kh from "/src/assets/certificates/UG/kh.PNG";
+import ka from "/src/assets/certificates/UG/ka.png";
+import kb from "/src/assets/certificates/UG/kb.png";
+import kc from "/src/assets/certificates/UG/kc.png";
+import kd from "/src/assets/certificates/UG/kd.png";
+import ke from "/src/assets/certificates/UG/ke.png";
+import kf from "/src/assets/certificates/UG/kf.png";
+import kg from "/src/assets/certificates/UG/kg.png";
+import kh from "/src/assets/certificates/UG/kh.png";
 
 const KURSUS_UG = ({ onClose }) => {
   return (

@@ -1,9 +1,9 @@
 import React from 'react';
-import liaa from "/src/assets/certificates/LIA/liaa.JPG";
-import liab from "/src/assets/certificates/LIA/liab.JPG";
-import liac from "/src/assets/certificates/LIA/liac.JPG";
-import liad from "/src/assets/certificates/LIA/liad.JPG";
-import liae from "/src/assets/certificates/LIA/liae.JPG";
+import liaa from "/src/assets/certificates/LIA/liaa.jpg";
+import liab from "/src/assets/certificates/LIA/liab.jpg";
+import liac from "/src/assets/certificates/LIA/liac.jpg";
+import liad from "/src/assets/certificates/LIA/liad.jpg";
+import liae from "/src/assets/certificates/LIA/liae.jpg";
 
 const LIA = ({ onClose }) => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import vr from "/src/assets/certificates/UG/vr.PNG";
+import vr from "/src/assets/certificates/UG/vr.png";
 
 const VR = ({ onClose }) => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import ioda_da from "/src/assets/certificates/IODA_DA/ioda_da.PNG";
+import ioda_da from "/src/assets/certificates/IODA_DA/ioda_da.png";
 
 const IODA_DA = ({ onClose }) => {
   return (

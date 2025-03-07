@@ -1,5 +1,5 @@
 import React from 'react';
-import ss_ml from "/src/assets/certificates/SS_ML/ss_ml.PNG";
+import ss_ml from "/src/assets/certificates/SS_ML/ss_ml.png";
 
 const SS_ML = ({ onClose }) => {
   return (
