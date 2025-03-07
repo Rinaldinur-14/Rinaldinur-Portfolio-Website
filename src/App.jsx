@@ -26,7 +26,14 @@ function App() {
     localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
   }, [menuOpen, isLightMode]);
 
-  return (
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "assets/index-pGq2GXt4.css";
+    document.head.appendChild(link);
+  }, []);
+
+  return ( 
     <>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <ParticleBackground />
