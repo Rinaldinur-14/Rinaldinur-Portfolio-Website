@@ -1,0 +1,510 @@
+import { useState } from "react";
+import { RevealOnScroll } from "../RevealOnScroll";
+import Education from "./Documentation/Education";
+import Lab from "./Documentation/Lab";
+import FFI from "./Documentation/FFI";
+import IES from "./Documentation/IES";
+import Accreditation from "./Documentation/Accreditation";
+import GIEF from "./Documentation/GIEF";
+import BKSTI from "./Documentation/BKSTI";
+import EChar from "./Documentation/EChar";
+
+export const About = ({ isLightMode }) => {
+  const SoftSkills = [
+    "Team Work", "Leadership", "Public Speaking", "Effective Communication",
+    "Problem Solving", "Analytical Thinking", "Presentations", "Time Management",
+    "Stress Management"
+  ];
+  const HardSkills = [
+    "Supply Chain Management & Logistics", "Process Optimization", "Ergonomics",
+    "Manufacturing & Production Systems", "Project Management", "Operation Research",
+    "Environment, Health, and Safety", "HACCP", "RCA", "Simulation System",
+    "Quality Management", "Financial and Cost Analysis", "Data Analysis & Statistics",
+    "Data Cleaning", "Data Visualization", "Microsoft Office (Word, Excel, PowerPoint)",
+    "Python (Pandas, Numpy, Seaborn, Matplotlib)", "Spreadsheet", "Tableau", "Power BI",
+    "MATLAB", "MySQL", "SQLite", "Microsoft SQL Server", "MINITAB", "Tailwindcss",
+    "HTML", "React.js", "CATIA", "Sketch Up", "Promodel", "Canva", "Figma", "Capcut", "3D Printing",
+    "Cura", "Bambu Studio"
+  ];
+  const Language = [
+    "Bahasa (Native)", "English (Limited Working Proficiency)"
+  ];
+
+  // State for toggling skills visibility
+  const [showAll, setShowAll] = useState(false);
+
+  // State for toggling documentation modals
+  const [showEducation, setShowEducation] = useState(false);
+  const [showLab, setShowLab] = useState(false);
+  const [showFFI, setShowFFI] = useState(false);
+  const [showIES, setShowIES] = useState(false);
+  const [showAccreditation, setShowAccreditation] = useState(false);
+  const [showGIEF, setShowGIEF] = useState(false);
+  const [showBKSTI, setShowBKSTI] = useState(false);
+  const [showEChar, setShowEChar] = useState(false);
+
+  return (
+    <section id="about" className="min-h-screen flex items-center justify-center py-20">
+      <RevealOnScroll>
+        <div className="max-w-5xl mx-auto px-4">
+          {/* About Me Heading */}
+          <h1 className={`text-4xl font-bold mb-8 text-center bg-clip-text text-transparent animate-fade-in animate-gradient ${
+            isLightMode
+              ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+              : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
+          }`}>
+            About Me
+          </h1>
+
+          {/* About Me Content */}
+          <div className={`rounded-xl p-8 border hover:-translate-y-1 transition-all ${
+            isLightMode
+              ? "border-orange-500/60 shadow-[0_2px_8px_rgba(249,115,22,0.2)] lg:border-white/10 lg:hover:border-orange-500/60 lg:hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]"
+              : "border-blue-500/60 shadow-[0_2px_8px_rgba(59,130,246,0.2)] lg:border-white/10 lg:hover:border-blue-500/60 lg:hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]"
+          }`}>
+            <p className="text-white mb-6 text-justify text-xs md:text-base">
+              Hello! My name is Rinaldi Nurhardiansyah, a recent Industrial Engineering graduate with a passion for supply chain management and data analytics.
+              My academic background has equipped me with a strong foundation in core industrial engineering principles and statistics, while my self-driven learning journey has allowed me to develop practical skills in Python, SQL, and data visualization tools.
+              Beyond academics, I have actively engaged in projects, organizations, and internships that have honed my soft skills as well as my technical expertise.
+              These experiences have shaped me into a highly motivated and results-oriented professional, driven to optimize processes and deliver data-driven solutions that create tangible value.
+              I am eager to contribute my skills and knowledge to a forward-thinking organization, where I can tackle real-world challenges, streamline operations, and deliver sustainable results.
+              Let’s connect and explore how we can collaborate to achieve success!
+            </p>
+
+            {/* Skills Sections */}
+            {showAll && (
+              <div>
+                {/* Language */}
+                <div className="grid grid-cols-1 gap-6 mt-10">
+                  {[Language].map((skills, index) => (
+                    <div key={index} className="rounded-xl hover:-translate-y-1 transition-all flex flex-col items-center justify-center border-white/10">
+                      <h3 className="text-xl font-bold mb-4 text-white">Language</h3>
+                      <div className="flex flex-wrap gap-2 justify-center">
+                        {skills.map((tech, key) => (
+                          <span
+                            key={key}
+                            className={`py-1 px-3 rounded-full transition text-xs md:text-sm ${
+                              isLightMode
+                                ? 'bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]'
+                                : 'bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)]'
+                            }`}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Soft & Hard Skills */}
+                <div className="grid grid-cols-1 gap-6 mt-7">
+                  {[SoftSkills, HardSkills].map((skills, index) => (
+                    <div key={index} className="rounded-xl hover:-translate-y-1 transition-all flex flex-col items-center justify-center border-white/10">
+                      <h3 className="text-xl font-bold mb-4 text-white">
+                        {index === 0 ? "Soft Skills" : "Hard Skills"}
+                      </h3>
+                      <div className="flex flex-wrap gap-2 justify-center">
+                        {skills.map((tech, key) => (
+                          <span
+                            key={key}
+                            className={`py-1 px-3 rounded-full transition text-xs md:text-sm ${
+                              isLightMode
+                                ? 'bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]'
+                                : 'bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)]'
+                            }`}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Toggle Skills Button */}
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className={`mx-auto block mt-8 bg-clip-text text-transparent animate-fade-in animate-gradient ${
+                isLightMode
+                  ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                  : 'bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600'
+              }`}
+            >
+              {showAll ? "↑ Close Skills" : "View Skills ↓"}
+            </button>
+          </div>
+
+          {/* Education and Experience Sections */}
+          <div className="flex flex-col gap-6 mt-8">
+            {/* Education */}
+            <CollapsibleSection title="Education" isLightMode={isLightMode}>
+              <div className="flex justify-between items-center mt-10">
+                <h3 className={`font-semibold mb-3 text-sm md:text-base bg-clip-text text-transparent animate-gradient ${
+                  isLightMode
+                    ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                    : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
+                }`}>
+                  Gunadarma University - Bachelor of Industrial Engineering
+                </h3>
+              </div>
+              <div className="flex justify-between">
+                <h5 className="mb-2 text-xs md:text-base">Grade: 3.72 / 4.00</h5>
+                <span className="text-xs md:text-base">(Sep 2020 - Sep 2024)</span>
+              </div>
+              <ul className="list-disc ml-5 text-xs md:text-base">
+                <li>Received PT Adaro Foundation Indonesia Scholarships</li>
+              </ul>
+
+              {/* Education Documentation Button */}
+              <div className={`transition-colors text-xs md:text-base mt-4 ${
+                isLightMode
+                  ? 'text-orange-500 hover:text-orange-400'
+                  : 'text-blue-400 hover:text-blue-300'
+              }`}>
+                <button onClick={() => setShowEducation(true)}>
+                  View Detail →
+                </button>
+              </div>
+            </CollapsibleSection>
+
+            {/* Work Experience */}
+            <CollapsibleSection title="Work Experience" isLightMode={isLightMode}>
+              {/* Elementary Laboratory */}
+              <div>
+                <h3 className={`font-semibold mb-3 mt-10 text-sm md:text-base bg-clip-text text-transparent animate-gradient ${
+                  isLightMode
+                    ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                    : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
+                }`}>
+                  Elementary Laboratory of Industrial Engineering at Gunadarma University
+                </h3>
+                <div className="flex justify-between items-center mb-2 text-xs md:text-base">
+                  <h5>Laboratory Assistant</h5>
+                  <span>(Aug 2022 - Jan 2025)</span>
+                </div>
+                <ul className="list-disc ml-5 text-xs md:text-base">
+                  <li>Explored and prepared practicum materials and systems for 5 practicums.</li>
+                  <li>Conducted teaching to over 600 practicum participants in total.</li>
+                  <li>Assisted in evaluating the practicum participant's assignments.</li>
+                </ul>
+
+                {/* MT */}
+                <div>
+                  <div className="flex justify-between items-center mb-2 mt-3 text-xs md:text-base">
+                    <h5>Maintenance Division</h5>
+                    <span>(Aug 2022 - Jan 2024)</span>
+                  </div>
+                  <ul className="list-disc ml-5 text-xs md:text-base">
+                    <li>Maintained all electronic facilities and installed software for practicums.</li>
+                    <li>Created a database for practicum participant's attendance and grades.</li>
+                    <li>Monitored over 40 computers during practicum activities using Veyon Master.</li>
+                  </ul>
+                </div>
+
+                {/* PJ */}
+                <div>
+                  <div className="flex justify-between items-center mb-2 mt-3 text-xs md:text-base">
+                    <h5>PIC of Assistants</h5>
+                    <span>(Jan 2024 - Jan 2025)</span>
+                  </div>
+                  <ul className="list-disc ml-5 text-xs md:text-base">
+                    <li>Coordinated and supervised a team of 30 assistants across 6 divisions.</li>
+                    <li>Acted as a liaison between the stakeholders, assistants, and practicum participants.</li>
+                    <li>Led internal projects and collaborative activities organized by Gunadarma University.</li>
+                    <li>Hired over 21 assistants.</li>
+                  </ul>
+                </div>
+
+                {/* Lab Documentation Button */}
+                <div className={`transition-colors text-xs md:text-base mt-4 ${
+                  isLightMode
+                    ? 'text-orange-500 hover:text-orange-400'
+                    : 'text-blue-400 hover:text-blue-300'
+                }`}>
+                  <button onClick={() => setShowLab(true)}>
+                    View Detail →
+                  </button>
+                </div>
+              </div>
+
+              {/* PT. Frisian Flag Indonesia */}
+              <div>
+                <h3 className={`font-semibold mb-3 mt-10 text-sm md:text-base bg-clip-text text-transparent animate-gradient ${
+                  isLightMode
+                    ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                    : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
+                }`}>
+                  PT. Frisian Flag Indonesia
+                </h3>
+                <div className="flex justify-between mb-2 text-xs md:text-base">
+                  <h5>Production Intern</h5>
+                  <span>(Mar 2024 - May 2024)</span>
+                </div>
+                <ul className="list-disc ml-5 text-xs md:text-base">
+                  <li>Created a checksheet and performed documentation for clearance activities.</li>
+                  <li>Assisted in creating Root Cause Analysis for clearance activities.</li>
+                  <li>Assisted in improving standardization for the PSD department.</li>
+                </ul>
+
+                {/* FFI Documentation Button */}
+                <div className={`transition-colors text-xs md:text-base mt-4 ${
+                  isLightMode
+                    ? 'text-orange-500 hover:text-orange-400'
+                    : 'text-blue-400 hover:text-blue-300'
+                }`}>
+                  <button onClick={() => setShowFFI(true)}>
+                    View Detail →
+                  </button>
+                </div>
+              </div>
+            </CollapsibleSection>
+
+            {/* Organization */}
+            {showAll && (
+              <CollapsibleSection title="Organization" isLightMode={isLightMode}>
+                {/* IES */}
+                <div>
+                  <h3 className={`font-semibold mb-3 mt-10 text-sm md:text-base bg-clip-text text-transparent animate-gradient ${
+                    isLightMode
+                      ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                      : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
+                  }`}>
+                    5th Industrial Engineering Synergy (IES)
+                  </h3>
+                  <div className="flex justify-between items-center mb-2 text-xs md:text-base">
+                    <h5>Consumption Committee</h5>
+                    <span>(May 2023)</span>
+                  </div>
+                  <ul className="list-disc ml-5 text-xs md:text-base">
+                    <li>Searched for vendors for food and beverages.</li>
+                    <li>Prepared and distributed food and beverages during the event.</li>
+                  </ul>
+
+                  <h3 className={`font-semibold mb-3 mt-5 text-sm md:text-base bg-clip-text text-transparent animate-gradient          
+                  ${isLightMode 
+                    ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                    : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
+                  }`}>
+                    6th Industrial Engineering Synergy (IES)</h3>
+                <div className="flex justify-between items-center mb-2 text-xs md:text-base">
+                  <h5>Head of Public Relation Committee</h5>
+                  <span>(May 2023)</span>
+                </div>
+                <ul className="list-disc ml-5 text-xs md:text-base">
+                    <li>Created designs for posters, virtual backgrounds, and certificates.</li>
+                    <li>Reached out to a media partner for event promotion.</li>
+               </ul>
+
+                  {/* IES Documentation Button */}
+                  <div className={`transition-colors text-xs md:text-base mt-4 ${
+                    isLightMode
+                      ? 'text-orange-500 hover:text-orange-400'
+                      : 'text-blue-400 hover:text-blue-300'
+                  }`}>
+                    <button onClick={() => setShowIES(true)}>
+                      View Detail →
+                    </button>
+                  </div>
+                </div>
+
+                {/* Accreditation */}
+                <div>
+                  <h3 className={`font-semibold mb-3 mt-10 text-sm md:text-base bg-clip-text text-transparent animate-gradient ${
+                    isLightMode
+                      ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                      : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
+                  }`}>
+                    Industrial Engineering Accreditation Preparation Committee (LAM TEKNIK)
+                  </h3>
+                  <div className="flex justify-between items-center mb-2 text-xs md:text-base">
+                    <h5>Assistant</h5>
+                    <span>(June 2023)</span>
+                  </div>
+                  <ul className="list-disc ml-5 text-xs md:text-base">
+                    <li>Attended VR training activity.</li>
+                    <li>Prepared necessary documents and set up facilities.</li>
+                    <li>Answered the assessor's questions and demonstrated the use of the facilities.</li>
+                  </ul>
+
+                  <h3 className={`font-semibold mb-3 mt-5 text-sm md:text-base bg-clip-text text-transparent animate-gradient          
+                  ${isLightMode 
+                    ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                    : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
+                  }`}>
+                    Industrial Engineering Accreditation Preparation Committee (IABEE)</h3>
+                <div className="flex justify-between items-center mb-2 text-xs md:text-base">
+                  <h5>Head of Assistant </h5>
+                  <span>(Nov 2024)</span>
+                </div>
+                <ul className="list-disc ml-5 text-xs md:text-base">
+                      <li>Attended Environment, Health, and Safety training activities.</li>
+                      <li>Coordinated assistants to prepare necessary documents and set up facilities.</li>
+                      <li>Answered the assessor's questions and demonstrated the use of the facilities.</li>
+                </ul>
+
+                  {/* Accreditation Documentation Button */}
+                  <div className={`transition-colors text-xs md:text-base mt-4 ${
+                    isLightMode
+                      ? 'text-orange-500 hover:text-orange-400'
+                      : 'text-blue-400 hover:text-blue-300'
+                  }`}>
+                    <button onClick={() => setShowAccreditation(true)}>
+                      View Detail →
+                    </button>
+                  </div>
+                </div>
+
+                {/* GIEF */}
+                <div>
+                  <h3 className={`font-semibold mb-3 mt-10 text-sm md:text-base bg-clip-text text-transparent animate-gradient ${
+                    isLightMode
+                      ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                      : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
+                  }`}>
+                    Gunadarma Industrial Engineering Fair (7th)
+                  </h3>
+                  <div className="flex justify-between items-center mb-2 text-xs md:text-base">
+                    <h5>Organizing Committee</h5>
+                    <span>(Sep 2023)</span>
+                  </div>
+                  <ul className="list-disc ml-5 text-xs md:text-base">
+                    <li>Assisted with the preparation and execution of the event.</li>
+                    <li>Greeted and escorted important guests.</li>
+                  </ul>
+
+                  {/* GIEF Documentation Button */}
+                  <div className={`transition-colors text-xs md:text-base mt-4 ${
+                    isLightMode
+                      ? 'text-orange-500 hover:text-orange-400'
+                      : 'text-blue-400 hover:text-blue-300'
+                  }`}>
+                    <button onClick={() => setShowGIEF(true)}>
+                      View Detail →
+                    </button>
+                  </div>
+                </div>
+
+                {/* BKSTI */}
+                <div>
+                  <h3 className={`font-semibold mb-3 mt-10 text-sm md:text-base bg-clip-text text-transparent animate-gradient ${
+                    isLightMode
+                      ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                      : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
+                  }`}>
+                    Rapat Kerja BKSTI
+                  </h3>
+                  <div className="flex justify-between items-center mb-2 text-xs md:text-base">
+                    <h5>Organizing Committee</h5>
+                    <span>(Jan 2024 - Feb 2024)</span>
+                  </div>
+                  <ul className="list-disc ml-5 text-xs md:text-base">
+                    <li>Created designs for nametag & backdrop and made a recap video.</li>
+                    <li>Prepared the event schedule and coordinated with the meeting participants.</li>
+                    <li>Documented the event through photos and videos.</li>
+                  </ul>
+
+                  {/* BKSTI Documentation Button */}
+                  <div className={`transition-colors text-xs md:text-base mt-4 ${
+                    isLightMode
+                      ? 'text-orange-500 hover:text-orange-400'
+                      : 'text-blue-400 hover:text-blue-300'
+                  }`}>
+                    <button onClick={() => setShowBKSTI(true)}>
+                      View Detail →
+                    </button>
+                  </div>
+                </div>
+              </CollapsibleSection>
+            )}
+
+            {/* Volunteering */}
+            {showAll && (
+              <CollapsibleSection title="Volunteering" isLightMode={isLightMode}>
+                {/* ELITE Charity */}
+                <div>
+                  <h3 className={`font-semibold mb-3 mt-10 text-sm md:text-base bg-clip-text text-transparent animate-gradient ${
+                    isLightMode
+                      ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                      : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
+                  }`}>
+                    ELITE Charity
+                  </h3>
+                  <div className="flex justify-between items-center mb-2 text-xs md:text-base">
+                    <h5>Fundraising Coordinator</h5>
+                    <span>(Aug 2024)</span>
+                  </div>
+                  <ul className="list-disc ml-5 text-xs md:text-base">
+                    <li>Planned fundraising strategies & surveyed orphanages as potential donation beneficiaries.</li>
+                    <li>Delivered presentations to potential donors.</li>
+                    <li>Coordinated and supervised over 40 assistants during the charity event.</li>
+                  </ul>
+
+                  {/* EChar Documentation Button */}
+                  <div className={`transition-colors text-xs md:text-base mt-4 ${
+                    isLightMode
+                      ? 'text-orange-500 hover:text-orange-400'
+                      : 'text-blue-400 hover:text-blue-300'
+                  }`}>
+                    <button onClick={() => setShowEChar(true)}>
+                      View Detail →
+                    </button>
+                  </div>
+                </div>
+              </CollapsibleSection>
+            )}
+
+            {/* "View All" / "View Less" Button */}
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className={`mx-auto block mt-8 bg-clip-text text-transparent animate-fade-in animate-gradient ${
+                isLightMode
+                  ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
+                  : 'bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600'
+              }`}
+            >
+              {showAll ? "↑ View Less" : "View All ↓"}
+            </button>
+          </div>
+        </div>
+      </RevealOnScroll>
+
+      {/* Documentation Modals */}
+      {showEducation && <Education onClose={() => setShowEducation(false)} />}
+      {showLab && <Lab onClose={() => setShowLab(false)} />}
+      {showFFI && <FFI onClose={() => setShowFFI(false)} />}
+      {showIES && <IES onClose={() => setShowIES(false)} />}
+      {showAccreditation && <Accreditation onClose={() => setShowAccreditation(false)} />}
+      {showGIEF && <GIEF onClose={() => setShowGIEF(false)} />}
+      {showBKSTI && <BKSTI onClose={() => setShowBKSTI(false)} />}
+      {showEChar && <EChar onClose={() => setShowEChar(false)} />}
+    </section>
+  );
+};
+
+// Collapsible Section Component
+const CollapsibleSection = ({ title, children, isLightMode }) => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  return (
+    <div className={`p-6 rounded-xl border hover:-translate-y-1 transition-all ${
+      isLightMode
+        ? "border-orange-500/60 shadow-[0_2px_8px_rgba(249,115,22,0.2)] lg:border-white/10 lg:hover:border-orange-500/60 lg:hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]"
+        : "border-blue-500/60 shadow-[0_2px_8px_rgba(59,130,246,0.2)] lg:border-white/10 lg:hover:border-blue-500/60 lg:hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]"
+    }`}>
+      <div className="flex justify-between items-center cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+        <h2 className="text-2xl font-bold text-white">{title}</h2>
+        <span className={`bg-clip-text text-transparent animate-gradient ${
+          isLightMode
+            ? "bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400"
+            : "bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600"
+        }`}>
+          {isOpen ? "▲" : "▼"}
+        </span>
+      </div>
+      {isOpen && <div className="mt-4">{children}</div>}
+    </div>
+  );
+};
