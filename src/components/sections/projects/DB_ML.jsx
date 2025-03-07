@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import VL from "/src/assets/projects/DB_ML/VDB_ML.png";
-import va from "/src/assets/projects/PYXE/PY_lOGO.png";
-import vb from "../../assets/projects/DB_ML/SK.png";
+import va from "../../assets/projects/PYXE/PY_lOGO.png";
+import vb from "/src/assets/projects/DB_ML/SK.png";
 import vc from "/src/assets/projects/DB_ML/PD.png";
 import vd from "/src/assets/projects/DB_ML/NP.png";
 import ve from "/src/assets/projects/DB_ML/MP.png";
