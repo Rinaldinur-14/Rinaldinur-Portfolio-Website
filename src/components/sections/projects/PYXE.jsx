@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import VPYXE from "src/assets/projects/PYXE/VPYXE.png";
 import GUI from "src/assets/projects/PYXE/GUI.png";
 import va from "src/assets/projects/PYXE/PY_LOGO.png";
@@ -10,11 +10,12 @@ import vf from "src/assets/projects/PYXE/DS_LOGO.png";
 import MPYXE from "src/assets/projects/PYXE/MPYXE.mp4";
 
 
+// eslint-disable-next-line react/prop-types
 const PYXE = ({ onClose }) => {
   const [currentCertIndex, setCurrentCertIndex] = useState(0);
-  const [currentDocIndex, setCurrentDocIndex] = useState(0);
+  // eslint-disable-next-line no-empty-pattern
+  const [] = useState(0);
   const certificationImages = [va, vb, vc, vd, ve, vf]; // Add certification images if available
-  const documentationImages = []; // Add documentation images if available
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -35,17 +36,7 @@ const PYXE = ({ onClose }) => {
     );
   };
 
-  const goToPreviousDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === 0 ? documentationImages.length - 1 : prevIndex - 1
-    );
-  };
 
-  const goToNextDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === documentationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
   return (
     <div
