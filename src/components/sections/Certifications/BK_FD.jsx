@@ -1,5 +1,5 @@
 import React from 'react';
-import bk_fd from "/src/assets/certificates/BK_FD/BK_FD.png";
+import bk_fd from "src/assets/certificates/BK_FD/BK_FD.png";
 
 const BK_FD= ({ onClose }) => {
   return (

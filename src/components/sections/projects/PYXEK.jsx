@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import VPYXEK from "/src/assets/projects/PYXEK/VPYXEK.png";
-import GUI from "/src/assets/projects/PYXEK/GUI.png";
-import va from "/src/assets/projects/PYXE/PY_lOGO.png";
-import vb from "/src/assets/projects/PYXE/TK_lOGO.png";
-import vc from "/src/assets/projects/PYXE/PI_lOGO.png";
-import vd from "/src/assets/projects/PYXE/PN_lOGO.png";
-import ve from "/src/assets/projects/PYXE/VS_lOGO.png";
-import vf from "/src/assets/projects/PYXEK/CM_lOGO.png";
-import vg from "/src/assets/projects/PYXE/DS_lOGO.png";
-import MPYXEK from "/src/assets/projects/PYXEK/MPYXEK.mp4";
+import VPYXEK from "src/assets/projects/PYXEK/VPYXEK.png";
+import GUI from "src/assets/projects/PYXEK/GUI.png";
+import va from "src/assets/projects/PYXE/PY_lOGO.png";
+import vb from "src/assets/projects/PYXE/TK_lOGO.png";
+import vc from "src/assets/projects/PYXE/PI_lOGO.png";
+import vd from "src/assets/projects/PYXE/PN_lOGO.png";
+import ve from "src/assets/projects/PYXE/VS_lOGO.png";
+import vf from "src/assets/projects/PYXEK/CM_lOGO.png";
+import vg from "src/assets/projects/PYXE/DS_lOGO.png";
+import MPYXEK from "src/assets/projects/PYXEK/MPYXEK.mp4";
 
 
 const PYXEK = ({ onClose }) => {

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import sertifikat from "/src/assets/certificates/ALZ/ALZ.png";
+import sertifikat from "src/assets/certificates/ALZ/ALZ.png";
 
 const ALZ = ({ onClose }) => {
   useEffect(() => {

@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import eliteLogo from "/src/assets/docum/exp/ELITE.png";
-import es from "/src/assets/docum/exp/e1.png";
-import ed from "/src/assets/docum/exp/e2.png";
-import et from "/src/assets/docum/exp/e3.jpeg";
-import ee from "/src/assets/docum/exp/e4.jpeg";
-import el from "/src/assets/docum/exp/e5.jpeg";
-import en from "/src/assets/docum/exp/e6.jpeg";
-import eu from "/src/assets/docum/exp/e7.jpeg";
-import ea from "/src/assets/docum/exp/e8.jpg";
-import em from "/src/assets/docum/exp/e9.jpeg";
-import ese from "/src/assets/docum/exp/e10.png"
-import esb from "/src/assets/docum/exp/e11.png"
-import fa from "/src/assets/docum/exp/ea.jpg"
-import fb from "/src/assets/docum/exp/eb.jpg"
-import fc from "/src/assets/docum/exp/ec.jpg"
+import eliteLogo from "src/assets/docum/exp/ELITE.png";
+import es from "src/assets/docum/exp/e1.png";
+import ed from "src/assets/docum/exp/e2.png";
+import et from "src/assets/docum/exp/e3.jpeg";
+import ee from "src/assets/docum/exp/e4.jpeg";
+import el from "src/assets/docum/exp/e5.jpeg";
+import en from "src/assets/docum/exp/e6.jpeg";
+import eu from "src/assets/docum/exp/e7.jpeg";
+import ea from "src/assets/docum/exp/e8.jpg";
+import em from "src/assets/docum/exp/e9.jpeg";
+import ese from "src/assets/docum/exp/e10.png"
+import esb from "src/assets/docum/exp/e11.png"
+import fa from "src/assets/docum/exp/ea.jpg"
+import fb from "src/assets/docum/exp/eb.jpg"
+import fc from "src/assets/docum/exp/ec.jpg"
 
 
 const Lab = ({ onClose }) => {

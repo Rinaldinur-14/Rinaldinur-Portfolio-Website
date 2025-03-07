@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import gC from "/src/assets/docum/organz/GIEF.png";
+import gC from "src/assets/docum/organz/GIEF.png";
 
 const GIEF = ({ onClose }) => {
     useEffect(() => {

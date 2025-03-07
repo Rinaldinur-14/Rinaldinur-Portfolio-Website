@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import sertifikat from "/src/assets/certificates/OCC_FD/OCC_FD.png";
+import sertifikat from "src/assets/certificates/OCC_FD/OCC_FD.png";
 
 const OCC_FD = ({ onClose }) => {
   useEffect(() => {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import ls from "/src/assets/docum/organz/l1.png";
-import ld from "/src/assets/docum/organz/l2.jpeg";
-import is from "/src/assets/docum/organz/i1.jpeg";
-import id from "/src/assets/docum/organz/i2.jpeg";
+import ls from "src/assets/docum/organz/l1.png";
+import ld from "src/assets/docum/organz/l2.jpeg";
+import is from "src/assets/docum/organz/i1.jpeg";
+import id from "src/assets/docum/organz/i2.jpeg";
 
 const Accreditation = ({ onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

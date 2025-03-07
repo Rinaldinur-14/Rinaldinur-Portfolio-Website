@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import sertifikat from "/src/assets/certificates/OCC_DA/OCC_DA.png";
+import sertifikat from "src/assets/certificates/OCC_DA/OCC_DA.png";
 
 const OCC_DA = ({ onClose }) => {
   useEffect(() => {

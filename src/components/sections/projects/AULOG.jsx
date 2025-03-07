@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import VAULOG from "/src/assets/projects/AULOG/VAULOG.png";
-import va from "/src/assets/projects/PYXE/PY_lOGO.png";
-import vb from "/src/assets/projects/AULOG/Selenium_Logo.png";
-import vc from "/src/assets/projects/PYXE/VS_lOGO.png";
-import vd from "/src/assets/projects/CMS/VEYON_lOGO.png";
-import ve from "/src/assets/projects/PYXE/PN_lOGO.png";
-import vf from "/src/assets/projects/AULOG/CG_Logo.png";
-import MAULOG from "/src/assets/projects/AULOG/MAULOG.mp4";
+import VAULOG from "src/assets/projects/AULOG/VAULOG.png";
+import va from "src/assets/projects/PYXE/PY_lOGO.png";
+import vb from "src/assets/projects/AULOG/Selenium_Logo.png";
+import vc from "src/assets/projects/PYXE/VS_lOGO.png";
+import vd from "src/assets/projects/CMS/VEYON_lOGO.png";
+import ve from "src/assets/projects/PYXE/PN_lOGO.png";
+import vf from "src/assets/projects/AULOG/CG_Logo.png";
+import MAULOG from "src/assets/projects/AULOG/MAULOG.mp4";
 
 const AULOG = ({ onClose }) => {
   const [currentCertIndex, setCurrentCertIndex] = useState(0);

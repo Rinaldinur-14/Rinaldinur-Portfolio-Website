@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import bksImg1 from "/src/assets/docum/organz/BKSTI1.jpeg";
-import bksImg2 from "/src/assets/docum/organz/BKSTI2.jpeg";
-import bksImg3 from "/src/assets/docum/organz/BKSTI3.jpeg";
-import bks4 from "/src/assets/docum/organz/BKSTI4.png";
-import bks5 from "/src/assets/docum/organz/BKSTI5.png";
+import bksImg1 from "src/assets/docum/organz/BKSTI1.jpeg";
+import bksImg2 from "src/assets/docum/organz/BKSTI2.jpeg";
+import bksImg3 from "src/assets/docum/organz/BKSTI3.jpeg";
+import bks4 from "src/assets/docum/organz/BKSTI4.png";
+import bks5 from "src/assets/docum/organz/BKSTI5.png";
 
 const BKSTI = ({ onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

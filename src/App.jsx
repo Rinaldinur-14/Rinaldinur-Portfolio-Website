@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import { LoadingScreen } from "/src/components/LoadingScreen.jsx";
-import { Navbar } from "/src/components/Navbar.jsx";
-import { MobileMenu } from "/src/components/MobileMenu.jsx";
-import { Home } from "/src/components/sections/Home.jsx";
-import { About } from "/src/components/sections/About.jsx";
-import { Projects } from "/src/components/sections/Projects.jsx";
-import { Certifications } from "/src/components/sections/Certifications.jsx";
-import { Contact } from "/src/components/sections/Contact.jsx";
-import { Footer } from "/src/components/sections/Footer.jsx";
-import ParticleBackground from "/src/components/ParticleBackground.jsx";
-import QuickScroll from "/src/components/QuickScroll.jsx";
-import "/src/index.css";
+import { LoadingScreen } from "src/components/LoadingScreen";
+import { Navbar } from "src/components/Navbar";
+import { MobileMenu } from "src/components/MobileMenu";
+import { Home } from "src/components/sections/Home";
+import { About } from "src/components/sections/About";
+import { Projects } from "src/components/sections/Projects";
+import { Certifications } from "src/components/sections/Certifications";
+import { Contact } from "src/components/sections/Contact";
+import { Footer } from "src/components/sections/Footer";
+import ParticleBackground from "src/components/ParticleBackground";
+import QuickScroll from "src/components/QuickScroll";
+import "src/index.css";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);

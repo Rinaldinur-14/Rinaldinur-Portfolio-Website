@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import mu from "/src/assets/mm.png"; // Image for the top position
+import mu from "src/assets/mm.png"; // Image for the top position
 
 
 const MemoryGame = ({ onClose, isLightMode }) => {

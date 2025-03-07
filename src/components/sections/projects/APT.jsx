@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import VAPT from "/src/assets/projects/APT/VAPT.png";
-import VA from "/src/assets/projects/APT/VEYON_LOGO.png";
-import VB from "/src/assets/projects/APT/SS_LOGO.png";
-import VC from "/src/assets/projects/APT/GF_LOGO.png";
-import ta from "/src/assets/projects/APT/ta.jpeg";
-import tc from "/src/assets/projects/APT/tc.png";
+import VAPT from "src/assets/projects/APT/VAPT.png";
+import VA from "src/assets/projects/APT/VEYON_LOGO.png";
+import VB from "src/assets/projects/APT/SS_LOGO.png";
+import VC from "src/assets/projects/APT/GF_LOGO.png";
+import ta from "src/assets/projects/APT/ta.jpeg";
+import tc from "src/assets/projects/APT/tc.png";
 
 const APT = ({ onClose }) => {
       const [currentDocIndex, setCurrentDocIndex] = useState(0);

@@ -1,5 +1,5 @@
 import React from 'react';
-import bnsp from "/src/assets/certificates/UG/bnsp.png";
+import bnsp from "src/assets/certificates/UG/bnsp.png";
 
 const BNSP = ({ onClose }) => {
   return (

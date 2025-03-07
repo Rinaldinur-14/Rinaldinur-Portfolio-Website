@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import ad from "/src/assets/projects/AAD/VAAD.png";
-import ada from "/src/assets/projects/AAD/AR_LOGO.png";
-import adb from "/src/assets/projects/AAD/P_LOGO.png";
-import adc from "/src/assets/projects/AAD/SIO_LOGO.png";
-import add from "/src/assets/projects/AAD/SS_LOGO.png";
-import ade from "/src/assets/projects/AAD/QR_LOGO.png";
-import adf from "/src/assets/projects/AAD/VCARD.png";
-import aa from "/src/assets/projects/AAD/aa.jpeg";
-import ab from "/src/assets/projects/AAD/ab.jpeg";
+import ad from "src/assets/projects/AAD/VAAD.png";
+import ada from "src/assets/projects/AAD/AR_LOGO.png";
+import adb from "src/assets/projects/AAD/P_LOGO.png";
+import adc from "src/assets/projects/AAD/SIO_LOGO.png";
+import add from "src/assets/projects/AAD/SS_LOGO.png";
+import ade from "src/assets/projects/AAD/QR_LOGO.png";
+import adf from "src/assets/projects/AAD/VCARD.png";
+import aa from "src/assets/projects/AAD/aa.jpeg";
+import ab from "src/assets/projects/AAD/ab.jpeg";
 
 
 

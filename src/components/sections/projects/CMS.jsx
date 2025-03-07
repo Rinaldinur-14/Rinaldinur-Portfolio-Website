@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import VL from "/src/assets/projects/CMS/VEYON_LOGO.png";
-import VCMS from "/src/assets/projects/CMS/VCMS.png";
-import vcb from "/src/assets/projects/CMS/vcb.jpg";
-import vcc from "/src/assets/projects/CMS/vcc.jpg";
-import vc from "/src/assets/projects/CMS/vc.JPG";
-import ia from "/src/assets/projects/CMS/ia.JPG";
-import ib from "/src/assets/projects/CMS/ib.JPG";
-import ic from "/src/assets/projects/CMS/ic.JPG";
-import id from "/src/assets/projects/CMS/id.JPG";
-import ie from "/src/assets/projects/CMS/ie.JPG";
-import vz from "/src/assets/projects/CMS/vz.mp4";
+import VL from "src/assets/projects/CMS/VEYON_LOGO.png";
+import VCMS from "src/assets/projects/CMS/VCMS.png";
+import vcb from "src/assets/projects/CMS/vcb.jpg";
+import vcc from "src/assets/projects/CMS/vcc.jpg";
+import vc from "src/assets/projects/CMS/vc.JPG";
+import ia from "src/assets/projects/CMS/ia.JPG";
+import ib from "src/assets/projects/CMS/ib.JPG";
+import ic from "src/assets/projects/CMS/ic.JPG";
+import id from "src/assets/projects/CMS/id.JPG";
+import ie from "src/assets/projects/CMS/ie.JPG";
+import vz from "src/assets/projects/CMS/vz.mp4";
 
 const CMS = ({ onClose }) => {
   const [currentCertIndex, setCurrentCertIndex] = useState(0);

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import headlog from "/src/assets/headlog.svg";
+import headlog from "src/assets/headlog.svg";
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);

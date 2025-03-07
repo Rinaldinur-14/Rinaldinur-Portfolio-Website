@@ -1,23 +1,23 @@
 import { useEffect, useRef, useState } from "react";
-import { RevealOnScroll } from "/src/components/RevealOnScroll.jsx";
-import pw from "/src/assets/projects/PORT_W/VPORT_W.png";
-import ml from "/src/assets/projects/DB_ML/VDB_ML.png";
-import vru from "/src/assets/projects/RUW/VRUW.png";
-import vc from "/src/assets/projects/CMS/VCMS.png";
-import ap from "/src/assets/projects/APT/VAPT.png";
-import ad from "/src/assets/projects/AAD/VAAD.png";
-import pyk from "/src/assets/projects/PYXEK/VPYXEK.png";
-import pyx from "/src/assets/projects/PYXE/VPYXE.png";
-import aul from "/src/assets/projects/AULOG/VAULOG.png";
-import DB_ML from "/src/components/sections//projects/DB_ML.jsx";
-import RUW from "/src/components/sections//projects/RUW.jsx";
-import PYXE from "/src/components/sections//projects/PYXE.jsx";
-import AULOG from "/src/components/sections//projects/AULOG.jsx";
-import PYXEK from "/src/components/sections//projects/PYXEK.jsx";
-import APT from "/src/components/sections/projects/APT.jsx";
-import AAD from "/src/components/sections/projects/AAD.jsx";
-import CMS from "/src/components/sections/projects/CMS.jsx";
-import PORT_W from "/src/components/sections/projects/PORT_W.jsx";
+import { RevealOnScroll } from "src/components/RevealOnScroll";
+import pw from "src/assets/projects/PORT_W/VPORT_W.png";
+import ml from "src/assets/projects/DB_ML/VDB_ML.png";
+import vru from "src/assets/projects/RUW/VRUW.png";
+import vc from "src/assets/projects/CMS/VCMS.png";
+import ap from "src/assets/projects/APT/VAPT.png";
+import ad from "src/assets/projects/AAD/VAAD.png";
+import pyk from "src/assets/projects/PYXEK/VPYXEK.png";
+import pyx from "src/assets/projects/PYXE/VPYXE.png";
+import aul from "src/assets/projects/AULOG/VAULOG.png";
+import DB_ML from "src/components/sections//projects/DB_ML";
+import RUW from "src/components/sections//projects/RUW";
+import PYXE from "src/components/sections//projects/PYXE";
+import AULOG from "src/components/sections//projects/AULOG";
+import PYXEK from "src/components/sections//projects/PYXEK";
+import APT from "src/components/sections/projects/APT";
+import AAD from "src/components/sections/projects/AAD";
+import CMS from "src/components/sections/projects/CMS";
+import PORT_W from "src/components/sections/projects/PORT_W";
 
 const projects = [
   // {
