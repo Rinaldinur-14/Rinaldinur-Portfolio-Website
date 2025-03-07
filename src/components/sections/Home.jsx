@@ -15,6 +15,7 @@ const scrollToSection = (id) => {
   }
 };
 
+// eslint-disable-next-line react/prop-types
 export const Home = ({ isLightMode }) => {
   const [showEasterEgg, setShowEasterEgg] = useState(false); // State for the easter egg
 
@@ -62,7 +63,7 @@ export const Home = ({ isLightMode }) => {
             <h1 className="text-3xl md:text-4xl font-bold mb-3 text-center">
               <span className="block mb-2">
                 {" "}
-                I'm{" "}
+                I&apos;m{" "}
                 <span
                   className={`bg-clip-text text-transparent animate-fade-in animate-gradient ${
                     isLightMode

@@ -1,4 +1,4 @@
-import React from "react";
+import "react";
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
@@ -10,6 +10,7 @@ const scrollToSection = (id) => {
   }
 };
 
+// eslint-disable-next-line react/prop-types
 const Footer = ({ isLightMode }) => {
   const navLinks = [
     { id: "home", label: "Home" },
