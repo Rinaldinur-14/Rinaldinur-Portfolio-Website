@@ -3,37 +3,7 @@ import VL from "src/assets/projects/CMS/VEYON_LOGO.png";
 import VCMS from "src/assets/projects/CMS/VCMS.png";
 import vcb from "src/assets/projects/CMS/vcb.jpg";
 import vcc from "src/assets/projects/CMS/vcc.jpg";
-import vc from "src/assets/projects/CMS/vc.jpgconsole.log('CMS component mounted');
-console.log('certificationImages:', certificationImages);
-console.log('documentationImages:', documentationImages);
-
-const goToPreviousCert = () => {
-  console.log('Going to previous certification image');
-  setCurrentCertIndex((prevIndex) =>
-    prevIndex === 0 ? certificationImages.length - 1 : prevIndex - 1
-  );
-};
-
-const goToNextCert = () => {
-  console.log('Going to next certification image');
-  setCurrentCertIndex((prevIndex) =>
-    prevIndex === certificationImages.length - 1 ? 0 : prevIndex + 1
-  );
-};
-
-const goToPreviousDoc = () => {
-  console.log('Going to previous documentation image');
-  setCurrentDocIndex((prevIndex) =>
-    prevIndex === 0 ? documentationImages.length - 1 : prevIndex - 1
-  );
-};
-
-const goToNextDoc = () => {
-  console.log('Going to next documentation image');
-  setCurrentDocIndex((prevIndex) =>
-    prevIndex === documentationImages.length - 1 ? 0 : prevIndex + 1
-  );
-};";
+import vc from "src/assets/projects/CMS/vc.jpg";
 import ia from "src/assets/projects/CMS/ia.JPG";
 import ib from "src/assets/projects/CMS/ib.JPG";
 import ic from "src/assets/projects/CMS/ic.JPG";
