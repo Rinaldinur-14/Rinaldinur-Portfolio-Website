@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import sertifikat from "src/assets/certificates/OCC_FD/OCC_FD.png";
 
+// eslint-disable-next-line react/prop-types
 const OCC_FD = ({ onClose }) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';

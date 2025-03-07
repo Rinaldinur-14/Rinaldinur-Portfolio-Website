@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import ffiLogo from "src/assets/docum/exp/FFI.png";
 import fs from "src/assets/docum/exp/f1.png";
 import fd from "src/assets/docum/exp/f2.jpg";
 import ft from "src/assets/docum/exp/f3.jpg";
 import fe from "src/assets/docum/exp/f4.JPG";
 
+// eslint-disable-next-line react/prop-types
 const FFI = ({ onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const internshipImages = [fd, ft, fe]; // Images for the carousel (f2 and f3)

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+// eslint-disable-next-line react/prop-types
 export const QuickScroll = ({ isLightMode }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isNearFooter, setIsNearFooter] = useState(false);

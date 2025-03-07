@@ -1,6 +1,7 @@
-import React from 'react';
+import 'react';
 import ioda_da from "src/assets/certificates/IODA_DA/ioda_da.png";
 
+// eslint-disable-next-line react/prop-types
 const IODA_DA = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -19,7 +20,7 @@ const IODA_DA = ({ onClose }) => {
 
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
-              <strong>IODA Academy</strong> is an educational institution that offers specialized training programs to help individuals develop skills in data analysis, coding, and other technical fields. Through its intensive courses, such as the "Kelas Weekend Data Analyst," IODA Academy provides hands-on, practical learning experiences designed to enhance professional competencies. Participants who successfully complete these programs receive a certificate of excellence, recognizing their achievement and newly acquired expertise.
+              <strong>IODA Academy</strong> is an educational institution that offers specialized training programs to help individuals develop skills in data analysis, coding, and other technical fields. Through its intensive courses, such as the &quot;Kelas Weekend Data Analyst,&quot; IODA Academy provides hands-on, practical learning experiences designed to enhance professional competencies. Participants who successfully complete these programs receive a certificate of excellence, recognizing their achievement and newly acquired expertise.
             </p>
           </div>
 

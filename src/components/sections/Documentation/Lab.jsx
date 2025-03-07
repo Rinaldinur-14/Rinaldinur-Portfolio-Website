@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import eliteLogo from "src/assets/docum/exp/ELITE.png";
 import es from "src/assets/docum/exp/e1.png";
 import ed from "src/assets/docum/exp/e2.png";
@@ -16,6 +16,7 @@ import fb from "src/assets/docum/exp/eb.jpg"
 import fc from "src/assets/docum/exp/ec.jpg"
 
 
+// eslint-disable-next-line react/prop-types
 const Lab = ({ onClose }) => {
   const [currentCertIndex, setCurrentCertIndex] = useState(0);
   const [currentDocIndex, setCurrentDocIndex] = useState(0);
@@ -125,7 +126,7 @@ const Lab = ({ onClose }) => {
                 <strong>Conducted Teaching</strong>: Delivered instruction to over 600 practicum participants, fostering a collaborative learning environment.
               </li>
               <li>
-                <strong>Evaluated Assignments</strong>: Assisted in assessing and providing feedback on practicum participants' assignments.
+                <strong>Evaluated Assignments</strong>: Assisted in assessing and providing feedback on practicum participants&apos; assignments.
               </li>
             </ul>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import VAULOG from "src/assets/projects/AULOG/VAULOG.png";
 import va from "src/assets/projects/PYXE/PY_LOGO.png";
 import vb from "src/assets/projects/AULOG/Selenium_Logo.png";
@@ -8,11 +8,12 @@ import ve from "src/assets/projects/PYXE/PN_LOGO.png";
 import vf from "src/assets/projects/AULOG/CG_LOGO.png";
 import MAULOG from "src/assets/projects/AULOG/MAULOG.mp4";
 
+// eslint-disable-next-line react/prop-types
 const AULOG = ({ onClose }) => {
   const [currentCertIndex, setCurrentCertIndex] = useState(0);
-  const [currentDocIndex, setCurrentDocIndex] = useState(0);
+  // eslint-disable-next-line no-empty-pattern
+  const [] = useState(0);
   const certificationImages = [va, vb, vc, vd, ve, vf]; // Placeholder for certification images
-  const documentationImages = []; // Placeholder for documentation images
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -33,17 +34,7 @@ const AULOG = ({ onClose }) => {
     );
   };
 
-  const goToPreviousDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === 0 ? documentationImages.length - 1 : prevIndex - 1
-    );
-  };
 
-  const goToNextDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === documentationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -84,7 +75,7 @@ const AULOG = ({ onClose }) => {
           {/* Introduction */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
-              <strong>In November 2023</strong>, I initiated a project to develop an <strong>Automated Login System</strong> for Gunadarma University's wifi access using <strong>Python</strong> and <strong>Selenium</strong>. The goal was to streamline the process of logging into the university's wifi network, which required students to manually enter their credentials on each computer. This manual process was time-consuming and inefficient, especially in the <strong>Elementary Laboratory of Industrial Engineering</strong>, where multiple computers needed to be prepared for pre-tests and other activities. As the project manager, I aimed to create a solution that would automate this process, saving time and effort for the laboratory assistants.
+              <strong>In November 2023</strong>, I initiated a project to develop an <strong>Automated Login System</strong> for Gunadarma University&apos;s wifi access using <strong>Python</strong> and <strong>Selenium</strong>. The goal was to streamline the process of logging into the university&apos;s wifi network, which required students to manually enter their credentials on each computer. This manual process was time-consuming and inefficient, especially in the <strong>Elementary Laboratory of Industrial Engineering</strong>, where multiple computers needed to be prepared for pre-tests and other activities. As the project manager, I aimed to create a solution that would automate this process, saving time and effort for the laboratory assistants.
             </p>
             <p>
               The project was born out of a need to improve efficiency in the laboratory. Previously, laboratory assistants had to manually log in to each computer using student credentials to access the wifi. This process was not only repetitive but also prone to errors, especially when dealing with a large number of computers. By automating the login process, I aimed to reduce the time and effort required for these tasks.
@@ -153,7 +144,7 @@ const AULOG = ({ onClose }) => {
             </p>
             <ul className="list-decimal ml-5 space-y-2 text-left md:text-justify">
               <li><strong>Importing Required Libraries:</strong> The script used Selenium for browser automation and WebDriverWait to ensure the script waited for specific elements to load before interacting with them.</li>
-              <li><strong>Setting Up Credentials and Website Link:</strong> The script targeted the university's login page and used predefined credentials for authentication.</li>
+              <li><strong>Setting Up Credentials and Website Link:</strong> The script targeted the university&apos;s login page and used predefined credentials for authentication.</li>
               <li><strong>Locating Web Elements:</strong> The script identified the HTML elements for the username, password, and submit button using their respective attributes.</li>
               <li><strong>Automating the Login Process:</strong> The script initialized the Chrome browser, navigated to the login page, and waited for the username and password fields to load. It then input the credentials and clicked the submit button to complete the login process.</li>
             </ul>

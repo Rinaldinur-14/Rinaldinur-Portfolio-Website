@@ -9,6 +9,7 @@ import GIEF from "src/components/sections/Documentation/GIEF";
 import BKSTI from "src/components/sections/Documentation/BKSTI";
 import EChar from "src/components/sections/Documentation/EChar";
 
+// eslint-disable-next-line react/prop-types
 export const About = ({ isLightMode }) => {
   const SoftSkills = [
     "Team Work", "Leadership", "Public Speaking", "Effective Communication",
@@ -188,7 +189,7 @@ export const About = ({ isLightMode }) => {
                 <ul className="list-disc ml-5 text-xs md:text-base">
                   <li>Explored and prepared practicum materials and systems for 5 practicums.</li>
                   <li>Conducted teaching to over 600 practicum participants in total.</li>
-                  <li>Assisted in evaluating the practicum participant's assignments.</li>
+                  <li>Assisted in evaluating the practicum participant&apos;s assignments.</li>
                 </ul>
 
                 {/* MT */}
@@ -199,7 +200,7 @@ export const About = ({ isLightMode }) => {
                   </div>
                   <ul className="list-disc ml-5 text-xs md:text-base">
                     <li>Maintained all electronic facilities and installed software for practicums.</li>
-                    <li>Created a database for practicum participant's attendance and grades.</li>
+                    <li>Created a database for practicum participant&apos;s attendance and grades.</li>
                     <li>Monitored over 40 computers during practicum activities using Veyon Master.</li>
                   </ul>
                 </div>
@@ -326,7 +327,7 @@ export const About = ({ isLightMode }) => {
                   <ul className="list-disc ml-5 text-xs md:text-base">
                     <li>Attended VR training activity.</li>
                     <li>Prepared necessary documents and set up facilities.</li>
-                    <li>Answered the assessor's questions and demonstrated the use of the facilities.</li>
+                    <li>Answered the assessor&apos;s questions and demonstrated the use of the facilities.</li>
                   </ul>
 
                   <h3 className={`font-semibold mb-3 mt-5 text-sm md:text-base bg-clip-text text-transparent animate-gradient          
@@ -342,7 +343,7 @@ export const About = ({ isLightMode }) => {
                 <ul className="list-disc ml-5 text-xs md:text-base">
                       <li>Attended Environment, Health, and Safety training activities.</li>
                       <li>Coordinated assistants to prepare necessary documents and set up facilities.</li>
-                      <li>Answered the assessor's questions and demonstrated the use of the facilities.</li>
+                      <li>Answered the assessor&apos;s questions and demonstrated the use of the facilities.</li>
                 </ul>
 
                   {/* Accreditation Documentation Button */}
@@ -485,6 +486,7 @@ export const About = ({ isLightMode }) => {
 };
 
 // Collapsible Section Component
+// eslint-disable-next-line react/prop-types
 const CollapsibleSection = ({ title, children, isLightMode }) => {
   const [isOpen, setIsOpen] = useState(true);
 

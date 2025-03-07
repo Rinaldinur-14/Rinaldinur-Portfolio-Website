@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import VL from "src/assets/projects/CMS/VEYON_LOGO.png";
 import VCMS from "src/assets/projects/CMS/VCMS.png";
 import vcb from "src/assets/projects/CMS/vcb.jpg";
@@ -11,6 +11,7 @@ import id from "src/assets/projects/CMS/id.JPG";
 import ie from "src/assets/projects/CMS/ie.JPG";
 import vz from "src/assets/projects/CMS/vz.mp4";
 
+// eslint-disable-next-line react/prop-types
 const CMS = ({ onClose }) => {
   const [currentCertIndex, setCurrentCertIndex] = useState(0);
   const [currentDocIndex, setCurrentDocIndex] = useState(0);
@@ -113,7 +114,7 @@ const CMS = ({ onClose }) => {
               its potential, I spent hours exploring its features through online
               resources, tutorials, and hands-on experimentation. I dove into
               its features, experimenting and implementing a system that would
-              transform how the lab's computer operated.
+              transform how the lab&apos;s computer operated.
             </p>
           </div>
 
@@ -276,7 +277,7 @@ const CMS = ({ onClose }) => {
               Key Features
             </h3>
             <p>
-              The system I built was packed with features designed to make lab's
+              The system I built was packed with features designed to make lab&apos;s
               computer management a breeze:
             </p>
             {/*Image */}
@@ -347,11 +348,11 @@ const CMS = ({ onClose }) => {
               </li>
               <li>
                 <strong>Dynamic IP Problems:</strong> Frequent changes in IP
-                addresses caused connection issues, disrupting the system's
+                addresses caused connection issues, disrupting the system&apos;s
                 functionality. To resolve this, I recommend implementing DHCP
                 reservations or dynamic DNS to automatically handle IP address
                 changes. This would ensure consistent connectivity and eliminate
-                the need for manual reconfiguration, improving the system's
+                the need for manual reconfiguration, improving the system&apos;s
                 reliability.
               </li>
             </ul>

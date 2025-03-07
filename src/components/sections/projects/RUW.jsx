@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import VRUW from "src/assets/projects/RUW/VRUW.png";
 import va from "src/assets/projects/RUW/HTML.png";
 import vb from "src/assets/projects/RUW/CSS.png";
@@ -9,11 +9,12 @@ import vf from "src/assets/projects/PYXE/DS_LOGO.png";
 import ru_fd from "src/assets/certificates/RU_FD/RU_FD.png";
 import pfd from "src/assets/projects/RUW/PRUW.png";
 
+// eslint-disable-next-line react/prop-types
 const RUW = ({ onClose }) => {
   const [currentCertIndex, setCurrentCertIndex] = useState(0);
-  const [currentDocIndex, setCurrentDocIndex] = useState(0);
+  // eslint-disable-next-line no-empty-pattern
+  const [] = useState(0);
   const certificationImages = [va, vb, vc, vd, ve, vf]; // Add certification images if available
-  const documentationImages = []; // Add documentation images if available
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -34,17 +35,7 @@ const RUW = ({ onClose }) => {
     );
   };
 
-  const goToPreviousDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === 0 ? documentationImages.length - 1 : prevIndex - 1
-    );
-  };
 
-  const goToNextDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === documentationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
   return (
     <div

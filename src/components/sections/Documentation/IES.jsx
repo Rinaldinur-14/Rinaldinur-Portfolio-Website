@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import fIES from "src/assets/docum/organz/5IES.png";
 import sIES from "src/assets/docum/organz/6IES.png";
 import dsies from "src/assets/docum/organz/d1ies.jpeg";
 import ddies from "src/assets/docum/organz/d2ies.jpeg";
 
 
+// eslint-disable-next-line react/prop-types
 const IES = ({ onClose }) => {
     useEffect(() => {
         document.body.style.overflow = 'hidden';
@@ -142,7 +143,7 @@ const IES = ({ onClose }) => {
               </p>
     
               <p>
-                The topics covered during these events, such as "International Organization for Standardization (ISO)" and "Green and Lean Manufacturing Toward Making Indonesia 4.0," provided deep insights into quality management and sustainable manufacturing practices. These themes are crucial in the context of Industry 4.0, where efficiency and sustainability are paramount.
+                The topics covered during these events, such as &quot;International Organization for Standardization (ISO)&quot; and &quot;Green and Lean Manufacturing Toward Making Indonesia 4.0,&quot; provided deep insights into quality management and sustainable manufacturing practices. These themes are crucial in the context of Industry 4.0, where efficiency and sustainability are paramount.
               </p>
     
               <p>

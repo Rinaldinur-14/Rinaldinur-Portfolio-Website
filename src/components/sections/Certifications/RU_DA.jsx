@@ -1,6 +1,7 @@
-import React from 'react';
+import 'react';
 import ru_da from "src/assets/certificates/RU_DA/ru_da.png";
 
+// eslint-disable-next-line react/prop-types
 const RU_DA = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>

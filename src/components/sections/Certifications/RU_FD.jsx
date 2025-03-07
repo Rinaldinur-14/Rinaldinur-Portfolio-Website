@@ -1,7 +1,8 @@
-import React from 'react';
+import 'react';
 import ru_fd from "src/assets/certificates/RU_FD/RU_FD.png";
 import pfd from "src/assets/projects/RUW/PRUW.png";
 
+// eslint-disable-next-line react/prop-types
 const RU_FD = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>

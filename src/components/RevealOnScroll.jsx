@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 
+// eslint-disable-next-line react/prop-types
 export const RevealOnScroll = ({ children }) => {
   const ref = useRef(null);
 

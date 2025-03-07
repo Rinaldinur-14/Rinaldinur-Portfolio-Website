@@ -1,6 +1,7 @@
-import React from 'react';
+import 'react';
 import tdl from "src/assets/certificates/SINAU_TDL/tdl.png";
 
+// eslint-disable-next-line react/prop-types
 const SINAU_TDL = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -19,7 +20,7 @@ const SINAU_TDL = ({ onClose }) => {
 
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
-              <strong>Sinau Koding</strong> is an educational platform that offers training and certification programs to help individuals develop technical skills in coding and software development. Through its webinars and courses, such as "Buat Aplikasi To-Do-List untuk Manajemen Waktu yang Lebih Efisien," Sinau Koding provides practical, hands-on learning experiences. Participants who successfully complete these programs receive a certificate of participation, recognizing their achievement and newly acquired skills.
+              <strong>Sinau Koding</strong> is an educational platform that offers training and certification programs to help individuals develop technical skills in coding and software development. Through its webinars and courses, such as &quot;Buat Aplikasi To-Do-List untuk Manajemen Waktu yang Lebih Efisien,&quot; Sinau Koding provides practical, hands-on learning experiences. Participants who successfully complete these programs receive a certificate of participation, recognizing their achievement and newly acquired skills.
             </p>
           </div>
 
@@ -44,7 +45,7 @@ const SINAU_TDL = ({ onClose }) => {
           {/* Certification Details */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
-              On <strong>February 11, 2025</strong>, I participated in a webinar hosted by <strong>Sinau Koding Academy</strong> titled <strong>"Buat Aplikasi To-Do-List untuk Manajemen Waktu yang Lebih Efisien"</strong> (Building a To-Do List App for More Efficient Time Management). This webinar provided valuable insights into time management and hands-on experience in building a simple to-do list application using <strong>HTML, CSS, and JavaScript</strong>.
+              On <strong>February 11, 2025</strong>, I participated in a webinar hosted by <strong>Sinau Koding Academy</strong> titled <strong>&quot;Buat Aplikasi To-Do-List untuk Manajemen Waktu yang Lebih Efisien&quot;</strong> (Building a To-Do List App for More Efficient Time Management). This webinar provided valuable insights into time management and hands-on experience in building a simple to-do list application using <strong>HTML, CSS, and JavaScript</strong>.
             </p>
 
             <p>

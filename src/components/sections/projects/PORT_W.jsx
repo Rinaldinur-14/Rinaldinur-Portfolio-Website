@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import VPORT_W from "src/assets/projects/PORT_W/VPORT_W.png"; // Replace with your image path
 import va from "src/assets/projects/RUW/HTML.png";
 import vb from "src/assets/projects/PORT_W/REACT.png"; // Replace with your image path
@@ -12,6 +12,7 @@ import vi from "src/assets/projects/PYXE/DS_LOGO.png";
 import imp from "src/assets/projects/PORT_W/imp.png";
 
 
+// eslint-disable-next-line react/prop-types
 const PORT_W = ({ onClose }) => {
   const [currentCertIndex, setCurrentCertIndex] = useState(0);
   const certificationImages = [va, vb, vc, vd, ve, vf, vg, vh, vi]; // Add certification images
@@ -141,10 +142,10 @@ const PORT_W = ({ onClose }) => {
             </p>
             <ul className="list-disc ml-5 space-y-2 text-left md:text-justify">
             <li>
-                <strong>HTML:</strong> Used to build the website's structure.
+                <strong>HTML:</strong> Used to build the website&apos;s structure.
               </li>
               <li>
-                <strong>React:</strong> Used to build the website's interactive and dynamic user interface.
+                <strong>React:</strong> Used to build the website&apos;s interactive and dynamic user interface.
               </li>
               <li>
                 <strong>Vite:</strong> Provided fast development and efficient performance for the project.

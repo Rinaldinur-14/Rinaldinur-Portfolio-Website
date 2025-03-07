@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import sertifikat from "src/assets/certificates/ALZ/ALZ.png";
 
+// eslint-disable-next-line react/prop-types
 const ALZ = ({ onClose }) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';

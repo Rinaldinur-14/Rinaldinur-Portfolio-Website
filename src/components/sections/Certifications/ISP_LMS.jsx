@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import isp from "src/assets/certificates/ISP/ISP.png";
 
+// eslint-disable-next-line react/prop-types
 const ISP_LMS = ({ onClose }) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -27,7 +28,7 @@ const ISP_LMS = ({ onClose }) => {
         </h2>
         <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
-                <strong>iSpring Learn</strong> is a leading provider of e-learning solutions and tools that help organizations create, manage, and deliver interactive online training programs. Through its webinars and training sessions, such as "Transformasikan On-the-Job Training," iSpring offers valuable insights and practical strategies for enhancing workplace learning and development. Participants who attend these sessions receive a certificate of participation, acknowledging their engagement and commitment to professional growth.
+                <strong>iSpring Learn</strong> is a leading provider of e-learning solutions and tools that help organizations create, manage, and deliver interactive online training programs. Through its webinars and training sessions, such as &quot;Transformasikan On-the-Job Training,&quot; iSpring offers valuable insights and practical strategies for enhancing workplace learning and development. Participants who attend these sessions receive a certificate of participation, acknowledging their engagement and commitment to professional growth.
             </p>
         </div>
 
@@ -50,7 +51,7 @@ const ISP_LMS = ({ onClose }) => {
 
         <div className="space-y-4 text-white text-xs md:text-base text-justify">
           <p>
-            On <strong>February 27, 2025</strong>, I participated in a webinar hosted by <strong>iSpring Solutions</strong> titled <strong>"Transformasikan On-the-Job Training"</strong> (Transforming On-the-Job Training). The webinar was led by <strong>Bimo Ardiansyah</strong>, a Learning Expert Consultant, and provided valuable insights into the implementation and optimization of on-the-job training (OJT) programs using the <strong>iSpring Learn</strong> platform.
+            On <strong>February 27, 2025</strong>, I participated in a webinar hosted by <strong>iSpring Solutions</strong> titled <strong>&quot;Transformasikan On-the-Job Training&quot;</strong> (Transforming On-the-Job Training). The webinar was led by <strong>Bimo Ardiansyah</strong>, a Learning Expert Consultant, and provided valuable insights into the implementation and optimization of on-the-job training (OJT) programs using the <strong>iSpring Learn</strong> platform.
           </p>
         </div>
 

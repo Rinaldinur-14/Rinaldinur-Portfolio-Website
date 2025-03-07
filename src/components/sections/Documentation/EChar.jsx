@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import es from "src/assets/docum/char/e1.png";
 import ed from "src/assets/docum/char/e2.png";
 import et from "src/assets/docum/char/e3.png";
 
+// eslint-disable-next-line react/prop-types
 const EChar = ({ onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const charityImages = [es, ed, et]; // Images for the carousel (ed and et)
@@ -44,7 +45,7 @@ const EChar = ({ onClose }) => {
           {/* Description */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
-              ELITE Charity is a social initiative and annual event organized by the Laboratory Assistants of Elementary Laboratory of Industrial Engineering at Gunadarma University. The program aims to give back to the community through acts of kindness, such as donating to orphanages and underprivileged communities. The theme of the event is <strong>"The Smallest Act of Kindness is Worth More Than The Greatest Intention"</strong>, emphasizing the importance of taking action to help others.
+              ELITE Charity is a social initiative and annual event organized by the Laboratory Assistants of Elementary Laboratory of Industrial Engineering at Gunadarma University. The program aims to give back to the community through acts of kindness, such as donating to orphanages and underprivileged communities. The theme of the event is <strong>&quot;The Smallest Act of Kindness is Worth More Than The Greatest Intention&quot;</strong>, emphasizing the importance of taking action to help others.
             </p>
           </div>
 

@@ -1,6 +1,7 @@
-import React from 'react';
+import 'react';
 import ss_ml from "src/assets/certificates/SS_ML/ss_ml.png";
 
+// eslint-disable-next-line react/prop-types
 const SS_ML = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>

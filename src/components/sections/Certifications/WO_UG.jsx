@@ -1,7 +1,8 @@
-import React from 'react';
+import 'react';
 import promodel from "src/assets/certificates/UG/wa.png";
 import iso from "src/assets/certificates/UG/wb.png";
 
+// eslint-disable-next-line react/prop-types
 const WO_UG = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>

@@ -1,6 +1,7 @@
-import React from 'react';
+import 'react';
 import bnsp from "src/assets/certificates/UG/bnsp.png";
 
+// eslint-disable-next-line react/prop-types
 const BNSP = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -19,7 +20,7 @@ const BNSP = ({ onClose }) => {
 
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
-              <strong>BNSP (Badan Nasional Sertifikasi Profesi)</strong> is the Indonesian National Professional Certification Authority responsible for certifying individuals' competencies in various professional fields. Through its certification programs, BNSP ensures that individuals meet national competency standards, as outlined in the Indonesian National Work Competency Standards (SKKNI). Certificates issued by BNSP, such as those for competencies in Manufacturing Systems and Quality Control, are recognized nationally and are valid for three years, providing professionals with formal acknowledgment of their skills and expertise.
+              <strong>BNSP (Badan Nasional Sertifikasi Profesi)</strong> is the Indonesian National Professional Certification Authority responsible for certifying individuals&apos; competencies in various professional fields. Through its certification programs, BNSP ensures that individuals meet national competency standards, as outlined in the Indonesian National Work Competency Standards (SKKNI). Certificates issued by BNSP, such as those for competencies in Manufacturing Systems and Quality Control, are recognized nationally and are valid for three years, providing professionals with formal acknowledgment of their skills and expertise.
             </p>
           </div>
 

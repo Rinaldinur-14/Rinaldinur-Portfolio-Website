@@ -109,6 +109,7 @@ const projects = [
 ];
 
 
+// eslint-disable-next-line react/prop-types
 export const Projects = ({ isLightMode }) => {
   const [showAll, setShowAll] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");

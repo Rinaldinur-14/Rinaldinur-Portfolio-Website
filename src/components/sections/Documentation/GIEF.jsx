@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import gC from "src/assets/docum/organz/GIEF.png";
 
+// eslint-disable-next-line react/prop-types
 const GIEF = ({ onClose }) => {
     useEffect(() => {
         document.body.style.overflow = 'hidden';
@@ -52,7 +53,7 @@ const GIEF = ({ onClose }) => {
             {/* Certificate Description */}
             <div className="space-y-4 text-white text-xs md:text-base text-justify">
               <p>
-                I had the honor of being a member of the organizing committee for the 7th Gunadarma Industrial Engineering Fair (GIEF) 2023, held on September 13th, 2023, at the Gunadarma University F8 Campus Auditorium in Depok. The theme of the event was "Circular Economy for Greener Industry in Indonesia," which highlighted the importance of sustainable practices in the industrial sector.
+                I had the honor of being a member of the organizing committee for the 7th Gunadarma Industrial Engineering Fair (GIEF) 2023, held on September 13th, 2023, at the Gunadarma University F8 Campus Auditorium in Depok. The theme of the event was &quot;Circular Economy for Greener Industry in Indonesia,&quot; which highlighted the importance of sustainable practices in the industrial sector.
               </p>
     
               <p>

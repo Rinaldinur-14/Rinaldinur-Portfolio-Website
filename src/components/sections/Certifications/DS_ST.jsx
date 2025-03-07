@@ -1,10 +1,11 @@
-import React from 'react';
+import 'react';
 import dss from "src/assets/certificates/DS_ST/ds1.png";
 import dsd from "src/assets/certificates/DS_ST/ds2.png";
 import dst from "src/assets/certificates/DS_ST/ds3.png";
 import dse from "src/assets/certificates/DS_ST/ds4.png";
 import dsf from "src/assets/certificates/DS_ST/ds5.png"; 
 
+// eslint-disable-next-line react/prop-types
 const DS_ST = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -45,7 +46,7 @@ const DS_ST = ({ onClose }) => {
          </div>
          <div className="text-white text-xs md:text-base text-justify">
             <p >
-              On <strong>February 21, 2025</strong>, I attended <strong>Skola Talk #89: Management Server AWS</strong>. This workshop provided an in-depth look at Amazon Web Services (AWS), the world's most popular cloud computing platform. Topics included designing scalable cloud architectures, key compute services like EC2, and hands-on demonstrations of deploying web applications using AWS services.
+              On <strong>February 21, 2025</strong>, I attended <strong>Skola Talk #89: Management Server AWS</strong>. This workshop provided an in-depth look at Amazon Web Services (AWS), the world&apos;s most popular cloud computing platform. Topics included designing scalable cloud architectures, key compute services like EC2, and hands-on demonstrations of deploying web applications using AWS services.
             </p>
           </div>
 
@@ -115,7 +116,7 @@ const DS_ST = ({ onClose }) => {
          </div>
           <div className="text-white text-xs md:text-base text-justify">
             <p>
-              On <strong>February 27, 2025</strong>, I joined <strong>Skola Talk #92: Digital Writing Camp</strong>. This event explored the power of digital writing in marketing and branding. I learned techniques for crafting content across various platforms, dos and don'ts of digital writing, and future trends in content creation.
+              On <strong>February 27, 2025</strong>, I joined <strong>Skola Talk #92: Digital Writing Camp</strong>. This event explored the power of digital writing in marketing and branding. I learned techniques for crafting content across various platforms, dos and don&apos;ts of digital writing, and future trends in content creation.
             </p>
           </div>
 

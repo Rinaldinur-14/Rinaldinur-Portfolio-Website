@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import VL from "src/assets/projects/DB_ML/VDB_ML.png";
 import va from "src/assets/projects/PYXE/PY_LOGO.png";
 import vb from "src/assets/projects/DB_ML/SK.png";
@@ -17,6 +17,7 @@ import sg from "src/assets/projects/DB_ML/task.jpg"
 import sh from "src/assets/projects/DB_ML/dataset.png";
 
 
+// eslint-disable-next-line react/prop-types
 const DB_ML = ({ onClose }) => {
   const [currentCertIndex, setCurrentCertIndex] = useState(0);
   const [currentDocIndex, setCurrentDocIndex] = useState(0);
@@ -128,10 +129,10 @@ const DB_ML = ({ onClose }) => {
                 <strong>Build and Train a Regression Model:</strong> Use a <strong>Random Forest Regressor</strong> to predict diabetes progression.
               </li>
               <li>
-                <strong>Evaluate the Model's Performance:</strong> Assess the model's accuracy using metrics like <strong>MSE</strong> and <strong>R²</strong>.
+                <strong>Evaluate the Model&apos;s Performance:</strong> Assess the model&apos;s accuracy using metrics like <strong>MSE</strong> and <strong>R²</strong>.
               </li>
               <li>
-                <strong>Visualize the Results:</strong> Plot the actual vs. predicted values to understand the model's performance.
+                <strong>Visualize the Results:</strong> Plot the actual vs. predicted values to understand the model&apos;s performance.
               </li>
               <li>
                 <strong>Certificate Achievement:</strong> I initially aimed to complete this project to earn a certificate from Dibimbing Digital Skill Fair 36 - Data Science. 
@@ -230,7 +231,7 @@ const DB_ML = ({ onClose }) => {
                 Exploratory Data Analysis (EDA)
               </h3>
               <p>
-                The first step in the project was to perform <strong>Exploratory Data Analysis (EDA)</strong> to understand the dataset's structure, distribution, and relationships between features and the target variable. Below are the key steps and findings from the EDA process:
+                The first step in the project was to perform <strong>Exploratory Data Analysis (EDA)</strong> to understand the dataset&apos;s structure, distribution, and relationships between features and the target variable. Below are the key steps and findings from the EDA process:
               </p>
 
               {/* Dataset Information */}

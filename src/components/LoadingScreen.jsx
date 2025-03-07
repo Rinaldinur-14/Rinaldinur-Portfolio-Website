@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import favicon from "src/assets/favicon.png";
 
+// eslint-disable-next-line react/prop-types
 export const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
   const [animationComplete, setAnimationComplete] = useState(false);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import ugLogo from "src/assets/docum/edu/UG.png";
 import us from "src/assets/docum/edu/u1.png";
 import ud from "src/assets/docum/edu/u2.png";
@@ -12,8 +12,10 @@ import da from "src/assets/docum/edu/da.jpg"
 import db from "src/assets/docum/edu/db.jpg"
 import dc from "src/assets/docum/edu/dc.jpg"
 
+// eslint-disable-next-line react/prop-types
 const Education = ({ onClose }) => {
-  const [currentAccreditationIndex, setCurrentAccreditationIndex] = useState(0);
+  // eslint-disable-next-line no-empty-pattern
+  const [] = useState(0);
   const [currentLSPIndex, setCurrentLSPIndex] = useState(0);
   const [currentGraduationIndex, setCurrentGraduationIndex] = useState(0);
   const lspImages = [ue, ul]; // LSP documentation
@@ -78,7 +80,7 @@ const Education = ({ onClose }) => {
               <strong>Gunadarma University</strong> is one of the leading private universities in Indonesia, known for its focus on technology, innovation, and practical education. Established in 1981, the university has consistently produced graduates who excel in various fields, particularly in engineering and information technology.
             </p>
             <p className="text-white text-xs md:text-base text-justify mt-4">
-              The Industrial Engineering program at Gunadarma University is accredited with an <strong>"Unggul" (Excellent)</strong> rating by the <strong>Lembaga Akreditasi Mandiri Program Studi Keteknikan (LAM Teknik)</strong>, as stated in the accreditation certificate (No. 0246/SK/LAM Teknik/AS/VIII/2023). This accreditation is valid from <strong>August 21, 2023, to August 20, 2028</strong>.
+              The Industrial Engineering program at Gunadarma University is accredited with an <strong>&quot;Unggul&quot; (Excellent)</strong> rating by the <strong>Lembaga Akreditasi Mandiri Program Studi Keteknikan (LAM Teknik)</strong>, as stated in the accreditation certificate (No. 0246/SK/LAM Teknik/AS/VIII/2023). This accreditation is valid from <strong>August 21, 2023, to August 20, 2028</strong>.
             </p>
             <div className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mt-5">
             <img
@@ -137,7 +139,7 @@ const Education = ({ onClose }) => {
             </p>
             <ul className="list-disc ml-5 space-y-2 text-left md:text-justify">
               <li>Provided instruction on <strong>ProModel 7.5</strong> and <strong>ProModel 2016</strong> software to over <strong>100 participants</strong>.</li>
-              <li>Covered both theoretical material and provided hands-on tutoring to ensure participants' understanding.</li>
+              <li>Covered both theoretical material and provided hands-on tutoring to ensure participants&apos; understanding.</li>
             </ul>
             <div className="flex justify-center mb-4">
               <img
@@ -156,7 +158,7 @@ const Education = ({ onClose }) => {
             </p>
             <ul className="list-disc ml-5 space-y-2 text-left md:text-justify">
               <li>Provided instruction on <strong>Manufacturing System Quality Control</strong> to over <strong>60 participants</strong>.</li>
-              <li>Covered both theoretical material and provided tutoring to ensure participants' success.</li>
+              <li>Covered both theoretical material and provided tutoring to ensure participants&apos; success.</li>
             </ul>
             <div className="flex justify-center mb-4 relative">
               <button
@@ -183,7 +185,7 @@ const Education = ({ onClose }) => {
               Graduation and Gratitude
             </h3>
             <p>
-              I successfully completed my <strong>sarjana's thesis</strong> and graduated in <strong>September 2024</strong>. This achievement would not have been possible without the unwavering support of my family, friends, and mentors. I am deeply grateful for their encouragement and guidance throughout my academic journey.
+              I successfully completed my <strong>sarjana&apos;s thesis</strong> and graduated in <strong>September 2024</strong>. This achievement would not have been possible without the unwavering support of my family, friends, and mentors. I am deeply grateful for their encouragement and guidance throughout my academic journey.
             </p>
             <div className="flex justify-center mb-4 relative">
               <button

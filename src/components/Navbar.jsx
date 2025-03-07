@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import headlog from "src/assets/headlog.svg";
 
@@ -12,6 +12,7 @@ const scrollToSection = (id) => {
   }
 };
 
+// eslint-disable-next-line react/prop-types
 export const Navbar = ({ menuOpen, setMenuOpen, isLightMode, setIsLightMode }) => {
 
 
@@ -44,7 +45,7 @@ export const Navbar = ({ menuOpen, setMenuOpen, isLightMode, setIsLightMode }) =
               className="font-mono text-lg md:text-xl lg:text-2xl font-bold text-white cursor-pointer"
             >
               {" "}
-              Rinaldi's
+              Rinaldi&apos;s
               <span className={`bg-clip-text text-transparent ${
                 isLightMode ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400' : 'bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600'
               } animate-gradient`}>

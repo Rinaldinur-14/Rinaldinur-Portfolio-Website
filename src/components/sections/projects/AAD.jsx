@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import ad from "src/assets/projects/AAD/VAAD.png";
 import ada from "src/assets/projects/AAD/AR_LOGO.png";
 import adb from "src/assets/projects/AAD/P_LOGO.png";
@@ -11,6 +11,7 @@ import ab from "src/assets/projects/AAD/ab.jpeg";
 
 
 
+// eslint-disable-next-line react/prop-types
 const AAD = ({ onClose }) => {
     const [currentDocIndex, setCurrentDocIndex] = useState(0);
     const [currentCertIndex, setCurrentCertIndex] = useState(0);

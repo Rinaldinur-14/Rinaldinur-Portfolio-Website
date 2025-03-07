@@ -1,9 +1,10 @@
-import React from 'react';
+import 'react';
 import dq_daa from "src/assets/certificates/DQ_DA/DQ_DAA.png";
 import dq_dae from "src/assets/certificates/DQ_DA/DQ_DAE.png";
 import dq_daml from "src/assets/certificates/DQ_DA/DQ_DAML.png";
 import dqa from "src/assets/certificates/DQ_DA/DQAA.png";
 
+// eslint-disable-next-line react/prop-types
 const DQ_DA = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -22,7 +23,7 @@ const DQ_DA = ({ onClose }) => {
 
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
-              <strong>DQLab</strong> is an online learning platform that offers specialized bootcamps and certification programs to help individuals develop skills in data analysis, machine learning, and programming. Through its practical and hands-on bootcamps, such as "Study Case Bootcamp Data Analyst with SQL & Python," "Study Case Bootcamp Data Analyst with Excel," and "Study Case Bootcamp Machine Learning & AI for Beginner," DQLab provides learners with the tools and knowledge needed to excel in data-driven fields. Participants who successfully complete these programs receive a certificate of completion, recognizing their achievement and newly acquired expertise.
+              <strong>DQLab</strong> is an online learning platform that offers specialized bootcamps and certification programs to help individuals develop skills in data analysis, machine learning, and programming. Through its practical and hands-on bootcamps, such as &quot;Study Case Bootcamp Data Analyst with SQL & Python,&quot; &quot;Study Case Bootcamp Data Analyst with Excel,&quot; and &quot;Study Case Bootcamp Machine Learning & AI for Beginner,&quot; DQLab provides learners with the tools and knowledge needed to excel in data-driven fields. Participants who successfully complete these programs receive a certificate of completion, recognizing their achievement and newly acquired expertise.
             </p>
           </div>
           <div className="flex flex-col items-center mb-2">

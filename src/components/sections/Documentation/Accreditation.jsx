@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import ls from "src/assets/docum/organz/l1.png";
 import ld from "src/assets/docum/organz/l2.jpeg";
 import is from "src/assets/docum/organz/i1.jpeg";
 import id from "src/assets/docum/organz/i2.jpeg";
 
+// eslint-disable-next-line react/prop-types
 const Accreditation = ({ onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const lamTeknikImages = [ls, ld]; // Images for LAM TEKNIK
@@ -99,7 +100,7 @@ const Accreditation = ({ onClose }) => {
                 <strong>Document Preparation</strong>: Prepared necessary documents and set up facilities for the accreditation assessment.
               </li>
               <li>
-                <strong>Facility Demonstration</strong>: Answered the assessor's questions and demonstrated the use of the facilities during the assessment.
+                <strong>Facility Demonstration</strong>: Answered the assessor&apos;s questions and demonstrated the use of the facilities during the assessment.
               </li>
             </ul>
 
@@ -149,7 +150,7 @@ const Accreditation = ({ onClose }) => {
                 <strong>Team Coordination</strong>: Coordinated assistants to prepare necessary documents and set up facilities for the accreditation assessment.
               </li>
               <li>
-                <strong>Facility Demonstration</strong>: Answered the assessor's questions and demonstrated the use of the facilities during the assessment.
+                <strong>Facility Demonstration</strong>: Answered the assessor&apos;s questions and demonstrated the use of the facilities during the assessment.
               </li>
             </ul>
 

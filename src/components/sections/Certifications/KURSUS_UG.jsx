@@ -1,4 +1,4 @@
-import React from 'react';
+import 'react';
 import ka from "src/assets/certificates/UG/ka.png";
 import kb from "src/assets/certificates/UG/kb.png";
 import kc from "src/assets/certificates/UG/kc.png";
@@ -8,6 +8,7 @@ import kf from "src/assets/certificates/UG/kf.png";
 import kg from "src/assets/certificates/UG/kg.png";
 import kh from "src/assets/certificates/UG/kh.png";
 
+// eslint-disable-next-line react/prop-types
 const KURSUS_UG = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>

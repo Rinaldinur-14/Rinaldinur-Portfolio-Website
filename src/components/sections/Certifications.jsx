@@ -283,6 +283,7 @@ const certifications = [
   },
 ];
 
+// eslint-disable-next-line react/prop-types
 export const Certifications = ({ isLightMode }) => {
   const [showRU_FD, setShowRU_FD] = useState(false);
   const [showOCC_FD, setShowOCC_FD] = useState(false);

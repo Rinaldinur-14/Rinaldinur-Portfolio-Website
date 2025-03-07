@@ -1,10 +1,11 @@
-import React from 'react';
+import 'react';
 import liaa from "src/assets/certificates/LIA/liaa.jpg";
 import liab from "src/assets/certificates/LIA/liab.jpg";
 import liac from "src/assets/certificates/LIA/liac.jpg";
 import liad from "src/assets/certificates/LIA/liad.jpg";
 import liae from "src/assets/certificates/LIA/liae.jpg";
 
+// eslint-disable-next-line react/prop-types
 const LIA = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -24,7 +25,7 @@ const LIA = ({ onClose }) => {
           {/* Introduction */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
-              <strong>LIA (Lembaga Bahasa LIA)</strong> is a prestigious language institution in Indonesia that offers a wide range of English courses for both adults and teens at various proficiency levels, including Elementary, Pre-Intermediate, Intermediate, and High-Intermediate. Through its structured and comprehensive programs, such as "English for Adults" and "English for Teens," LIA equips learners with the skills needed to achieve fluency and confidence in English. Participants who successfully complete these courses receive a certificate of achievement, recognizing their dedication and progress in mastering the language.
+              <strong>LIA (Lembaga Bahasa LIA)</strong> is a prestigious language institution in Indonesia that offers a wide range of English courses for both adults and teens at various proficiency levels, including Elementary, Pre-Intermediate, Intermediate, and High-Intermediate. Through its structured and comprehensive programs, such as &quot;English for Adults&quot; and &quot;English for Teens,&quot; LIA equips learners with the skills needed to achieve fluency and confidence in English. Participants who successfully complete these courses receive a certificate of achievement, recognizing their dedication and progress in mastering the language.
             </p>
           </div>
           <p className="text-white text-xs md:text-base text-justify">

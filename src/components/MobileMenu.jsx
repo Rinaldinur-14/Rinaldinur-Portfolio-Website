@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
@@ -10,6 +9,7 @@ const scrollToSection = (id) => {
   }
 };
 
+// eslint-disable-next-line react/prop-types
 export const MobileMenu = ({ menuOpen, setMenuOpen, isLightMode, setIsLightMode }) => {
 
   return (
