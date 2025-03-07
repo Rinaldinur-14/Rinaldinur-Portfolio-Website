@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "assets/index-pGq2GXt4.css";
+    link.href = "assets/index-CbMZzuum.css";
     document.head.appendChild(link);
   }, []);
 
