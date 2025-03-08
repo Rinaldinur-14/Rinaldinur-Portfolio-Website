@@ -8,7 +8,6 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
-      external: ['set-cookie-parser', 'turbo-stream'],
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
