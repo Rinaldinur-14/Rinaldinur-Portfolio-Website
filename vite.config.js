@@ -9,6 +9,7 @@ export default defineConfig({
     assetsDir: 'assets',
     rollupOptions: {
       external: ['react-router-dom', 'set-cookie-parser', 'turbo-stream'],
+      input: '/src/main.jsx',
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
