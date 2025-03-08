@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState, useEffect } from "react";
 import { RevealOnScroll } from "src/components/RevealOnScroll";
 import pw from "src/assets/projects/PORT_W/VPORT_W.png";
 import ml from "src/assets/projects/DB_ML/VDB_ML.png";
@@ -30,7 +30,7 @@ const projects = [
   // },
   {
     title: "Interactive and Responsive Portfolio Website Built with React, Vite, and Tailwind CSS",
-    description: "A fully responsive and interactive portfolio website showcasing my skills, projects, certifications, and contact information. Features include a hidden memory game, reveal-on-scroll animations, advanced search and sorting, and light/dark mode.",
+    description: "A fully responsive and interactive portfolio website showcasing my skills, projects, certifications, and contact information.",
     technologies: ["HTML", "React", "Vite", "Tailwind CSS", "JavaScript", "EmailJS", "GitHub", "Vercel", "DeepSeek AI"],
     image: pw, // Replace with your image path
     link: "#", // Replace with your project link
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     title: "Diabetes Progression Prediction Using Random Forest Regressor: A Machine Learning Approach",
-    description: "A Python-based machine learning project that predicts diabetes progression using the Random Forest Regressor. The project leverages the Diabetes dataset from Scikit-learn, which includes 10 baseline variables and a target variable measuring disease progression. The model achieved an R² score of 0.44 and an MSE of 2859.69, demonstrating moderate predictive accuracy.",
+    description: "A Python-based machine learning project that predicts diabetes progression using the Random Forest Regressor. The project leverages the Diabetes dataset from Scikit-learn, which includes 10 baseline variables and a target variable measuring disease progression.",
     technologies: ["Python", "Scikit-learn", "Random Forest Regressor", "Pandas", "Numpy", "Matplotlib", "Seaborn"],
     image: ml, // Ensure `ml` is defined as an image import
     link: "#", // Replace with actual link if available
@@ -46,7 +46,7 @@ const projects = [
   },
   {
     title: "Responsive Travel Agency Website with JavaScript Validation and Auto-Slide Banner",
-    description: "A responsive travel agency website built with HTML, CSS, and JavaScript. The website features an auto-slide banner, JavaScript form validation, and a user-friendly interface. Developed as part of the RevoU Software Engineering Mini Course, this project demonstrates foundational skills in front-end development and responsive design.",
+    description: "A responsive travel agency website built with HTML, CSS, and JavaScript. The website features an auto-slide banner, JavaScript form validation, and a user-friendly interface.",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design", "Git & GitHub", "DeepSeek AI"],
     image: vru, // Ensure `vru` is defined as an image import
     link: "#", // Replace with actual link if available
@@ -127,7 +127,6 @@ export const Projects = ({ isLightMode }) => {
   const [sortOrder, setSortOrder] = useState("");
   const [isSortMenuOpen, setIsSortMenuOpen] = useState(false);
 
-  const sortMenuRef = useRef(null);
 
   const handleViewToggle = () => {
     setShowAll(!showAll);
@@ -182,22 +181,30 @@ export const Projects = ({ isLightMode }) => {
     setIsSortMenuOpen(false); // Close the sort menu after selection
   };
 
-  // Close the sort menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (sortMenuRef.current && !sortMenuRef.current.contains(event.target)) {
-        setIsSortMenuOpen(false);
+  const useMediaQuery = (query) => {
+    const [matches, setMatches] = useState(false);
+  
+    useEffect(() => {
+      const media = window.matchMedia(query);
+      if (media.matches !== matches) {
+        setMatches(media.matches);
       }
-    };
+      const listener = () => setMatches(media.matches);
+      media.addListener(listener);
+      return () => media.removeListener(listener);
+    }, [matches, query]);
+  
+    return matches;
+  };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  const isMediumScreen = useMediaQuery("(min-width: 768px)");
+
 
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center py-20">
+    <section 
+      id="projects" 
+      className="min-h-screen flex items-center justify-center py-20"
+    >
       <RevealOnScroll>
         <div className="max-w-5xl mx-auto px-4">
           {/* Projects Heading with Count */}
@@ -242,7 +249,7 @@ export const Projects = ({ isLightMode }) => {
 
             {/* Sort Icon */}
             {isSearchVisible && (
-              <div className="absolute right-3 top-1/2 transform -translate-y-1/2" ref={sortMenuRef}>
+              <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <span
                   onClick={toggleSortMenu}
                   className={`material-symbols-outlined cursor-pointer bg-clip-text text-transparent animate-gradient ${
@@ -330,7 +337,7 @@ export const Projects = ({ isLightMode }) => {
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sortedProjects
-              .slice(0, showAll ? sortedProjects.length : 4)
+              .slice(0, showAll ? sortedProjects.length : isMediumScreen ? 4 : 2)
               .map((project, index) => (
                 <div
                   key={index}

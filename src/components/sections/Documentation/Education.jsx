@@ -127,7 +127,7 @@ const Education = ({ onClose }) => {
           {/* Beyond Education: Organizations and Projects */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
-              Beyond my academic pursuits, I actively participated in organizations, in projects, and assisted lecturers as an assistant instructor that enriched my skills and experiences. These activities allowed me to apply my knowledge in real-world scenarios and develop leadership, teamwork, and problem-solving abilities.
+              Beyond my academic pursuits, I actively participated in organizations, projects, and assisted lecturers as an assistant instructor that enriched my skills and experiences. These activities allowed me to apply my knowledge in real-world scenarios and develop leadership, teamwork, and problem-solving abilities.
             </p>
 
             {/* ProModel Workshop Instructor (u3) */}

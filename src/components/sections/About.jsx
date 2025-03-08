@@ -157,6 +157,8 @@ export const About = ({ isLightMode }) => {
               </div>
               <ul className="list-disc ml-5 text-xs md:text-base">
                 <li>Received PT Adaro Foundation Indonesia Scholarships</li>
+                <li>Instructor for Promodel Workshop</li>
+                <li>Assistant Instructor for Lembaga Sertifikasi Profesi (LSP)</li>
               </ul>
 
               {/* Education Documentation Button */}
@@ -182,6 +184,21 @@ export const About = ({ isLightMode }) => {
                 }`}>
                   Elementary Laboratory of Industrial Engineering at Gunadarma University
                 </h3>
+
+                {/* PJ */}
+                <div>
+                  <div className="flex justify-between items-center mb-2 mt-3 text-xs md:text-base">
+                    <h5>PIC of Assistants</h5>
+                    <span>(Jan 2024 - Jan 2025)</span>
+                  </div>
+                  <ul className="list-disc ml-5 text-xs md:text-base">
+                    <li>Coordinated and supervised a team of 30 assistants across 6 divisions.</li>
+                    <li>Led internal projects and collaborative activities organized by Gunadarma University.</li>
+                    <li>Hired over 21 assistants.</li>
+                  </ul>
+                </div>
+
+                {/* Assistant */}
                 <div className="flex justify-between items-center mb-2 text-xs md:text-base">
                   <h5>Laboratory Assistant</h5>
                   <span>(Aug 2022 - Jan 2025)</span>
@@ -205,19 +222,7 @@ export const About = ({ isLightMode }) => {
                   </ul>
                 </div>
 
-                {/* PJ */}
-                <div>
-                  <div className="flex justify-between items-center mb-2 mt-3 text-xs md:text-base">
-                    <h5>PIC of Assistants</h5>
-                    <span>(Jan 2024 - Jan 2025)</span>
-                  </div>
-                  <ul className="list-disc ml-5 text-xs md:text-base">
-                    <li>Coordinated and supervised a team of 30 assistants across 6 divisions.</li>
-                    <li>Acted as a liaison between the stakeholders, assistants, and practicum participants.</li>
-                    <li>Led internal projects and collaborative activities organized by Gunadarma University.</li>
-                    <li>Hired over 21 assistants.</li>
-                  </ul>
-                </div>
+
 
                 {/* Lab Documentation Button */}
                 <div className={`transition-colors text-xs md:text-base mt-4 ${
@@ -264,7 +269,7 @@ export const About = ({ isLightMode }) => {
             </CollapsibleSection>
 
             {/* Organization */}
-            {showAll && (
+
               <CollapsibleSection title="Organization" isLightMode={isLightMode}>
                 {/* IES */}
                 <div>
@@ -292,7 +297,7 @@ export const About = ({ isLightMode }) => {
                     6th Industrial Engineering Synergy (IES)</h3>
                 <div className="flex justify-between items-center mb-2 text-xs md:text-base">
                   <h5>Head of Public Relation Committee</h5>
-                  <span>(May 2023)</span>
+                  <span>(Aug 2024)</span>
                 </div>
                 <ul className="list-disc ml-5 text-xs md:text-base">
                     <li>Created designs for posters, virtual backgrounds, and certificates.</li>
@@ -322,7 +327,7 @@ export const About = ({ isLightMode }) => {
                   </h3>
                   <div className="flex justify-between items-center mb-2 text-xs md:text-base">
                     <h5>Assistant</h5>
-                    <span>(June 2023)</span>
+                    <span>(May 2023 - June 2023)</span>
                   </div>
                   <ul className="list-disc ml-5 text-xs md:text-base">
                     <li>Attended VR training activity.</li>
@@ -365,7 +370,7 @@ export const About = ({ isLightMode }) => {
                       ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
                       : 'bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500'
                   }`}>
-                    Gunadarma Industrial Engineering Fair (7th)
+                   7th Gunadarma Industrial Engineering Fair
                   </h3>
                   <div className="flex justify-between items-center mb-2 text-xs md:text-base">
                     <h5>Organizing Committee</h5>
@@ -419,10 +424,9 @@ export const About = ({ isLightMode }) => {
                   </div>
                 </div>
               </CollapsibleSection>
-            )}
+
 
             {/* Volunteering */}
-            {showAll && (
               <CollapsibleSection title="Volunteering" isLightMode={isLightMode}>
                 {/* ELITE Charity */}
                 <div>
@@ -455,19 +459,9 @@ export const About = ({ isLightMode }) => {
                   </div>
                 </div>
               </CollapsibleSection>
-            )}
 
-            {/* "View All" / "View Less" Button */}
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className={`mx-auto block mt-8 bg-clip-text text-transparent animate-fade-in animate-gradient ${
-                isLightMode
-                  ? 'bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400'
-                  : 'bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600'
-              }`}
-            >
-              {showAll ? "↑ View Less" : "View All ↓"}
-            </button>
+
+
           </div>
         </div>
       </RevealOnScroll>
@@ -488,7 +482,7 @@ export const About = ({ isLightMode }) => {
 // Collapsible Section Component
 // eslint-disable-next-line react/prop-types
 const CollapsibleSection = ({ title, children, isLightMode }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={`p-6 rounded-xl border hover:-translate-y-1 transition-all ${

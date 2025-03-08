@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RevealOnScroll } from "src/components/RevealOnScroll";
 import BKS from "src/assets/certificates/BK_FD/BK_FD.png";
 import DQA from "src/assets/certificates/DQ_DA/DQAA.png";
@@ -363,6 +363,24 @@ export const Certifications = ({ isLightMode }) => {
     setIsSortMenuOpen(false); // Close the sort menu after selection
   };
 
+  const useMediaQuery = (query) => {
+    const [matches, setMatches] = useState(false);
+  
+    useEffect(() => {
+      const media = window.matchMedia(query);
+      if (media.matches !== matches) {
+        setMatches(media.matches);
+      }
+      const listener = () => setMatches(media.matches);
+      media.addListener(listener);
+      return () => media.removeListener(listener);
+    }, [matches, query]);
+  
+    return matches;
+  };
+
+  const isMediumScreen = useMediaQuery("(min-width: 768px)");
+
   return (
     <section
       id="certifications"
@@ -500,7 +518,7 @@ export const Certifications = ({ isLightMode }) => {
           {/* Certifications Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sortedCertifications
-              .slice(0, showAll ? sortedCertifications.length : 4)
+              .slice(0, showAll ? sortedCertifications.length : isMediumScreen ? 4 : 2)
               .map((certification, index) => (
                 <div
                   key={index}

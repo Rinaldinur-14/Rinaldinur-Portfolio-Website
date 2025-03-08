@@ -53,7 +53,7 @@ const Accreditation = ({ onClose }) => {
 
           {/* LAM TEKNIK Section */}
           <h3 className="text-lg md:text-2xl font-bold mt-8 mb-4 text-white text-center">
-            LAM TEKNIK Accreditation (June 2023)
+            LAM TEKNIK Accreditation (May 2023 - June 2023)
           </h3>
 
           {/* LAM TEKNIK Carousel */}
