@@ -104,7 +104,7 @@ export const Contact = ({ isLightMode }) => {
           {/* Contact Me & Follow Me Sections */}
           <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-6">
             {/* Contact Me Section */}
-            <div className="text-center bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg animate-fade-in-up">
+            <div className="text-center bg-gray-800 p-8 rounded-lg shadow-lg animate-fade-in-up">
               <h4 className="text-xl font-semibold mb-5">Contact Me</h4>
               <div className="flex justify-center mx-14 space-x-14">
 
@@ -163,7 +163,7 @@ export const Contact = ({ isLightMode }) => {
             </div>
 
             {/* Follow Me Section */}
-            <div className="text-center bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg animate-fade-in-up">
+            <div className="text-center bg-gray-800 p-8 rounded-lg shadow-lg animate-fade-in-up">
               <h4 className="text-xl font-semibold mb-6">Follow Me</h4>
               <div className="flex justify-center space-x-6">
 
