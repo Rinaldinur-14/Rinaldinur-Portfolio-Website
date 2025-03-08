@@ -216,7 +216,7 @@ const PORT_W = ({ onClose }) => {
 
             <div className="transition-colors text-xs md:text-base mb-4 text-center text-blue-500">
               <a
-                href="https://your-vercel-deployment-link" // Replace with your Vercel link
+                href="https://rinaldinur-portfolio.vercel.app/" // Replace with your Vercel link
                 target="_blank"
                 rel="noopener noreferrer"
               >
