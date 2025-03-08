@@ -19,7 +19,7 @@ export default defineConfig({
     },
   },
   plugins: [react(), tailwindcss()],
-  base: "/rinaldinur-portfolio/",
+
   assetsInclude: ["**/*.JPG"],
   resolve: {
     alias: {
