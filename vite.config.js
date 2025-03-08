@@ -8,7 +8,7 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
-      external: ['react-router-dom', 'set-cookie-parser', 'turbo-stream'],
+      external: ['set-cookie-parser', 'turbo-stream'],
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
@@ -27,5 +27,3 @@ export default defineConfig({
     },
   },
 });
-
-
