@@ -33,14 +33,14 @@ const APT = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
-      <div className="bg-white/10 p-8 rounded-lg w-[70%] h-[90%] mx-4 overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white/10 p-8 rounded-lg w-[80%] h-[90%] mx-4 overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <button 
           onClick={onClose}
           className="absolute top-4 right-4 text-white hover:text-gray-300 text-2xl"
         >
           &times;
         </button>
-        <div className="space-y-4 pr-4">
+        <div className="space-y-4">
           {/* Title */}
           <h2 className="text-xl md:text-3xl font-bold mb-6 text-white text-center">
             Automated Practicum Pre-Test System Using Google Forms, Spreadsheets, and Veyon Master
@@ -84,7 +84,7 @@ const APT = ({ onClose }) => {
 
           <div className="space-y-4 text-white text-xs md:text-base text-justify mt-10">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-            Tools and Technologies
+            Tools Used
             </h3>
             <p>
               To achieve the project goals, I utilized the following tools and technologies:
@@ -101,7 +101,7 @@ const APT = ({ onClose }) => {
               <img
                 src={documentationImages[currentDocIndex]}
                 alt={`Documentation Image ${currentDocIndex + 1}`}
-                className="w-full max-w-40 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
+                className="w-full max-w-20 md:max-w-30 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
               />
               <button
                 onClick={goToNextDoc}

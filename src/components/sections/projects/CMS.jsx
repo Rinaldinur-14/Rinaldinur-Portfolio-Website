@@ -55,7 +55,7 @@ const CMS = ({ onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white/10 p-8 rounded-lg w-[70%] h-[90%] mx-4 overflow-y-auto"
+        className="bg-white/10 p-8 rounded-lg w-[80%] h-[90%] mx-4 overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -64,7 +64,7 @@ const CMS = ({ onClose }) => {
         >
           &times;
         </button>
-        <div className="space-y-4 pr-4">
+        <div className="space-y-4">
           {/* Title */}
           <h2 className="text-xl md:text-3xl font-bold mb-6 text-white text-center">
             Computer Management System Using Veyon Master

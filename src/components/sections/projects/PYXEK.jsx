@@ -46,7 +46,7 @@ const PYXEK = ({ onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-white/10 p-8 rounded-lg w-[70%] h-[90%] mx-4 overflow-y-auto"
+        className="bg-white/10 p-8 rounded-lg w-[80%] h-[90%] mx-4 overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -55,7 +55,7 @@ const PYXEK = ({ onClose }) => {
         >
           &times;
         </button>
-        <div className="space-y-4 pr-4">
+        <div className="space-y-4">
           {/* Title */}
           <h2 className="text-xl md:text-3xl font-bold mb-6 text-white text-center">
             EXE Terminator Generator: Automating Application Management
@@ -118,7 +118,7 @@ const PYXEK = ({ onClose }) => {
             {/* Why Python, Tkinter, and Pillow? */}
             <div className="space-y-4 text-white text-xs md:text-base text-justify mt-10">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-              Tools and Technologies
+              Tools Used
             </h3>
             To bring this project to life, I used the following tools and technologies:
 
@@ -133,7 +133,7 @@ const PYXEK = ({ onClose }) => {
             <img
               src={certificationImages[currentCertIndex]}
               alt={`Certification Image ${currentCertIndex + 1}`}
-              className="w-full max-w-40 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
+              className="w-full max-w-20 md:max-w-30 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
             />
             <button
               onClick={goToNextCert}

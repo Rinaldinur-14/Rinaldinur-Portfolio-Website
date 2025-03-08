@@ -6,14 +6,14 @@ import iso from "src/assets/certificates/UG/wb.png";
 const WO_UG = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
-      <div className="bg-white/10 p-8 rounded-lg w-[70%] h-[90%] mx-4 overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white/10 p-8 rounded-lg w-[80%] h-[90%] mx-4 overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <button 
           onClick={onClose}
           className="absolute top-4 right-4 text-white hover:text-gray-300 text-2xl"
         >
           &times;
         </button>
-        <div className="space-y-4 pr-4">
+        <div className="space-y-4">
           {/* Title */}
           <h2 className="text-xl md:text-3xl font-bold mb-6 text-white text-center">
             Gunadarma University Workshop Certificates
@@ -21,7 +21,7 @@ const WO_UG = ({ onClose }) => {
         <div className="space-y-4 pr-4">
           {/* Title */}
           <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-            Certificate of Training of Creating Simulation Using Promodel Software - Gunadarma University
+            Creating Simulation Using Promodel Software
           </h3>
 
           {/* ProModel Certificate Image */}
@@ -60,7 +60,7 @@ const WO_UG = ({ onClose }) => {
         <div className="space-y-4 pr-4 mt-10">
           {/* Title */}
           <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-          Certificate of Training of Introduction to ISO 14001 - Gunadarma University
+          Introduction to ISO 14001
           </h3>
 
           {/* ISO 14001 Certificate Image */}

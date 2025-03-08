@@ -12,14 +12,14 @@ import kh from "src/assets/certificates/UG/kh.png";
 const KURSUS_UG = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
-      <div className="bg-white/10 p-8 rounded-lg w-[70%] h-[90%] mx-4 overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white/10 p-8 rounded-lg w-[80%] h-[90%] mx-4 overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <button 
           onClick={onClose}
           className="absolute top-4 right-4 text-white hover:text-gray-300 text-2xl"
         >
           &times;
         </button>
-        <div className="space-y-4 pr-4">
+        <div className="space-y-4">
           {/* Title */}
           <h2 className="text-xl md:text-3xl font-bold mb-6 text-white text-center">
             Gunadarma University Training Certificates
@@ -28,7 +28,7 @@ const KURSUS_UG = ({ onClose }) => {
           {/* Certificate 1: Product Design (ka.png) */}
           <div className="space-y-4">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-              Certificate of Training in Product Design - Gunadarma University
+              Product Design
             </h3>
             <div className="flex flex-col items-center mb-6">
               <img
@@ -58,7 +58,7 @@ const KURSUS_UG = ({ onClose }) => {
           {/* Certificate 2: Process Planning (kb.png) */}
           <div className="space-y-4">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-              Certificate of Training in Process Planning - Gunadarma University
+              Process Planning
             </h3>
             <div className="flex flex-col items-center mb-6">
               <img
@@ -88,7 +88,7 @@ const KURSUS_UG = ({ onClose }) => {
           {/* Certificate 3: Production System Design (kc.png) */}
           <div className="space-y-4">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-              Certificate of Training in Production System Design - Gunadarma University
+             Production System Design
             </h3>
             <div className="flex flex-col items-center mb-6">
               <img
@@ -118,7 +118,7 @@ const KURSUS_UG = ({ onClose }) => {
           {/* Certificate 4: Evaluation of Production System Design (kd.png) */}
           <div className="space-y-4">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-              Certificate of Training in Evaluation of Production System Design - Gunadarma University
+              Evaluation of Production System Design 
             </h3>
             <div className="flex flex-col items-center mb-6">
               <img
@@ -148,7 +148,7 @@ const KURSUS_UG = ({ onClose }) => {
           {/* Certificate 5: Production Planning (ke.png) */}
           <div className="space-y-4">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-              Certificate of Training in Production Planning - Gunadarma University
+              Production Planning
             </h3>
             <div className="flex flex-col items-center mb-6">
               <img
@@ -178,7 +178,7 @@ const KURSUS_UG = ({ onClose }) => {
           {/* Certificate 6: Production Control (kf.png) */}
           <div className="space-y-4">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-              Certificate of Training in Production Control - Gunadarma University
+              Production Control
             </h3>
             <div className="flex flex-col items-center mb-6">
               <img
@@ -208,7 +208,7 @@ const KURSUS_UG = ({ onClose }) => {
           {/* Certificate 7: Quality Control (kg.png) */}
           <div className="space-y-4">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-              Certificate of Training in Quality Control - Gunadarma University
+              Quality Control
             </h3>
             <div className="flex flex-col items-center mb-6">
               <img
@@ -238,7 +238,7 @@ const KURSUS_UG = ({ onClose }) => {
           {/* Certificate 8: Quality Assurance (kh.png) */}
           <div className="space-y-4">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-              Certificate of Training in Quality Assurance - Gunadarma University
+              Quality Assurance 
             </h3>
             <div className="flex flex-col items-center mb-6">
               <img
