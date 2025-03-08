@@ -19,7 +19,7 @@ export const Contact = ({ isLightMode }) => {
     emailjs
       .sendForm(
         'service_s4k6toe', // Replace with your EmailJS service ID
-        'template_1cnmlqh', // Replace with your EmailJS template ID
+        'template_xuml2k8', // Replace with your EmailJS template ID
         form, // Pass the form element directly
         'Qok5WzyLV3DmmuEK0' // Replace with your EmailJS user ID
       )
@@ -61,7 +61,9 @@ export const Contact = ({ isLightMode }) => {
                   name="name" // Ensure this matches the placeholder in your EmailJS template
                   required
                   value={formData.name}
-                  className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                  className={`w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none ${
+                    isLightMode ? 'focus:border-orange-500 ' : 'focus:border-blue-500'
+                  } `}
                   placeholder="Name..."
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -77,7 +79,9 @@ export const Contact = ({ isLightMode }) => {
                   name="email" // Ensure this matches the placeholder in your EmailJS template
                   required
                   value={formData.email}
-                  className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                  className={`w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none ${
+                    isLightMode ? 'focus:border-orange-500 ' : 'focus:border-blue-500'
+                  } `}
                   placeholder="example@gmail.com"
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -93,7 +97,9 @@ export const Contact = ({ isLightMode }) => {
                   required
                   rows={5}
                   value={formData.message}
-                  className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                  className={`w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none ${
+                    isLightMode ? 'focus:border-orange-500 ' : 'focus:border-blue-500'
+                  } `}
                   placeholder="Your Message..."
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
