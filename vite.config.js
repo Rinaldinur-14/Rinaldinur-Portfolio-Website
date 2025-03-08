@@ -4,10 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/rinaldinur-portfolio/",
-  plugins: [react(), tailwindcss()],
-  assetsInclude: ["**/*.JPG"],
-
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -22,24 +18,14 @@ export default defineConfig({
       },
     },
   },
-
-  esbuild: {
-    loader: 'jsx',
-  },
+  plugins: [react(), tailwindcss()],
+  base: "/rinaldinur-portfolio/",
+  assetsInclude: ["**/*.JPG"],
   resolve: {
     alias: {
       src: "/src",
-      './runtimeConfig': './runtimeConfig.browser'
     },
   },
-  optimizeDeps: {
-    esbuildOptions: {
-      loader: {
-        '.js': 'jsx',
-      }
-    }
-  }
-
 });
 
 
