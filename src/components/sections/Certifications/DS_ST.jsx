@@ -3,7 +3,8 @@ import dss from "src/assets/certificates/DS_ST/ds1.png";
 import dsd from "src/assets/certificates/DS_ST/ds2.png";
 import dst from "src/assets/certificates/DS_ST/ds3.png";
 import dse from "src/assets/certificates/DS_ST/ds4.png";
-import dsf from "src/assets/certificates/DS_ST/ds5.png"; 
+import dsf from "src/assets/certificates/DS_ST/ds5.png";
+import ds6 from "src/assets/certificates/DS_ST/ds6.png"; // Import the new certificate image
 
 // eslint-disable-next-line react/prop-types
 const DS_ST = ({ onClose }) => {
@@ -24,7 +25,7 @@ const DS_ST = ({ onClose }) => {
 
           {/* Introduction */}
           <p className="text-white text-xs md:text-base text-justify">
-            In February 2025, I attended several online workshops hosted by <strong>DigitalSkola</strong>, a platform dedicated to providing free, high-quality learning opportunities in technology and digital skills. These workshops allowed me to expand my knowledge in various areas, from cloud computing to digital writing, and I received certificates of attendance for each event.
+            In February and March 2025, I attended several online workshops hosted by <strong>DigitalSkola</strong>, a platform dedicated to providing free, high-quality learning opportunities in technology and digital skills. These workshops allowed me to expand my knowledge in various areas, from cloud computing to data analytics, and I received certificates of attendance for each event.
           </p>
 
           {/* Certificate 1: Management Server AWS */}
@@ -120,8 +121,8 @@ const DS_ST = ({ onClose }) => {
             </p>
           </div>
 
-                    {/* Certificate 5: Data Science */}
-                    <div className="flex flex-col items-center mb-2 transition-transform duration-300 ease-in-out transform hover:scale-105">
+          {/* Certificate 5: Data Science */}
+          <div className="flex flex-col items-center mb-2 transition-transform duration-300 ease-in-out transform hover:scale-105">
             <img
               src={dsf}
               alt="Data Science Certificate"
@@ -143,6 +144,28 @@ const DS_ST = ({ onClose }) => {
             </p>
           </div>
 
+          {/* Certificate 6: Data Analytics */}
+          <div className="flex flex-col items-center mb-2 transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <img
+              src={ds6} // Use the new certificate image
+              alt="Data Analytics Certificate"
+              className="w-full max-w-md rounded-lg shadow-lg object-contain mb-4"
+            />
+          </div>
+
+          <div className = "transition-colors text-xs md:text-base mb-4 text-center text-blue-500">
+                <a
+                  href="https://cdn.digitalskola.co.id/certificates/ST/XXX/140-ST-XXX1-III-2025.png" // Update the link to the new certificate
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  View Certificate →
+                </a>
+         </div>
+         <div className="text-white text-xs md:text-base text-justify">
+            <p>
+              On <strong>March 7, 2025</strong>, I attended <strong>Skola Talk #94: Data Analytics</strong>. This event focused on how data analytics is transforming businesses. I learned practical techniques for cleaning and preparing data using Excel and SQL, manipulating data with Python, and presenting data effectively using Tableau. The workshop also provided tips for building a strong portfolio and career as a Data Analyst. Additionally, we simulated database operations using <strong>Dbeaver</strong>, a powerful database management tool, to understand how to interact with and analyze data stored in databases.
+            </p>
+          </div>
 
           {/* Closing Statement */}
           <p className="text-white text-xs md:text-base text-justify">

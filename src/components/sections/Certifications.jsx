@@ -2,7 +2,7 @@ import { useState } from "react";
 import { RevealOnScroll } from "src/components/RevealOnScroll";
 import BKS from "src/assets/certificates/BK_FD/BK_FD.png";
 import DQA from "src/assets/certificates/DQ_DA/DQAA.png";
-import DSA from "src/assets/certificates/DS_ST/ds4.png";
+import DSA from "src/assets/certificates/DS_ST/ds6.png";
 import IODADA from "src/assets/certificates/IODA_DA/ioda_da.png";
 import LA from "src/assets/certificates/LIA/liae.jpg";
 import OCCDAA from "src/assets/certificates/OCC_DA/OCC_DA.png";
@@ -49,10 +49,10 @@ const certifications = [
   {
     title: "Skola Talk - DigitalSkola",
     description: "Webinar series designed to educate participants on topics related to data science, machine learning, data analysis, and other digital skills. These sessions provide insights into industry transformation, career opportunities, and essential tools for professionals.",
-    technologies: ["AWS", "QA Engineering", "Postman", "Microsoft Excel", "Digital Writing", "Data Science"],
+    technologies: ["AWS", "QA Engineering", "Postman", "Microsoft Excel", "Digital Writing", "Data Science", "Data Analytics", "SQL", "DBeaver", "Data Visualization"],
     image: DSA,
     link: "#",
-    validationDate: "4 March 2025", // Add validation date
+    validationDate: "7 March 2025", // Add validation date
   },
   {
     title: "Frontend Fundamentals Bootcamp - OneCodeCamp",
