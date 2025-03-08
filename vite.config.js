@@ -19,8 +19,6 @@ export default defineConfig({
       },
     },
   },
-
-  base: "/rinaldinur-portfolio/",
   assetsInclude: ["**/*.JPG"],
   resolve: {
     alias: {
