@@ -32,6 +32,8 @@ export const Contact = ({ isLightMode }) => {
       });
   };
 
+  
+
   return (
     <section
       id="contact"
@@ -58,7 +60,7 @@ export const Contact = ({ isLightMode }) => {
                 <input
                   type="text"
                   id="name"
-                  name="name" // Ensure this matches the placeholder in your EmailJS template
+                  name="from_name" // Ensure this matches the placeholder in your EmailJS template
                   required
                   value={formData.name}
                   className={`w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none ${
@@ -76,7 +78,7 @@ export const Contact = ({ isLightMode }) => {
                 <input
                   type="email"
                   id="email"
-                  name="email" // Ensure this matches the placeholder in your EmailJS template
+                  name="from_email" // Ensure this matches the placeholder in your EmailJS template
                   required
                   value={formData.email}
                   className={`w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none ${
