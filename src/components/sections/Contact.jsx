@@ -44,7 +44,7 @@ export const Contact = ({ isLightMode }) => {
             </h1>
 
             <form
-              className="mx-auto max-w-3xl space-y-6 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
+              className="mx-auto max-w-3xl space-y-6 bg-gray-800 p-8 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
               onSubmit={handleSubmit}
             >
               <div className="relative">
