@@ -1,4 +1,9 @@
-import  { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css'; // Swiper core styles
+import 'swiper/css/navigation'; // Navigation module styles
+import 'swiper/css/pagination'; // Pagination module styles
 import eliteLogo from "src/assets/docum/exp/ELITE.png";
 import es from "src/assets/docum/exp/e1.png";
 import ed from "src/assets/docum/exp/e2.png";
@@ -9,17 +14,14 @@ import en from "src/assets/docum/exp/e6.jpeg";
 import eu from "src/assets/docum/exp/e7.jpeg";
 import ea from "src/assets/docum/exp/e8.jpg";
 import em from "src/assets/docum/exp/e9.jpeg";
-import ese from "src/assets/docum/exp/e10.png"
-import esb from "src/assets/docum/exp/e11.png"
-import fa from "src/assets/docum/exp/ea.jpg"
-import fb from "src/assets/docum/exp/eb.jpg"
-import fc from "src/assets/docum/exp/ec.jpg"
-
+import ese from "src/assets/docum/exp/e10.png";
+import esb from "src/assets/docum/exp/e11.png";
+import fa from "src/assets/docum/exp/ea.jpg";
+import fb from "src/assets/docum/exp/eb.jpg";
+import fc from "src/assets/docum/exp/ec.jpg";
 
 // eslint-disable-next-line react/prop-types
 const Lab = ({ onClose }) => {
-  const [currentCertIndex, setCurrentCertIndex] = useState(0);
-  const [currentDocIndex, setCurrentDocIndex] = useState(0);
   const certificationImages = [es, ed]; // Images for certification carousel
   const documentationImages = [et, ee, esb, ese, el, en, fc, eu, ea, em, fa, fb]; // Images for documentation carousel
 
@@ -29,30 +31,6 @@ const Lab = ({ onClose }) => {
       document.body.style.overflow = 'auto';
     };
   }, []);
-
-  const goToPreviousCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === 0 ? certificationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === certificationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const goToPreviousDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === 0 ? documentationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === documentationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -66,7 +44,7 @@ const Lab = ({ onClose }) => {
         <div className="space-y-4">
           {/* Title */}
           <h2 className="text-xl md:text-3xl font-bold mb-6 text-white text-center">
-            Laboratory Assistant at Elementary Laboratory of Industrial Engineering, Gunadarma University
+            Laboratory Assistant at Elementary Laboratory of Industrial Engineering at Gunadarma University
           </h2>
 
           {/* ELITE Logo and Description */}
@@ -77,29 +55,39 @@ const Lab = ({ onClose }) => {
               className="w-48 mb-4"
             />
             <p className="text-white text-xs md:text-base text-justify">
-            The Elementary Laboratory of Industrial Engineering (ELITE) at Gunadarma University is one of the three main laboratories in the Industrial Engineering major. ELITE is responsible for facilitating five key practicums: Probability Theory, Engineering Drawing, Statistical Inference, Manufacturing Information Systems, and Industrial Engineering Design 1. These practicums provide students with hands-on learning experiences that bridge theoretical knowledge and practical application in industrial engineering. As a Laboratory Assistant, I contributed to various roles and responsibilities across different divisions.
+              The Elementary Laboratory of Industrial Engineering (ELITE) at Gunadarma University is one of the three main laboratories in the Industrial Engineering major. ELITE is responsible for facilitating five key practicums: Probability Theory, Engineering Drawing, Statistical Inference, Manufacturing Information Systems, and Industrial Engineering Design 1. These practicums provide students with hands-on learning experiences that bridge theoretical knowledge and practical application in industrial engineering. As a Laboratory Assistant, I contributed to various roles and responsibilities across different divisions.
             </p>
           </div>
 
           {/* Certification Carousel (e1 and e2) */}
-          <div className="flex justify-center mb-4 relative">
-            <button
-              onClick={goToPreviousCert}
-              className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
+          <div className="mb-4">
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={10}
+              slidesPerView={1}
+              navigation={{
+                nextEl: '.swiper-button-next-cert',
+                prevEl: '.swiper-button-prev-cert',
+              }}
+              pagination={{ clickable: true }}
+              className="relative"
             >
+            <div className="swiper-button-prev-cert absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
               &larr;
-            </button>
-            <img
-              src={certificationImages[currentCertIndex]}
-              alt={`Certification Image ${currentCertIndex + 1}`}
-              className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-            />
-            <button
-              onClick={goToNextCert}
-              className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
+            </div>
+            <div className="swiper-button-next-cert absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
               &rarr;
-            </button>
+            </div>
+              {certificationImages.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={image}
+                    alt={`Certification Image ${index + 1}`}
+                    className="w-full h-100 rounded-lg shadow-lg object-contain mx-auto"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
           {/* View Certificate Button */}
@@ -174,24 +162,35 @@ const Lab = ({ onClose }) => {
             </p>
 
             {/* Documentation Carousel (e3 - e9) */}
-            <div className="flex justify-center items-center mt-6 relative">
-              <button
-                onClick={goToPreviousDoc}
-                className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
+            <div className="mt-6">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-doc',
+                  prevEl: '.swiper-button-prev-doc',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
               >
+                <div className="swiper-button-prev-doc absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
                 &larr;
-              </button>
-              <img
-                src={documentationImages[currentDocIndex]}
-                alt={`Documentation Image ${currentDocIndex + 1}`}
-                className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-              />
-              <button
-                onClick={goToNextDoc}
-                className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-              >
+              </div>
+              <div className="swiper-button-next-doc absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
                 &rarr;
-              </button>
+              </div>
+                {documentationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Documentation Image ${index + 1}`}
+                      className="w-full h-100 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
             </div>
           </div>
         </div>

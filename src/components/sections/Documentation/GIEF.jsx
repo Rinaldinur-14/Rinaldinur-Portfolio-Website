@@ -24,7 +24,7 @@ const GIEF = ({ onClose }) => {
     
             {/* Certificate Title */}
             <h2 className="text-xl md:text-3xl font-bold mb-6 text-white text-center">
-              Gunadarma Industrial Engineering Fair (GIEF) Experience
+              Gunadarma Industrial Engineering Fair (GIEF) Organizing Committee
             </h2>
     
             <div className="space-y-4 text-white text-xs md:text-base text-justify">

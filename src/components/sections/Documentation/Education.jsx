@@ -1,4 +1,9 @@
-import  { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css'; // Swiper core styles
+import 'swiper/css/navigation'; // Navigation module styles
+import 'swiper/css/pagination'; // Pagination module styles
 import ugLogo from "src/assets/docum/edu/UG.png";
 import us from "src/assets/docum/edu/u1.png";
 import ud from "src/assets/docum/edu/u2.png";
@@ -8,16 +13,12 @@ import ul from "src/assets/docum/edu/u5.jpeg";
 import un from "src/assets/docum/edu/u6.jpg";
 import uu from "src/assets/docum/edu/u7.jpg";
 import ua from "src/assets/docum/edu/u8.jpg";
-import da from "src/assets/docum/edu/da.jpg"
-import db from "src/assets/docum/edu/db.jpg"
-import dc from "src/assets/docum/edu/dc.jpg"
+import da from "src/assets/docum/edu/da.jpg";
+import db from "src/assets/docum/edu/db.jpg";
+import dc from "src/assets/docum/edu/dc.jpg";
 
 // eslint-disable-next-line react/prop-types
 const Education = ({ onClose }) => {
-  // eslint-disable-next-line no-empty-pattern
-  const [] = useState(0);
-  const [currentLSPIndex, setCurrentLSPIndex] = useState(0);
-  const [currentGraduationIndex, setCurrentGraduationIndex] = useState(0);
   const lspImages = [ue, ul]; // LSP documentation
   const graduationImages = [un, dc, uu, ua, da, db]; // Graduation documentation
 
@@ -27,30 +28,6 @@ const Education = ({ onClose }) => {
       document.body.style.overflow = 'auto';
     };
   }, []);
-
-  const goToPreviousLSP = () => {
-    setCurrentLSPIndex((prevIndex) =>
-      prevIndex === 0 ? lspImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextLSP = () => {
-    setCurrentLSPIndex((prevIndex) =>
-      prevIndex === lspImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const goToPreviousGraduation = () => {
-    setCurrentGraduationIndex((prevIndex) =>
-      prevIndex === 0 ? graduationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextGraduation = () => {
-    setCurrentGraduationIndex((prevIndex) =>
-      prevIndex === graduationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -69,7 +46,7 @@ const Education = ({ onClose }) => {
 
           {/* Gunadarma University Logo and Accreditation */}
           <div className="flex flex-col items-center mb-6">
-            <div className="flex justify-center  mb-4">
+            <div className="flex justify-center mb-4">
               <img
                 src={ugLogo}
                 alt="Gunadarma University Logo"
@@ -83,29 +60,27 @@ const Education = ({ onClose }) => {
               The Industrial Engineering program at Gunadarma University is accredited with an <strong>&quot;Unggul&quot; (Excellent)</strong> rating by the <strong>Lembaga Akreditasi Mandiri Program Studi Keteknikan (LAM Teknik)</strong>, as stated in the accreditation certificate (No. 0246/SK/LAM Teknik/AS/VIII/2023). This accreditation is valid from <strong>August 21, 2023, to August 20, 2028</strong>.
             </p>
             <div className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mt-5">
-            <img
+              <img
                 src={us}
                 alt="Industrial Engineering Accreditation"
                 className="w-full max-w-md rounded-lg shadow-lg object-contain"
               />
             </div>  
-            <div className = "transition-colors text-xs md:text-base mt-4  text-center text-blue-500">
-                    <a
-                      href="http://career.gunadarma.ac.id/sites/default/files/sertifikat_akreditasi_s1_teknik_industri_2023-2028.pdf"
-                      target="_blank" rel="noopener noreferrer"
-                    >
-                      View Certificate →
-                    </a>
+            <div className="transition-colors text-xs md:text-base mt-4 text-center text-blue-500">
+              <a
+                href="http://career.gunadarma.ac.id/sites/default/files/sertifikat_akreditasi_s1_teknik_industri_2023-2028.pdf"
+                target="_blank" rel="noopener noreferrer"
+              >
+                View Certificate →
+              </a>
             </div>
-
           </div>
 
           <p className="text-white text-xs md:text-base text-justify mt-4">
-              I pursued my <strong>Bachelor of Industrial Engineering</strong> at Gunadarma University from <strong>September 2020 to September 2024</strong>, achieving a GPA of <strong>3.72/4.00</strong>.
-              I have gained knowledge in key industrial engineering concepts, including supply chaint management (SCM), logistics, production planning, material requirements planning (MRP), ergonomics, statistical analysis, EHS (Environment, Health, and Safety), quality control, quality assurance etc.
-              During my studies, I was honored to receive the <strong>PT Adaro Foundation Indonesia Scholarship</strong>, which supported my academic journey.
-            </p>
-
+            I pursued my <strong>Bachelor of Industrial Engineering</strong> at Gunadarma University from <strong>September 2020 to September 2024</strong>, achieving a GPA of <strong>3.72/4.00</strong>.
+            I have gained knowledge in key industrial engineering concepts, including supply chain management (SCM), logistics, production planning, material requirements planning (MRP), ergonomics, statistical analysis, EHS (Environment, Health, and Safety), quality control, quality assurance, etc.
+            During my studies, I was honored to receive the <strong>PT Adaro Foundation Indonesia Scholarship</strong>, which supported my academic journey.
+          </p>
 
           {/* Scholarship (u2) */}
           <div className="flex justify-center mb-4">
@@ -115,15 +90,15 @@ const Education = ({ onClose }) => {
               className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
             />
           </div>
-          <div className = "transition-colors text-xs md:text-base mt-4 mb-4 text-center text-blue-500">
-                    <a
-                      href="https://drive.google.com/file/d/1DyvIVWrfw1b20JoPQP6hKB6iZWciohb3/view?usp=sharing"
-                      target="_blank" rel="noopener noreferrer"
-                    >
-                      View Document →
-                    </a>
-            </div>
-          
+          <div className="transition-colors text-xs md:text-base mt-4 mb-4 text-center text-blue-500">
+            <a
+              href="https://drive.google.com/file/d/1DyvIVWrfw1b20JoPQP6hKB6iZWciohb3/view?usp=sharing"
+              target="_blank" rel="noopener noreferrer"
+            >
+              View Document →
+            </a>
+          </div>
+
           {/* Beyond Education: Organizations and Projects */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
@@ -160,51 +135,75 @@ const Education = ({ onClose }) => {
               <li>Provided instruction on <strong>Manufacturing System Quality Control</strong> to over <strong>60 participants</strong>.</li>
               <li>Covered both theoretical material and provided tutoring to ensure participants&apos; success.</li>
             </ul>
-            <div className="flex justify-center mb-4 relative">
-              <button
-                onClick={goToPreviousLSP}
-                className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
+            <div className="mb-4">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-lsp',
+                  prevEl: '.swiper-button-prev-lsp',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
               >
+              {/* Navigation Arrows */}
+              <div className="swiper-button-prev-lsp absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
                 &larr;
-              </button>
-              <img
-                src={lspImages[currentLSPIndex]}
-                alt={`LSP Documentation ${currentLSPIndex + 1}`}
-                className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-              />
-              <button
-                onClick={goToNextLSP}
-                className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-              >
+              </div>
+              <div className="swiper-button-next-lsp absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
                 &rarr;
-              </button>
+              </div>
+                {lspImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`LSP Documentation ${index + 1}`}
+                      className="w-full h-96 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
             </div>
 
             {/* Graduation and Gratitude (u6 - u8) */}
-            <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4  text-white">
+            <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white">
               Graduation and Gratitude
             </h3>
             <p>
               I successfully completed my <strong>sarjana&apos;s thesis</strong> and graduated in <strong>September 2024</strong>. This achievement would not have been possible without the unwavering support of my family, friends, and mentors. I am deeply grateful for their encouragement and guidance throughout my academic journey.
             </p>
-            <div className="flex justify-center mb-4 relative">
-              <button
-                onClick={goToPreviousGraduation}
-                className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
+            <div className="mt-6">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-graduation',
+                  prevEl: '.swiper-button-prev-graduation',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
               >
+             {/* Navigation Arrows */}
+              <div className="swiper-button-prev-graduation absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
                 &larr;
-              </button>
-              <img
-                src={graduationImages[currentGraduationIndex]}
-                alt={`Graduation Documentation ${currentGraduationIndex + 1}`}
-                className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-              />
-              <button
-                onClick={goToNextGraduation}
-                className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-              >
+              </div>
+              <div className="swiper-button-next-graduation absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
                 &rarr;
-              </button>
+              </div>
+                {graduationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Graduation Documentation ${index + 1}`}
+                      className="w-full h-96 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+
             </div>
           </div>
         </div>

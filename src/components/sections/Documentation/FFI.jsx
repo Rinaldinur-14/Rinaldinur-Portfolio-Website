@@ -1,4 +1,9 @@
-import  { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css'; // Swiper core styles
+import 'swiper/css/navigation'; // Navigation module styles
+import 'swiper/css/pagination'; // Pagination module styles
 import ffiLogo from "src/assets/docum/exp/FFI.png";
 import fs from "src/assets/docum/exp/f1.png";
 import fd from "src/assets/docum/exp/f2.jpg";
@@ -7,8 +12,7 @@ import fe from "src/assets/docum/exp/f4.JPG";
 
 // eslint-disable-next-line react/prop-types
 const FFI = ({ onClose }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const internshipImages = [fd, ft, fe]; // Images for the carousel (f2 and f3)
+  const internshipImages = [fd, ft, fe]; // Images for the carousel
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -16,18 +20,6 @@ const FFI = ({ onClose }) => {
       document.body.style.overflow = 'auto';
     };
   }, []);
-
-  const goToPrevious = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? internshipImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === internshipImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -41,7 +33,7 @@ const FFI = ({ onClose }) => {
         <div className="space-y-4">
           {/* Title */}
           <h2 className="text-xl md:text-3xl font-bold mb-6 text-white text-center">
-            Internship at PT Frisian Flag Indonesia (FFI)
+            Internship at PT Frisian Flag Indonesia (FFI) as Production Intern
           </h2>
 
           {/* FFI Logo and Description */}
@@ -105,27 +97,38 @@ const FFI = ({ onClose }) => {
               I am grateful for the opportunity to contribute to PT Frisian Flag Indonesia and look forward to applying the knowledge and skills I gained in my future endeavors.
             </p>
 
-          {/* Carousel for f2 and f3 */}
-          <div className="flex justify-center items-center mt-6 relative">
-            <button
-              onClick={goToPrevious}
-              className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &larr;
-            </button>
-            <img
-              src={internshipImages[currentImageIndex]}
-              alt={`Internship Image ${currentImageIndex + 1}`}
-              className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-            />
-            <button
-              onClick={goToNext}
-              className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &rarr;
-            </button>
-          </div>
+            {/* Carousel for f2, f3, and f4 */}
+            <div className="mt-6">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-ffi',
+                  prevEl: '.swiper-button-prev-ffi',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
+              >
+              {/* Navigation Arrows */}
+              <div className="swiper-button-prev-ffi absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                &larr;
+              </div>
+              <div className="swiper-button-next-ffi absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                &rarr;
+              </div>
+                {internshipImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Internship Image ${index + 1}`}
+                      className="w-full h-96 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
 
+            </div>
           </div>
         </div>
       </div>

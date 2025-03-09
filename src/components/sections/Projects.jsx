@@ -9,105 +9,90 @@ import ad from "src/assets/projects/AAD/VAAD.png";
 import pyk from "src/assets/projects/PYXEK/VPYXEK.png";
 import pyx from "src/assets/projects/PYXE/VPYXE.png";
 import aul from "src/assets/projects/AULOG/VAULOG.png";
-import DB_ML from "src/components/sections//projects/DB_ML";
-import RUW from "src/components/sections//projects/RUW";
-import PYXE from "src/components/sections//projects/PYXE";
-import AULOG from "src/components/sections//projects/AULOG";
-import PYXEK from "src/components/sections//projects/PYXEK";
+import DB_ML from "src/components/sections/projects/DB_ML";
+import RUW from "src/components/sections/projects/RUW";
+import PYXE from "src/components/sections/projects/PYXE";
+import AULOG from "src/components/sections/projects/AULOG";
+import PYXEK from "src/components/sections/projects/PYXEK";
 import APT from "src/components/sections/projects/APT";
 import AAD from "src/components/sections/projects/AAD";
 import CMS from "src/components/sections/projects/CMS";
 import PORT_W from "src/components/sections/projects/PORT_W";
 
 const projects = [
-  // {
-  //   title: "",
-  //   description: "",
-  //   technologies: ["", "", "", ""],
-  //   image: ,
-  //   link: "#",
-  //   validationDate: "", // Added validation date
-  // },
   {
     title: "Interactive and Responsive Portfolio Website Built with React, Vite, and Tailwind CSS",
     description: "A fully responsive and interactive portfolio website showcasing my skills, projects, certifications, and contact information.",
     technologies: ["HTML", "React", "Vite", "Tailwind CSS", "JavaScript", "EmailJS", "GitHub", "Vercel", "DeepSeek AI"],
-    image: pw, // Replace with your image path
-    link: "#", // Replace with your project link
-    validationDate: "18 February 2025 - 7 March 2025", // Updated validation date
+    image: pw,
+    link: "#",
+    validationDate: "18 February 2025 - 7 March 2025",
   },
   {
     title: "Diabetes Progression Prediction Using Random Forest Regressor: A Machine Learning Approach",
     description: "A Python-based machine learning project that predicts diabetes progression using the Random Forest Regressor. The project leverages the Diabetes dataset from Scikit-learn, which includes 10 baseline variables and a target variable measuring disease progression.",
     technologies: ["Python", "Scikit-learn", "Random Forest Regressor", "Pandas", "Numpy", "Matplotlib", "Seaborn"],
-    image: ml, // Ensure `ml` is defined as an image import
-    link: "#", // Replace with actual link if available
-    validationDate: "27 February 2025", // Added validation date
+    image: ml,
+    link: "#",
+    validationDate: "27 February 2025",
   },
   {
     title: "Responsive Travel Agency Website with JavaScript Validation and Auto-Slide Banner",
     description: "A responsive travel agency website built with HTML, CSS, and JavaScript. The website features an auto-slide banner, JavaScript form validation, and a user-friendly interface.",
     technologies: ["HTML", "CSS", "JavaScript", "Responsive Design", "Git & GitHub", "DeepSeek AI"],
-    image: vru, // Ensure `vru` is defined as an image import
-    link: "#", // Replace with actual link if available
-    validationDate: "26 February 2025", // Added validation date
+    image: vru,
+    link: "#",
+    validationDate: "26 February 2025",
   },
   {
     title: "Python to EXE Converter: Easily Convert Python Scripts into Custom Executables with a User-Friendly Interface",
     description: "A Python-based application with a Tkinter GUI that simplifies the process of converting Python scripts into executable files. It includes features like customizable output names, icons, admin privileges, and automatic cleanup of residual files.",
     technologies: ["Python", "Tkinter", "PyInstaller", "Pillow", "DeepSeek AI"],
-    image: pyx, // Replace with the actual image path
+    image: pyx,
     link: "#",
-    validationDate: "23 November 2023 - 26 November 2023", // Added validation date
+    validationDate: "23 November 2023 - 26 November 2023",
   },
   {
     title: "Web Automated Login System for Gunadarma University Wifi Access Using Python and Selenium",
     description: "A Python-based automation tool that streamlines the login process for Gunadarma University's wifi network. Using Selenium, the tool automates credential input and login, reducing manual effort, and improving efficiency in the Elementary Laboratory of Industrial Engineering.",
     technologies: ["Python", "Selenium", "Visual Studio Code", "Veyon Master", "ChatGPT AI"],
-    image: aul, // Ensure `aul` is defined as an image import
-    link: "#", // Replace with actual link if available
-    validationDate: "8 November 2023 - 10 November 2023", // Added validation date
+    image: aul,
+    link: "#",
+    validationDate: "8 November 2023 - 10 November 2023",
   },
   {
     title: "EXE Terminator Generator: Easily Create Custom Tools to Manage and Stop Unwanted Applications.",
     description: "A Python-based tool with a Tkinter GUI that automates the process of closing applications on Windows systems. It generates custom .exe files to terminate specified applications, featuring icon customization, admin privileges, and real-time progress indication.",
     technologies: ["Python", "Tkinter", "Pillow", "PyInstaller", "Taskkill Command", "DeepSeek AI"],
-    image: pyk, // Ensure `pyk` is defined as an image import
-    link: "#", // Replace with actual link if available
-    validationDate: "23 October 2023 - 27 October 2023", // Added validation date
+    image: pyk,
+    link: "#",
+    validationDate: "23 October 2023 - 27 October 2023",
   },
   {
     title: "Automated Practicum Pre-Test System Using Google Forms, Spreadsheets, and Veyon Master",
     description: "A system designed to automate the practicum pre-test process, ensuring efficiency, fairness, and reduced paper usage. It integrates Google Forms for test administration, Google Spreadsheets for automated result calculation and storage, and Veyon Master for real-time monitoring and control during the test.",
     technologies: ["Google Forms", "Google Spreadsheets (IF, IFERROR, XLOOKUP, ImportRange)", "Veyon Master"],
-    image: ap, // Ensure 'ap' is defined as the image path for this project
-    link: "#", // Add a relevant link if available
-    validationDate: "5 October 2023 - 9 October 2023", // Corrected the date format and timeline
+    image: ap,
+    link: "#",
+    validationDate: "5 October 2023 - 9 October 2023",
   },
   {
     title: "Computer Management System Using Veyon Master",
     description: "Designed and implemented a centralized system to efficiently monitor, control, and manage multiple computers in a laboratory environment using Veyon Master. The system streamlined tasks such as remote power management, application control, screen locking, and file distribution, significantly reducing manual effort and improving operational efficiency.",
     technologies: ["Veyon Master", "Public-Key Cryptography", "Network Configuration", "System Administration"],
-    image: vc, // Replace with your project image
-    link: "#", // Add a link to the project if available
+    image: vc,
+    link: "#",
     validationDate: "2 October 2023 - 5 October 2023",
   },
   {
     title: "Automated QR Code-Based Attendance System for Practicum Using Virtual Cards and Spreadsheet Integration",
     description: "Developed a paperless attendance system using QR codes and virtual cards to streamline attendance tracking in the Elementary Laboratory of Industrial Engineering at Gunadarma University. The system integrates QR code scanning with spreadsheet automation, reducing manual effort and promoting sustainability.",
-    technologies: [
-      "Spreadsheet (XLOOKUP, IF, TIME, IFERROR)",
-      "QRExplorer",
-      "Photopea",
-      "Scan It to Office",
-      "Advance Renamer"
-    ],
+    technologies: ["Spreadsheet (XLOOKUP, IF, TIME, IFERROR)", "QRExplorer", "Photopea", "Scan It to Office", "Advance Renamer"],
     image: ad,
     link: "#",
-    validationDate: "28 July 2023 - 24 August 2023", // Added validation date
+    validationDate: "28 July 2023 - 24 August 2023",
   },
 ];
-
 
 // eslint-disable-next-line react/prop-types
 export const Projects = ({ isLightMode }) => {
@@ -126,7 +111,6 @@ export const Projects = ({ isLightMode }) => {
   const [sortBy, setSortBy] = useState("");
   const [sortOrder, setSortOrder] = useState("");
   const [isSortMenuOpen, setIsSortMenuOpen] = useState(false);
-
 
   const handleViewToggle = () => {
     setShowAll(!showAll);
@@ -183,7 +167,7 @@ export const Projects = ({ isLightMode }) => {
 
   const useMediaQuery = (query) => {
     const [matches, setMatches] = useState(false);
-  
+
     useEffect(() => {
       const media = window.matchMedia(query);
       if (media.matches !== matches) {
@@ -193,16 +177,15 @@ export const Projects = ({ isLightMode }) => {
       media.addListener(listener);
       return () => media.removeListener(listener);
     }, [matches, query]);
-  
+
     return matches;
   };
 
   const isMediumScreen = useMediaQuery("(min-width: 768px)");
 
-
   return (
-    <section 
-      id="projects" 
+    <section
+      id="projects"
       className="min-h-screen flex items-center justify-center py-20"
     >
       <RevealOnScroll>
@@ -335,176 +318,93 @@ export const Projects = ({ isLightMode }) => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {sortedProjects
               .slice(0, showAll ? sortedProjects.length : isMediumScreen ? 4 : 2)
-              .map((project, index) => (
-                <div
-                  key={index}
-                  className={`p-6 rounded-xl border hover:-translate-y-1 transition ${
-                    isLightMode
-                      ? "border-orange-500/60 shadow-[0_2px_8px_rgba(249,115,22,0.2)] lg:border-white/10 lg:hover:border-orange-500/60 lg:hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]"
-                      : "border-blue-500/60 shadow-[0_2px_8px_rgba(59,130,246,0.2)] lg:border-white/10 lg:hover:border-blue-500/60 lg:hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]"
-                  }`}
-                >
-                  <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                    {project.title}
-                  </h3>
+              .map((project, index) => {
+                // Determine which modal to open based on the project title
+                const handleClick = () => {
+                  switch (project.title) {
+                    case "Interactive and Responsive Portfolio Website Built with React, Vite, and Tailwind CSS":
+                      setShowPORT_W(true);
+                      break;
+                    case "Diabetes Progression Prediction Using Random Forest Regressor: A Machine Learning Approach":
+                      setShowDB_ML(true);
+                      break;
+                    case "Responsive Travel Agency Website with JavaScript Validation and Auto-Slide Banner":
+                      setShowRUW(true);
+                      break;
+                    case "Python to EXE Converter: Easily Convert Python Scripts into Custom Executables with a User-Friendly Interface":
+                      setShowPYXE(true);
+                      break;
+                    case "Web Automated Login System for Gunadarma University Wifi Access Using Python and Selenium":
+                      setShowAULOG(true);
+                      break;
+                    case "EXE Terminator Generator: Easily Create Custom Tools to Manage and Stop Unwanted Applications.":
+                      setShowPYXEK(true);
+                      break;
+                    case "Automated Practicum Pre-Test System Using Google Forms, Spreadsheets, and Veyon Master":
+                      setShowAPT(true);
+                      break;
+                    case "Computer Management System Using Veyon Master":
+                      setShowCMS(true);
+                      break;
+                    case "Automated QR Code-Based Attendance System for Practicum Using Virtual Cards and Spreadsheet Integration":
+                      setShowAAD(true);
+                      break;
+                    default:
+                      break;
+                  }
+                };
 
-                  <div className="flex justify-center mb-4">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-64 md:w-80 max-h-48 object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-                    />
-                  </div>
+                return (
+                  <button
+                    key={index}
+                    onClick={handleClick}
+                    className={`p-6 rounded-xl border hover:-translate-y-1 transition text-left w-full ${
+                      isLightMode
+                        ? "border-orange-500/60 shadow-[0_2px_8px_rgba(249,115,22,0.2)] lg:border-white/10 lg:hover:border-orange-500/60 lg:hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]"
+                        : "border-blue-500/60 shadow-[0_2px_8px_rgba(59,130,246,0.2)] lg:border-white/10 lg:hover:border-blue-500/60 lg:hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]"
+                    }`}
+                  >
+                    <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                      {project.title}
+                    </h3>
 
-                  <p className="mb-4 text-sm md:text-base text-center">
-                    {project.description}
-                  </p>
+                    <div className="flex justify-center mb-4">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-64 md:w-80 max-h-48 object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
+                      />
+                    </div>
 
-                  <div className="flex flex-wrap gap-2 mb-4 justify-center py-4">
-                    {project.technologies.map((tech, key) => (
-                      <span
-                        key={key}
-                        className={`py-1 px-3 rounded-full text-xs md:text-sm transition-all ${
-                          isLightMode
-                            ? "bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]"
-                            : "bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)]"
-                        }`}
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                    <p className="mb-4 text-sm md:text-base text-center">
+                      {project.description}
+                    </p>
 
-                  {/* Validation Date */}
-                  <div className="text-center text-sm text-white mt-3 mb-7">
-                    {project.validationDate}
-                  </div>
+                    <div className="flex flex-wrap gap-2 mb-4 justify-center py-4">
+                      {project.technologies.map((tech, key) => (
+                        <span
+                          key={key}
+                          className={`py-1 px-3 rounded-full text-xs md:text-sm transition-all ${
+                            isLightMode
+                              ? "bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]"
+                              : "bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)]"
+                          }`}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
 
-                  
-
-                  <div>
-                  {project.title === "Interactive and Responsive Portfolio Website Built with React, Vite, and Tailwind CSS" && (
-                      <button
-                        onClick={() => setShowPORT_W(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Project →
-                      </button>
-                    )}
-
-                    {project.title === "Diabetes Progression Prediction Using Random Forest Regressor: A Machine Learning Approach" && (
-                      <button
-                        onClick={() => setShowDB_ML(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Project →
-                      </button>
-                    )}
-
-                    {project.title === "Responsive Travel Agency Website with JavaScript Validation and Auto-Slide Banner" && (
-                      <button
-                        onClick={() => setShowRUW(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Project →
-                      </button>
-                    )}
-
-                    {project.title === "Python to EXE Converter: Easily Convert Python Scripts into Custom Executables with a User-Friendly Interface" && (
-                      <button
-                        onClick={() => setShowPYXE(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Project →
-                      </button>
-                    )}
-
-                    {project.title === "Web Automated Login System for Gunadarma University Wifi Access Using Python and Selenium" && (
-                      <button
-                        onClick={() => setShowAULOG(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Project →
-                      </button>
-                    )}
-
-                    {project.title === "EXE Terminator Generator: Easily Create Custom Tools to Manage and Stop Unwanted Applications." && (
-                      <button
-                        onClick={() => setShowPYXEK(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Project →
-                      </button>
-                    )}
-
-                    {project.title === "Automated Practicum Pre-Test System Using Google Forms, Spreadsheets, and Veyon Master" && (
-                      <button
-                        onClick={() => setShowAPT(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Project →
-                      </button>
-                    )}
-
-                    {project.title === "Computer Management System Using Veyon Master" && (
-                      <button
-                        onClick={() => setShowCMS(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Project →
-                      </button>
-                    )}
-
-                    {project.title === "Automated QR Code-Based Attendance System for Practicum Using Virtual Cards and Spreadsheet Integration" && (
-                      <button
-                        onClick={() => setShowAAD(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Project →
-                      </button>
-                    )}
-                  </div>
-                </div>
-              ))}
+                    {/* Validation Date */}
+                    <div className="text-center text-sm text-white mt-1">
+                      {project.validationDate}
+                    </div>
+                  </button>
+                );
+              })}
           </div>
 
           {/* View All / View Less Button */}

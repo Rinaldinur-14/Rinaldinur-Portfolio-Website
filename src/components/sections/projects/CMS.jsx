@@ -1,4 +1,9 @@
-import  { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css"; // Swiper core styles
+import "swiper/css/navigation"; // Navigation module styles
+import "swiper/css/pagination"; // Pagination module styles
 import VL from "src/assets/projects/CMS/VEYON_LOGO.png";
 import VCMS from "src/assets/projects/CMS/VCMS.png";
 import vcb from "src/assets/projects/CMS/vcb.jpg";
@@ -13,10 +18,8 @@ import vz from "src/assets/projects/CMS/vz.mp4";
 
 // eslint-disable-next-line react/prop-types
 const CMS = ({ onClose }) => {
-  const [currentCertIndex, setCurrentCertIndex] = useState(0);
-  const [currentDocIndex, setCurrentDocIndex] = useState(0);
-  const certificationImages = [vcb, vcc];
-  const documentationImages = [ia, ib, ic, id, ie];
+  const certificationImages = [vcb, vcc]; // Images for certification carousel
+  const documentationImages = [ia, ib, ic, id, ie]; // Images for documentation carousel
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -24,30 +27,6 @@ const CMS = ({ onClose }) => {
       document.body.style.overflow = "auto";
     };
   }, []);
-
-  const goToPreviousCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === 0 ? certificationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === certificationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const goToPreviousDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === 0 ? documentationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === documentationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
   return (
     <div
@@ -69,7 +48,8 @@ const CMS = ({ onClose }) => {
           <h2 className="text-xl md:text-3xl font-bold mb-6 text-white text-center">
             Computer Management System Using Veyon Master
           </h2>
-          {/*Image */}
+
+          {/* Image */}
           <div className="flex flex-col items-center mb-2">
             <img
               src={VCMS}
@@ -99,22 +79,6 @@ const CMS = ({ onClose }) => {
               With limited human resources, the manual processes we relied on
               were not only time-consuming but also prone to errors, creating
               inefficiencies that slowed down daily operations.
-            </p>
-          </div>
-
-          <div className="space-y-4 text-white text-xs md:text-base text-justify">
-            <p>
-              One day, while reflecting on the problem, I remembered how
-              internet cafes (or warnet, as we call them in Indonesia)
-              efficiently managed dozens of computers using centralized control
-              systems. Inspired by this, I wondered if a similar approach could
-              work for our laboratory. I began researching computer management
-              tools and stumbled upon Veyon, an open-source software designed
-              for monitoring and controlling multiple computers. Intrigued by
-              its potential, I spent hours exploring its features through online
-              resources, tutorials, and hands-on experimentation. I dove into
-              its features, experimenting and implementing a system that would
-              transform how the lab&apos;s computer operated.
             </p>
           </div>
 
@@ -159,7 +123,7 @@ const CMS = ({ onClose }) => {
               Why Veyon?
             </h3>
             <p>Choosing Veyon was a no-brainer. Here’s why:</p>
-            {/*Image */}
+            {/* Image */}
             <div className="flex flex-col items-center mb-2">
               <img
                 src={VL}
@@ -201,7 +165,6 @@ const CMS = ({ onClose }) => {
             </ul>
           </div>
 
-
           {/* How It Works */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify mt-10">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
@@ -209,30 +172,40 @@ const CMS = ({ onClose }) => {
             </h3>
             <p>Here’s how I implemented the system</p>
 
-            {/* Carousel  */}
-            <div className="flex justify-center mb-4 relative">
-              <button
-                onClick={goToPreviousCert}
-                className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
+            {/* Certification Carousel */}
+            <div className="mb-4">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-cert',
+                  prevEl: '.swiper-button-prev-cert',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
               >
-                &larr;
-              </button>
-              <img
-                src={certificationImages[currentCertIndex]}
-                alt={`Certification Image ${currentCertIndex + 1}`}
-                className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-              />
-              <button
-                onClick={goToNextCert}
-                className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-              >
-                &rarr;
-              </button>
+                <div className="swiper-button-prev-cert absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &larr;
+                </div>
+                <div className="swiper-button-next-cert absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &rarr;
+                </div>
+                {certificationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Certification Image ${index + 1}`}
+                      className="w-full h-80 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
 
             <ul className="list-decimal ml-5 space-y-2 text-left md:text-justify">
               <li>
-                <strong>Installation:</strong>I installed Veyon Master on the
+                <strong>Installation:</strong> I installed Veyon Master on the
                 central computer and Veyon Service on all client computers. To
                 ensure a smooth setup, I collaborated with my friends from the
                 maintenance division, who assisted me in installing the software
@@ -271,8 +244,8 @@ const CMS = ({ onClose }) => {
             </p>
           </div>
 
-                    {/* Key Features */}
-                    <div className="space-y-4 text-white text-xs md:text-base text-justify mt-10">
+          {/* Key Features */}
+          <div className="space-y-4 text-white text-xs md:text-base text-justify mt-10">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
               Key Features
             </h3>
@@ -280,7 +253,7 @@ const CMS = ({ onClose }) => {
               The system I built was packed with features designed to make lab&apos;s
               computer management a breeze:
             </p>
-            {/*Image */}
+            {/* Image */}
             <div className="flex flex-col items-center mb-2">
               <img
                 src={vc}
@@ -325,7 +298,6 @@ const CMS = ({ onClose }) => {
             </ul>
           </div>
 
-
           {/* Challenges and Solutions */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify mt-10">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
@@ -364,37 +336,47 @@ const CMS = ({ onClose }) => {
               Conclusion
             </h3>
 
-            <div className="flex justify-center items-center mt-6 relative">
-              <button
-                onClick={goToPreviousDoc}
-                className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
+            {/* Documentation Carousel */}
+            <div className="mt-6">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-doc',
+                  prevEl: '.swiper-button-prev-doc',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
               >
-                &larr;
-              </button>
-
-              <img
-                src={documentationImages[currentDocIndex]}
-                alt={`Documentation Image ${currentDocIndex + 1}`}
-                className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-              />
-              <button
-                onClick={goToNextDoc}
-                className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-              >
-                &rarr;
-              </button>
+                <div className="swiper-button-prev-doc absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &larr;
+                </div>
+                <div className="swiper-button-next-doc absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &rarr;
+                </div>
+                {documentationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Documentation Image ${index + 1}`}
+                      className="w-full h-100 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
 
-                        {/* Video */}
-                        <div className="flex flex-col items-center mb-2">
-                          <video
-                            controls
-                            className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
-                          >
-                            <source src={vz} type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
+            {/* Video */}
+            <div className="flex flex-col items-center mb-2">
+              <video
+                controls
+                className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
+              >
+                <source src={vz} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
             <p>
               By the end of the project, the lab’s computer management had been
@@ -406,7 +388,6 @@ const CMS = ({ onClose }) => {
               with the right tools and a bit of creativity, even the biggest
               challenges can be overcome.
             </p>
-
           </div>
 
           {/* Skills Gained */}
@@ -424,7 +405,7 @@ const CMS = ({ onClose }) => {
                 management, system administration, and software installation.
               </li>
               <li>
-                <strong>Technical Skills:</strong> Veyon master, pblic-key
+                <strong>Technical Skills:</strong> Veyon master, public-key
                 cryptography, network configuration, and system administration.
               </li>
             </ul>

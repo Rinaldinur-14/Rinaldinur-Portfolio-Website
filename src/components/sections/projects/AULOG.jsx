@@ -1,4 +1,9 @@
-import  { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css'; // Swiper core styles
+import 'swiper/css/navigation'; // Navigation module styles
+import 'swiper/css/pagination'; // Pagination module styles
 import VAULOG from "src/assets/projects/AULOG/VAULOG.png";
 import va from "src/assets/projects/PYXE/PY_LOGO.png";
 import vb from "src/assets/projects/AULOG/Selenium_Logo.png";
@@ -10,10 +15,7 @@ import MAULOG from "src/assets/projects/AULOG/MAULOG.mp4";
 
 // eslint-disable-next-line react/prop-types
 const AULOG = ({ onClose }) => {
-  const [currentCertIndex, setCurrentCertIndex] = useState(0);
-  // eslint-disable-next-line no-empty-pattern
-  const [] = useState(0);
-  const certificationImages = [va, vb, vc, vd, ve, vf]; // Placeholder for certification images
+  const certificationImages = [va, vb, vc, vd, ve, vf]; // Images for certification carousel
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -21,20 +23,6 @@ const AULOG = ({ onClose }) => {
       document.body.style.overflow = 'auto';
     };
   }, []);
-
-  const goToPreviousCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === 0 ? certificationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === certificationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-
 
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -51,15 +39,14 @@ const AULOG = ({ onClose }) => {
             Web Automated Login System for Gunadarma University Wifi Access Using Python and Selenium
           </h2>
 
-
-                    {/*Image */}
-                    <div className="flex flex-col items-center mb-2">
-                      <img
-                        src={VAULOG}
-                        alt="Special Skill Machine Learning Projectificate"
-                        className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
-                      />
-                    </div>
+          {/* Image */}
+          <div className="flex flex-col items-center mb-2">
+            <img
+              src={VAULOG}
+              alt="Special Skill Machine Learning Projectificate"
+              className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
+            />
+          </div>
 
           {/* View Button */}
           <div className="transition-colors text-xs md:text-base mt-2 mb-4 text-center text-blue-500">
@@ -71,7 +58,6 @@ const AULOG = ({ onClose }) => {
             </a>
           </div>
 
-
           {/* Introduction */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <p>
@@ -82,57 +68,67 @@ const AULOG = ({ onClose }) => {
             </p>
           </div>
 
-
+          {/* Tools Used */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify mt-10">
-          <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-            Tools Used
-          </h3>
-          <p>
-            To achieve the project goals, I utilized the following tools and technologies:
-          </p>
+            <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
+              Tools Used
+            </h3>
+            <p>
+              To achieve the project goals, I utilized the following tools and technologies:
+            </p>
 
-          {/* Certification Carousel */}
-          <div className="flex justify-center mb-4 relative">
-            <button
-              onClick={goToPreviousCert}
-              className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &larr;
-            </button>
-            <img
-              src={certificationImages[currentCertIndex]}
-              alt={`Certification Image ${currentCertIndex + 1}`}
-              className="w-full max-w-20 md:max-w-30 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-            />
-            <button
-              onClick={goToNextCert}
-              className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &rarr;
-            </button>
-          </div>
+            {/* Certification Carousel */}
+            <div className="mb-4">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-cert',
+                  prevEl: '.swiper-button-prev-cert',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
+              >
+                <div className="swiper-button-prev-cert absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &larr;
+                </div>
+                <div className="swiper-button-next-cert absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &rarr;
+                </div>
+                {certificationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Certification Image ${index + 1}`}
+                      className="w-full h-30 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
 
-          <ul className="list-disc ml-5 space-y-2 text-left md:text-justify">
-            <li>
-              <strong>Python:</strong> The primary programming language used for scripting the automation process. Python’s readability and extensive library support made it ideal for this project.
-            </li>
-            <li>
-              <strong>Selenium:</strong> A powerful web automation library used to interact with the Gunadarma University wifi login page. Selenium allowed the script to navigate the website, input credentials, and submit the login form automatically.
-            </li>
-            <li>
-              <strong>Visual Studio Code:</strong> The Integrated Development Environment (IDE) used for writing, debugging, and testing the Python script. Its user-friendly interface and extensions made development efficient.
-            </li>
-            <li>
-              <strong>Veyon Master:</strong> Used to deploy and run the .exe file simultaneously on multiple computers in the laboratory. Veyon Master ensured that the login process could be automated across all machines at once.
-            </li>
-            <li>
-              <strong>PyInstaller:</strong> This library was used to convert the Python script into a standalone <code>.exe</code> file, making it easy to distribute and run on any Windows system without requiring Python to be installed.
-            </li>
-            <li>
-                <strong>ChatGPT  AI:</strong> An AI-powered coding assistant that helped me debug issues, optimize code, and recommend solutions for implementing features like the auto-slide banner and form validation. ChatGPT AI played a crucial role in overcoming challenges and improving the overall quality of the project.
+            <ul className="list-disc ml-5 space-y-2 text-left md:text-justify">
+              <li>
+                <strong>Python:</strong> The primary programming language used for scripting the automation process. Python’s readability and extensive library support made it ideal for this project.
               </li>
-          </ul>
-        </div>
+              <li>
+                <strong>Selenium:</strong> A powerful web automation library used to interact with the Gunadarma University wifi login page. Selenium allowed the script to navigate the website, input credentials, and submit the login form automatically.
+              </li>
+              <li>
+                <strong>Visual Studio Code:</strong> The Integrated Development Environment (IDE) used for writing, debugging, and testing the Python script. Its user-friendly interface and extensions made development efficient.
+              </li>
+              <li>
+                <strong>Veyon Master:</strong> Used to deploy and run the .exe file simultaneously on multiple computers in the laboratory. Veyon Master ensured that the login process could be automated across all machines at once.
+              </li>
+              <li>
+                <strong>PyInstaller:</strong> This library was used to convert the Python script into a standalone <code>.exe</code> file, making it easy to distribute and run on any Windows system without requiring Python to be installed.
+              </li>
+              <li>
+                <strong>ChatGPT AI:</strong> An AI-powered coding assistant that helped me debug issues, optimize code, and recommend solutions for implementing features like the auto-slide banner and form validation. ChatGPT AI played a crucial role in overcoming challenges and improving the overall quality of the project.
+              </li>
+            </ul>
+          </div>
 
           {/* Implementation */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
@@ -171,7 +167,7 @@ const AULOG = ({ onClose }) => {
           {/* Recommendations */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-            Recommendations for Improvement
+              Recommendations for Improvement
             </h3>
             <p>
               To address these limitations and improve the project, I recommend the following:
@@ -212,7 +208,7 @@ const AULOG = ({ onClose }) => {
               Acknowledgments
             </h3>
             <p>
-              I would like to express my gratitude to <strong>Mr. Mahesa</strong>, as elementary laboratory of Industrial Enginnering staff member, for his assistance and support throughout the project. His guidance was instrumental in overcoming challenges and ensuring the project’s success.
+              I would like to express my gratitude to <strong>Mr. Mahesa</strong>, as elementary laboratory of Industrial Engineering staff member, for his assistance and support throughout the project. His guidance was instrumental in overcoming challenges and ensuring the project’s success.
             </p>
           </div>
         </div>

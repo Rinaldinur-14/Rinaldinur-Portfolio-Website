@@ -1,4 +1,9 @@
-import  { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css'; // Swiper core styles
+import 'swiper/css/navigation'; // Navigation module styles
+import 'swiper/css/pagination'; // Pagination module styles
 import VAPT from "src/assets/projects/APT/VAPT.png";
 import VA from "src/assets/projects/APT/VEYON_LOGO.png";
 import VB from "src/assets/projects/APT/SS_LOGO.png";
@@ -8,9 +13,7 @@ import tc from "src/assets/projects/APT/tc.png";
 
 // eslint-disable-next-line react/prop-types
 const APT = ({ onClose }) => {
-      const [currentDocIndex, setCurrentDocIndex] = useState(0);
-      const documentationImages = [VC, VB, VA];
-
+  const documentationImages = [VC, VB, VA]; // Images for documentation carousel
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -18,18 +21,6 @@ const APT = ({ onClose }) => {
       document.body.style.overflow = 'auto';
     };
   }, []);
-
-  const goToPreviousDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === 0 ? documentationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === documentationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -46,15 +37,14 @@ const APT = ({ onClose }) => {
             Automated Practicum Pre-Test System Using Google Forms, Spreadsheets, and Veyon Master
           </h2>
 
-
-                    {/*Image */}
-                    <div className="flex flex-col items-center mb-2">
-                      <img
-                        src={VAPT}
-                        alt="Special Skill Machine Learning Projectificate"
-                        className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
-                      />
-                    </div>
+          {/* Image */}
+          <div className="flex flex-col items-center mb-2">
+            <img
+              src={VAPT}
+              alt="Special Skill Machine Learning Projectificate"
+              className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
+            />
+          </div>
 
           {/* Introduction */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
@@ -82,38 +72,49 @@ const APT = ({ onClose }) => {
             </ul>
           </div>
 
+          {/* Tools Used */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify mt-10">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
-            Tools Used
+              Tools Used
             </h3>
             <p>
               To achieve the project goals, I utilized the following tools and technologies:
             </p>
 
-                        {/* Tools Carousel */}
-                        <div className="flex justify-center items-center mt-6 relative">
-              <button
-                onClick={goToPreviousDoc}
-                className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
+            {/* Tools Carousel */}
+            <div className="mb-4">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-tools',
+                  prevEl: '.swiper-button-prev-tools',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
               >
-                &larr;
-              </button>
-              <img
-                src={documentationImages[currentDocIndex]}
-                alt={`Documentation Image ${currentDocIndex + 1}`}
-                className="w-full max-w-20 md:max-w-30 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-              />
-              <button
-                onClick={goToNextDoc}
-                className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-              >
-                &rarr;
-              </button>
+                <div className="swiper-button-prev-tools absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &larr;
+                </div>
+                <div className="swiper-button-next-tools absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &rarr;
+                </div>
+                {documentationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Tools Image ${index + 1}`}
+                      className="w-full h-30 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
 
             <ul className="list-disc ml-5 space-y-2 text-left md:text-justify">
               <li>
-                <strong>Google Forms:</strong> For creating and administering the pre-tests with customizable links  based on seat rotation.
+                <strong>Google Forms:</strong> For creating and administering the pre-tests with customizable links based on seat rotation.
               </li>
               <li>
                 <strong>Google Spreadsheets:</strong> For database management, automated result calculation, and data storage using advanced formulas like <strong>IF</strong>, <strong>IFERROR</strong>, <strong>XLOOKUP</strong>, and <strong>IMPORTRANGE</strong>.
@@ -132,14 +133,14 @@ const APT = ({ onClose }) => {
             <p>
               The system was implemented using a combination of Google Forms, Google Spreadsheets, and Veyon Master. Here’s how it worked:
             </p>
-                    {/*Image */}
-                    <div className="flex flex-col items-center mb-2">
-                      <img
-                        src={tc}
-                        alt="Special Skill Machine Learning Projectificate"
-                        className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
-                      />
-                    </div>
+            {/* Image */}
+            <div className="flex flex-col items-center mb-2">
+              <img
+                src={tc}
+                alt="Special Skill Machine Learning Projectificate"
+                className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
+              />
+            </div>
             <ul className="list-decimal ml-5 space-y-2 text-left md:text-justify">
               <li><strong>Test Administration:</strong> Google Forms was used to create the pre-test. Each form was customized based on the seat rotation system to ensure fairness.</li>
               <li><strong>Monitoring:</strong> Veyon Master was employed to open the test link simultaneously on all computers and to monitor participants during the test, ensuring they did not access unauthorized resources.</li>
@@ -148,9 +149,9 @@ const APT = ({ onClose }) => {
             </ul>
 
             <p>
-            After the Veyon training session on <strong>14 October 2023</strong> was done, I organized a dedicated training session about this project. 
-            During this session, I explained the Automated Practicum Pre-Test System in detail, covering how it works, the reasons for transitioning from the traditional paper-based method, and the benefits of the new system, such as increased efficiency, fairness through seat rotation, and environmental sustainability by reducing paper usage. I also highlighted its key features, including real-time monitoring with Veyon Master and automated result calculation using Google Spreadsheets. Additionally, I addressed potential weaknesses, such as the inability to lock screens during tests. 
-            This training ensured that lab assistants understood the system’s value and could effectively utilize it.
+              After the Veyon training session on <strong>14 October 2023</strong> was done, I organized a dedicated training session about this project. 
+              During this session, I explained the Automated Practicum Pre-Test System in detail, covering how it works, the reasons for transitioning from the traditional paper-based method, and the benefits of the new system, such as increased efficiency, fairness through seat rotation, and environmental sustainability by reducing paper usage. I also highlighted its key features, including real-time monitoring with Veyon Master and automated result calculation using Google Spreadsheets. Additionally, I addressed potential weaknesses, such as the inability to lock screens during tests. 
+              This training ensured that lab assistants understood the system’s value and could effectively utilize it.
             </p>
           </div>
 
@@ -196,7 +197,6 @@ const APT = ({ onClose }) => {
             </ul>
           </div>
 
-
           {/* Challenges and Solutions */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify mt-10">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
@@ -216,14 +216,14 @@ const APT = ({ onClose }) => {
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
               Conclusion
             </h3>
-                    {/*Image */}
-                    <div className="flex flex-col items-center mb-2">
-                      <img
-                        src={ta}
-                        alt="Special Skill Machine Learning Projectificate"
-                        className="w-full max-w-60 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
-                      />
-                    </div>
+            {/* Image */}
+            <div className="flex flex-col items-center mb-2">
+              <img
+                src={ta}
+                alt="Special Skill Machine Learning Projectificate"
+                className="w-full max-w-60 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
+              />
+            </div>
             <p>
               The Automated Practicum Pre-Test System was a resounding success. It significantly reduced the time and effort required to administer and evaluate pre-tests, while also minimizing paper usage. The system ensured fairness and efficiency, making it a valuable tool for the Elementary Laboratory of Industrial Engineering at Gunadarma University. While there were some challenges, they were promptly addressed, and the system continues to evolve with ongoing improvements.
             </p>
@@ -250,7 +250,6 @@ const APT = ({ onClose }) => {
               I would like to express my gratitude to <strong>Alfredo</strong>, my senior, for providing the initial idea for this project. His inspiration and encouragement were crucial in turning the concept of this project into a reality.
             </p>
           </div>
-
         </div>
       </div>
     </div>

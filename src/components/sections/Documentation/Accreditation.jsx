@@ -1,4 +1,9 @@
-import  { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css'; // Swiper core styles
+import 'swiper/css/navigation'; // Navigation module styles
+import 'swiper/css/pagination'; // Pagination module styles
 import ls from "src/assets/docum/organz/l1.png";
 import ld from "src/assets/docum/organz/l2.jpeg";
 import is from "src/assets/docum/organz/i1.jpeg";
@@ -6,7 +11,6 @@ import id from "src/assets/docum/organz/i2.jpeg";
 
 // eslint-disable-next-line react/prop-types
 const Accreditation = ({ onClose }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const lamTeknikImages = [ls, ld]; // Images for LAM TEKNIK
   const iabeeImages = [is, id]; // Images for IABEE
 
@@ -17,18 +21,6 @@ const Accreditation = ({ onClose }) => {
     };
   }, []);
 
-  const goToPrevious = (images) => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNext = (images) => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
       <div className="bg-white/10 p-8 rounded-lg w-[80%] h-[90%] mx-4 overflow-y-auto" onClick={(e) => e.stopPropagation()}>
@@ -38,10 +30,10 @@ const Accreditation = ({ onClose }) => {
         >
           &times;
         </button>
-        <div className="space-y-4 ">
+        <div className="space-y-4">
           {/* Title */}
           <h2 className="text-xl md:text-3xl font-bold mb-6 text-white text-center">
-            Accreditation Preparation Experience
+            Accreditation Preparation Committee
           </h2>
 
           {/* Description */}
@@ -57,34 +49,45 @@ const Accreditation = ({ onClose }) => {
           </h3>
 
           {/* LAM TEKNIK Carousel */}
-          <div className="flex justify-center items-center mb-6 relative">
-            <button
-              onClick={() => goToPrevious(lamTeknikImages)}
-              className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
+          <div className="mb-4">
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={10}
+              slidesPerView={1}
+              navigation={{
+                nextEl: '.swiper-button-next-lam',
+                prevEl: '.swiper-button-prev-lam',
+              }}
+              pagination={{ clickable: true }}
+              className="relative"
             >
-              &larr;
-            </button>
-            <img
-              src={lamTeknikImages[currentImageIndex]}
-              alt={`LAM TEKNIK Image ${currentImageIndex + 1}`}
-              className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-            />
-            <button
-              onClick={() => goToNext(lamTeknikImages)}
-              className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &rarr;
-            </button>
+              <div className="swiper-button-prev-lam absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                &larr;
+              </div>
+              <div className="swiper-button-next-lam absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                &rarr;
+              </div>
+              {lamTeknikImages.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={image}
+                    alt={`LAM TEKNIK Image ${index + 1}`}
+                    className="w-full h-100 rounded-lg shadow-lg object-contain mx-auto"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
-          <div className = "transition-colors text-xs md:text-base mt-4 mb-4 text-center text-blue-500">
-                    <a
-                      href="http://career.gunadarma.ac.id/sites/default/files/sertifikat_akreditasi_s1_teknik_industri_2023-2028.pdf"
-                      target="_blank" rel="noopener noreferrer"
-                    >
-                      View Certificate →
-                    </a>
-            </div>
+          {/* View Certificate Button */}
+          <div className="transition-colors text-xs md:text-base mt-2 mb-4 text-center text-blue-500">
+            <a
+              href="http://career.gunadarma.ac.id/sites/default/files/sertifikat_akreditasi_s1_teknik_industri_2023-2028.pdf"
+              target="_blank" rel="noopener noreferrer"
+            >
+              View Certificate →
+            </a>
+          </div>
 
           {/* LAM TEKNIK Description */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify">
@@ -115,25 +118,34 @@ const Accreditation = ({ onClose }) => {
           </h3>
 
           {/* IABEE Carousel */}
-          <div className="flex justify-center items-center mb-6 relative">
-            <button
-              onClick={() => goToPrevious(iabeeImages)}
-              className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
+          <div className="mb-4">
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={10}
+              slidesPerView={1}
+              navigation={{
+                nextEl: '.swiper-button-next-iabee',
+                prevEl: '.swiper-button-prev-iabee',
+              }}
+              pagination={{ clickable: true }}
+              className="relative"
             >
-              &larr;
-            </button>
-            <img
-              src={iabeeImages[currentImageIndex]}
-              alt={`IABEE Image ${currentImageIndex + 1}`}
-              className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-            />
-            <button
-              onClick={() => goToNext(iabeeImages)}
-              className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &rarr;
-            </button>
-
+              <div className="swiper-button-prev-iabee absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                &larr;
+              </div>
+              <div className="swiper-button-next-iabee absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                &rarr;
+              </div>
+              {iabeeImages.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={image}
+                    alt={`IABEE Image ${index + 1}`}
+                    className="w-full h-100 rounded-lg shadow-lg object-contain mx-auto"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
 
           {/* IABEE Description */}

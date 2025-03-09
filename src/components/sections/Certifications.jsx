@@ -22,7 +22,7 @@ import BK_FD from "src/components/sections/Certifications/BK_FD";
 import ALZ from "src/components/sections/Certifications/ALZ";
 import BNSP from "src/components/sections/Certifications/BNSP";
 import DQ_DA from "src/components/sections/Certifications/DQ_DA";
-import DS_ST from "src/components/sections/Certifications/DS_ST"; 
+import DS_ST from "src/components/sections/Certifications/DS_ST";
 import IODA_DA from "src/components/sections/Certifications/IODA_DA";
 import KURSUS_UG from "src/components/sections/Certifications/KURSUS_UG";
 import LIA from "src/components/sections/Certifications/LIA";
@@ -38,21 +38,13 @@ import WO_UG from "src/components/sections/Certifications/WO_UG";
 import ISP_LMS from "src/components/sections/Certifications/ISP_LMS";
 
 const certifications = [
-  // {
-  //   title: " ",
-  //   description: " ",
-  //   technologies: ["", "", "", ""],
-  //   image: ,
-  //   link: "#",
-  //   validationDate: "", // Add validation date
-  // },
   {
     title: "Skola Talk - DigitalSkola",
     description: "Webinar series designed to educate participants on topics related to data science, machine learning, data analysis, and other digital skills. These sessions provide insights into industry transformation, career opportunities, and essential tools for professionals.",
     technologies: ["AWS", "QA Engineering", "Postman", "Microsoft Excel", "Digital Writing", "Data Science", "Data Analytics", "SQL", "DBeaver", "Data Visualization"],
     image: DSA,
     link: "#",
-    validationDate: "7 March 2025", // Add validation date
+    validationDate: "7 March 2025",
   },
   {
     title: "Frontend Fundamentals Bootcamp - OneCodeCamp",
@@ -60,126 +52,71 @@ const certifications = [
     technologies: ["HTML", "CSS", "JavaScript", "Git & GitHub", "DOM Manipulation"],
     image: OCCFDA,
     link: "#",
-    validationDate: "2 March 2025", // Add validation date
+    validationDate: "2 March 2025",
   },
   {
     title: "Introduction to Software Engineering Mini Course - RevoU",
     description: "Completed a 2-week mini course on software engineering, covering theoretical concepts, practical applications, and career preparation. Gained proficiency in tools like HTML, CSS, JavaScript, and Git, along with hands-on experience in building a responsive travel agency website as a mini project.",
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Git",
-      "GitHub",
-      "Responsive Design",
-      "UI/UX",
-      "Web Development"
-    ],
-    image: RUFD, // Replace with your project image
-    link: "#", // Add a link to the project if available
-    validationDate: "28 February 2025", // Course completion date
+    technologies: ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Responsive Design", "UI/UX", "Web Development"],
+    image: RUFD,
+    link: "#",
+    validationDate: "28 February 2025",
   },
   {
     title: "Transforming On-the-Job Training Webinar - iSpring Learn",
     description: "Participated in a webinar on optimizing on-the-job training programs using the iSpring Learn platform. Gained insights into training design, assessment, and reporting for effective employee development.",
-    technologies: [
-      "On-the-Job Training (OJT)",
-      "Training Module Design",
-      "Assessment Tools",
-      "Reporting and Analytics"
-    ],
-    image: ISPA, // Assuming ISPA is the imported image for the certificate
+    technologies: ["On-the-Job Training (OJT)", "Training Module Design", "Assessment Tools", "Reporting and Analytics"],
+    image: ISPA,
     link: "#",
-    validationDate: "27 February 2025", // Webinar completion date
+    validationDate: "27 February 2025",
   },
   {
     title: "Data Analyst Class - Special Skill",
     description: "Completed a comprehensive data analyst program, covering data analysis concepts, tools, and practical applications using Excel and Python. Gained hands-on experience in data interpretation and analysis.",
-    technologies: [
-      "Excel",
-      "Python",
-      "Data Analysis",
-      "Data Interpretation",
-      "Business Decision-Making"
-    ],
-    image: SSD, // Assuming SSD is the imported image for the certificate
+    technologies: ["Excel", "Python", "Data Analysis", "Data Interpretation", "Business Decision-Making"],
+    image: SSD,
     link: "#",
-    validationDate: "24 February 2025", // Training completion date
+    validationDate: "24 February 2025",
   },
   {
     title: "Machine Learning Class - Special Skill",
     description: "Completed a comprehensive machine learning program, covering AI fundamentals, machine learning concepts, and practical AI model building. Gained hands-on experience in creating AI models and understanding data for AI.",
-    technologies: [
-      "Python",
-      "Machine Learning",
-      "Artificial Intelligence",
-      "Deep Learning",
-      "AI Model Building"
-    ],
-    image: SSM, // Assuming SSM is the imported image for the certificate
+    technologies: ["Python", "Machine Learning", "Artificial Intelligence", "Deep Learning", "AI Model Building"],
+    image: SSM,
     link: "#",
-    validationDate: "23 February 2025", // Training completion date
+    validationDate: "23 February 2025",
   },
   {
     title: "Data Analyst & Machine Learning Bootcamp - DQ Lab",
     description: "Completed multiple bootcamps at DQLab, covering data analysis with SQL, Python, and Excel, as well as machine learning and AI fundamentals. Gained hands-on experience in data cleaning, preprocessing, and analysis.",
-    technologies: [
-      "SQL",
-      "Python",
-      "Excel",
-      "Data Cleaning",
-      "Data Preprocessing",
-      "Machine Learning",
-      "AI"
-    ],
-    image: DQA, // Assuming DQA is the imported image for the latest certificate
+    technologies: ["SQL", "Python", "Excel", "Data Cleaning", "Data Preprocessing", "Machine Learning", "AI"],
+    image: DQA,
     link: "#",
-    validationDate: "19 February 2025", // Latest bootcamp completion date
+    validationDate: "19 February 2025",
   },
   {
     title: "Backend Python Mini Bootcamp - Alhazen Academy",
     description: "A 3-day intensive bootcamp focused on backend development using Python. The program covers fundamental concepts, hands-on Python programming, basic syntax, variables, input handling, and practical exercises.",
-    technologies: [
-      "Python",
-      "Interactive Mode",
-      "Scripting Mode",
-      "Basic Python Functions",
-      "Error Handling"
-    ],
+    technologies: ["Python", "Interactive Mode", "Scripting Mode", "Basic Python Functions", "Error Handling"],
     image: ALZA,
     link: "#",
-    validationDate: "19 February 2025", // Latest bootcamp completion date
+    validationDate: "19 February 2025",
   },
   {
     title: "Weekend Class Data Analyst - IODA Academy",
     description: "Completed a 2-day training program on data analysis and visualization using Excel and Looker Studio. Gained skills in data cleansing, descriptive statistics, and creating interactive dashboards.",
-    technologies: [
-      "Excel",
-      "Looker Studio",
-      "Data Cleansing",
-      "Descriptive Statistics",
-      "Data Visualization"
-    ],
-    image: IODADA, // Assuming IODADA is the imported image for the certificate
+    technologies: ["Excel", "Looker Studio", "Data Cleansing", "Descriptive Statistics", "Data Visualization"],
+    image: IODADA,
     link: "#",
-    validationDate: "16 February 2025", // Training completion date
+    validationDate: "16 February 2025",
   },
   {
     title: "Introduction to Data Analytics Mini Course - RevoU",
     description: "Completed a 10-day mini course on data analytics, covering theoretical concepts, practical applications, and career preparation. Gained proficiency in tools like Python, Google Data Studio, SQL, and Tableau, along with skills in data visualization and data-driven marketing.",
-    technologies: [
-      "Python",
-      "Google Data Studio",
-      "SQL",
-      "Looker",
-      "Google BigQuery",
-      "Tableau",
-      "Data Visualization",
-      "Data-Driven Marketing"
-    ],
-    image: RUDA, // Assuming RUDA is the imported image for the certificate
+    technologies: ["Python", "Google Data Studio", "SQL", "Looker", "Google BigQuery", "Tableau", "Data Visualization", "Data-Driven Marketing"],
+    image: RUDA,
     link: "#",
-    validationDate: "14 February 2025", // Bootcamp completion date
+    validationDate: "14 February 2025",
   },
   {
     title: "Data Analytics Fundamentals Bootcamp - OneCodeCamp",
@@ -187,99 +124,63 @@ const certifications = [
     technologies: ["Python", "Jupyter Notebook", "SQLite", "Matplotlib", "Pandas", "Numpy", "Visual Studio Code"],
     image: OCCDAA,
     link: "#",
-    validationDate: "13 February 2025", // Add validation date
+    validationDate: "13 February 2025",
   },
   {
     title: "Building a To-Do List App Webinar - Sinau Koding",
     description: "Participated in a webinar on building a to-do list application for efficient time management. Gained hands-on experience in web development using HTML, CSS, and JavaScript.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: TDL, // Assuming TDL is the imported image for the webinar certificate
+    image: TDL,
     link: "#",
-    validationDate: "11 February 2025", // Webinar completion date
+    validationDate: "11 February 2025",
   },
   {
     title: "Bootcamp Kilat Full-Stack Web Developer - harisenin.com",
     description: "Completed a 2-day intensive program on full-stack web development, covering front-end and back-end technologies, testing, deployment, and career development. Gained hands-on experience in creating landing pages and understanding UI frameworks.",
-    technologies: [
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "UI Frameworks",
-      "Testing and Deployment",
-      "Full-Stack Development"
-    ],
-    image: BKS, // Assuming BKS is the imported image for the certificate
+    technologies: ["JavaScript", "HTML", "CSS", "UI Frameworks", "Testing and Deployment", "Full-Stack Development"],
+    image: BKS,
     link: "#",
-    validationDate: "11 February 2025", // Program completion date
+    validationDate: "11 February 2025",
   },
   {
     title: "Manufacturing System Quality Control - BNSP",
     description: "Certified competence in Manufacturing System Quality Control, covering quality standards, statistical techniques, troubleshooting, quality assurance plans, internal audits, and customer complaint follow-up.",
     technologies: ["Quality Standards Setting", "Statistical Techniques for Quality Control", "Troubleshooting Techniques", "Quality Assurance Planning", "Internal Auditing", "Customer Complaint Resolution"],
-    image: BNS, // Assuming BNS is the imported image for the BNSP certification
+    image: BNS,
     link: "#",
-    validationDate: "6 July 2024 - 6 July 2027", // Validation period of 3 years
+    validationDate: "6 July 2024 - 6 July 2027",
   },
   {
     title: "Production and Quality Management Courses - Gunadarma University",
     description: "Completed multiple training programs at Gunadarma University, covering product design, process planning, production system design, quality control, and quality assurance. Gained skills in optimizing production processes, ensuring quality standards, and developing quality assurance plans.",
-    technologies: [
-      "Product Design",
-      "Process Planning",
-      "Production System Design",
-      "Quality Control",
-      "Quality Assurance",
-      "Statistical Techniques",
-      "Internal Auditing"
-    ],
-    image: KH, // Assuming KH is the imported image for the latest certificate (Quality Assurance)
+    technologies: ["Product Design", "Process Planning", "Production System Design", "Quality Control", "Quality Assurance", "Statistical Techniques", "Internal Auditing"],
+    image: KH,
     link: "#",
-    validationDate: "22 June 2024", // Latest training completion date
+    validationDate: "22 June 2024",
   },
   {
     title: "ProModel & ISO 14001 Workshop - Gunadarma University",
     description: "Completed workshops on ProModel simulation software and ISO 14001 Environmental Management Systems, gaining skills in process optimization and sustainable industrial practices.",
-    technologies: [
-      "ProModel V7.5",
-      "System Modeling",
-      "Simulation Analysis",
-      "ISO 14001 Standards",
-      "Environmental Management Systems"
-    ],
-    image: WO, // Assuming WO is the imported image for the workshop certificates
+    technologies: ["ProModel V7.5", "System Modeling", "Simulation Analysis", "ISO 14001 Standards", "Environmental Management Systems"],
+    image: WO,
     link: "#",
-    validationDate: "18 October 2023", // Latest workshop completion date
+    validationDate: "18 October 2023",
   },
   {
     title: "Virtual Reality (VR) Technology in Industry 4.0 - Gunadarma University",
     description: "Comprehensive training in VR applications, 3D modeling using blender, game engine integration, and user interface design for industrial applications.",
-    technologies: [
-      "VR Applications",
-      "3D Modeling",
-      "Blender",
-      "Game Engine Integration",
-      "Oculus Integration",
-      "User Interface Design"
-    ],
-    image: VRA, // Assuming VRA is the imported image for the VR certificate
+    technologies: ["VR Applications", "3D Modeling", "Blender", "Game Engine Integration", "Oculus Integration", "User Interface Design"],
+    image: VRA,
     link: "#",
-    validationDate: "23 June 2023", // Completion date of the training
+    validationDate: "23 June 2023",
   },
   {
     title: "LIA English Certificates",
     description: "Completed multiple English language courses at Lembaga Bahasa LIA, enhancing proficiency from elementary to high-intermediate levels. Developed skills in listening, speaking, reading, and writing, with a focus on critical thinking and effective communication.",
-    technologies: [
-      "English Proficiency",
-      "Listening",
-      "Speaking",
-      "Reading",
-      "Writing",
-      "Critical Thinking",
-      "Project-Based Learning"
-    ],
-    image: LA, // Assuming LA is the imported image for the latest certificate
+    technologies: ["English Proficiency", "Listening", "Speaking", "Reading", "Writing", "Critical Thinking", "Project-Based Learning"],
+    image: LA,
     link: "#",
-    validationDate: "28 December 2018", // Latest course completion date
+    validationDate: "28 December 2018",
   },
 ];
 
@@ -365,7 +266,7 @@ export const Certifications = ({ isLightMode }) => {
 
   const useMediaQuery = (query) => {
     const [matches, setMatches] = useState(false);
-  
+
     useEffect(() => {
       const media = window.matchMedia(query);
       if (media.matches !== matches) {
@@ -375,7 +276,7 @@ export const Certifications = ({ isLightMode }) => {
       media.addListener(listener);
       return () => media.removeListener(listener);
     }, [matches, query]);
-  
+
     return matches;
   };
 
@@ -519,302 +420,117 @@ export const Certifications = ({ isLightMode }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sortedCertifications
               .slice(0, showAll ? sortedCertifications.length : isMediumScreen ? 4 : 2)
-              .map((certification, index) => (
-                <div
-                  key={index}
-                  className={`p-6 rounded-xl border hover:-translate-y-1 transition ${
-                    isLightMode
-                      ? "border-orange-500/60 shadow-[0_2px_8px_rgba(249,115,22,0.2)] lg:border-white/10 lg:hover:border-orange-500/60 lg:hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]"
-                      : "border-blue-500/60 shadow-[0_2px_8px_rgba(59,130,246,0.2)] lg:border-white/10 lg:hover:border-blue-500/60 lg:hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]"
-                  }`}
-                >
-                  <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                    {certification.title}
-                  </h3>
+              .map((certification, index) => {
+                // Determine which modal to open based on the certification title
+                const handleClick = () => {
+                  switch (certification.title) {
+                    case "Skola Talk - DigitalSkola":
+                      setShowDS_ST(true);
+                      break;
+                    case "Frontend Fundamentals Bootcamp - OneCodeCamp":
+                      setShowOCC_FD(true);
+                      break;
+                    case "Introduction to Software Engineering Mini Course - RevoU":
+                      setShowRU_FD(true);
+                      break;
+                    case "Transforming On-the-Job Training Webinar - iSpring Learn":
+                      setShowISP_LMS(true);
+                      break;
+                    case "Data Analyst Class - Special Skill":
+                      setShowSS_DA(true);
+                      break;
+                    case "Machine Learning Class - Special Skill":
+                      setShowSS_ML(true);
+                      break;
+                    case "Data Analyst & Machine Learning Bootcamp - DQ Lab":
+                      setShowDQ_DA(true);
+                      break;
+                    case "Backend Python Mini Bootcamp - Alhazen Academy":
+                      setShowALZ(true);
+                      break;
+                    case "Weekend Class Data Analyst - IODA Academy":
+                      setShowIODA_DA(true);
+                      break;
+                    case "Introduction to Data Analytics Mini Course - RevoU":
+                      setShowRU_DA(true);
+                      break;
+                    case "Data Analytics Fundamentals Bootcamp - OneCodeCamp":
+                      setShowOCC_DA(true);
+                      break;
+                    case "Building a To-Do List App Webinar - Sinau Koding":
+                      setShowSINAU_TDL(true);
+                      break;
+                    case "Bootcamp Kilat Full-Stack Web Developer - harisenin.com":
+                      setShowBK_FD(true);
+                      break;
+                    case "Manufacturing System Quality Control - BNSP":
+                      setShowBNSP(true);
+                      break;
+                    case "Production and Quality Management Courses - Gunadarma University":
+                      setShowKURSUS_UG(true);
+                      break;
+                    case "ProModel & ISO 14001 Workshop - Gunadarma University":
+                      setShowWO_UG(true);
+                      break;
+                    case "Virtual Reality (VR) Technology in Industry 4.0 - Gunadarma University":
+                      setShowVR(true);
+                      break;
+                    case "LIA English Certificates":
+                      setShowLIA(true);
+                      break;
+                    default:
+                      break;
+                  }
+                };
 
-                  <div className="flex justify-center mb-4">
-                    <img
-                      src={certification.image}
-                      alt={certification.title}
-                      className="w-64 md:w-80 max-h-48 object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-                    />
-                  </div>
+                return (
+                  <button
+                    key={index}
+                    onClick={handleClick}
+                    className={`p-4 rounded-xl border hover:-translate-y-1 transition text-left w-full ${
+                      isLightMode
+                        ? "border-orange-500/60 shadow-[0_2px_8px_rgba(249,115,22,0.2)] lg:border-white/10 lg:hover:border-orange-500/60 lg:hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]"
+                        : "border-blue-500/60 shadow-[0_2px_8px_rgba(59,130,246,0.2)] lg:border-white/10 lg:hover:border-blue-500/60 lg:hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]"
+                    }`}
+                  >
+                    <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                      {certification.title}
+                    </h3>
 
-                  <p className="mb-4 text-sm md:text-base text-center">
-                    {certification.description}
-                  </p>
+                    <div className="flex justify-center mb-4">
+                      <img
+                        src={certification.image}
+                        alt={certification.title}
+                        className="w-64 md:w-80 max-h-48 object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
+                      />
+                    </div>
 
-                  <div className="flex flex-wrap gap-2 mb-4 justify-center py-4">
-                    {certification.technologies.map((tech, key) => (
-                      <span
-                        key={key}
-                        className={`py-1 px-3 rounded-full text-xs md:text-sm transition-all ${
-                          isLightMode
-                            ? "bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]"
-                            : "bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)]"
-                        }`}
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                    <p className="mb-4 text-sm md:text-base text-center">
+                      {certification.description}
+                    </p>
 
-                  {/* Validation Date */}
-                  <div className="text-center text-sm text-gray-400 mt-3 mb-7">
-                    {certification.validationDate}
-                  </div>
+                    <div className="flex flex-wrap gap-2 mb-4 justify-center py-4">
+                      {certification.technologies.map((tech, key) => (
+                        <span
+                          key={key}
+                          className={`py-1 px-3 rounded-full text-xs md:text-sm transition-all ${
+                            isLightMode
+                              ? "bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]"
+                              : "bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)]"
+                          }`}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
 
-
-                  {/* Template Sertif */}
-                  {/* {certification.title === " " && (
-                      <button
-                        onClick={() => setShow (true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )} */}
-
-                  {certification.title === "Skola Talk - DigitalSkola" && (
-                      <button
-                        onClick={() => setShowDS_ST(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-
-                  {certification.title === "Frontend Fundamentals Bootcamp - OneCodeCamp" && (
-                      <button
-                        onClick={() => setShowOCC_FD(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                {certification.title === "Introduction to Software Engineering Mini Course - RevoU" && (
-                      <button
-                        onClick={() => setShowRU_FD(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                  {certification.title === "Transforming On-the-Job Training Webinar - iSpring Learn" && (
-                      <button
-                        onClick={() => setShowISP_LMS(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                  {certification.title === "Data Analyst Class - Special Skill" && (
-                      <button
-                        onClick={() => setShowSS_DA (true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                  {certification.title === "Machine Learning Class - Special Skill" && (
-                      <button
-                        onClick={() => setShowSS_ML(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                  {certification.title === "Data Analyst & Machine Learning Bootcamp - DQ Lab" && (
-                      <button
-                        onClick={() => setShowDQ_DA(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                    {certification.title === "Backend Python Mini Bootcamp - Alhazen Academy" && (
-                      <button
-                        onClick={() => setShowALZ(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                  {certification.title === "Weekend Class Data Analyst - IODA Academy" && (
-                      <button
-                        onClick={() => setShowIODA_DA(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                    {certification.title === "Introduction to Data Analytics Mini Course - RevoU" && (
-                      <button
-                        onClick={() => setShowRU_DA(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                    {certification.title === "Data Analytics Fundamentals Bootcamp - OneCodeCamp" && (
-                      <button
-                        onClick={() => setShowOCC_DA(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                    {certification.title === "Building a To-Do List App Webinar - Sinau Koding" && (
-                      <button
-                        onClick={() => setShowSINAU_TDL(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                    {certification.title === "Bootcamp Kilat Full-Stack Web Developer - harisenin.com" && (
-                      <button
-                        onClick={() => setShowBK_FD(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                    {certification.title === "Manufacturing System Quality Control - BNSP" && (
-                      <button
-                        onClick={() => setShowBNSP(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                    {certification.title === "Production and Quality Management Courses - Gunadarma University" && (
-                      <button
-                        onClick={() => setShowKURSUS_UG(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                    {certification.title === "ProModel & ISO 14001 Workshop - Gunadarma University" && (
-                      <button
-                        onClick={() => setShowWO_UG(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                    {certification.title === "Virtual Reality (VR) Technology in Industry 4.0 - Gunadarma University" && (
-                      <button
-                        onClick={() => setShowVR(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-
-                    {certification.title === "LIA English Certificates" && (
-                      <button
-                        onClick={() => setShowLIA(true)}
-                        className={`transition-colors ${
-                          isLightMode
-                            ? "text-orange-500 hover:text-orange-400"
-                            : "text-blue-400 hover:text-blue-300"
-                        }`}
-                      >
-                        View Certificate →
-                      </button>
-                    )}
-                  </div>
-              ))}
+                    {/* Validation Date */}
+                    <div className="text-center text-sm text-gray-400 mt-1 ">
+                      {certification.validationDate}
+                    </div>
+                  </button>
+                );
+              })}
           </div>
 
           {/* View All / View Less Button */}
