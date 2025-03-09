@@ -1,4 +1,9 @@
-import  { useEffect, useState } from "react";
+import { useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css'; // Swiper core styles
+import 'swiper/css/navigation'; // Navigation module styles
+import 'swiper/css/pagination'; // Pagination module styles
 import VL from "src/assets/projects/DB_ML/VDB_ML.png";
 import va from "src/assets/projects/PYXE/PY_LOGO.png";
 import vb from "src/assets/projects/DB_ML/SK.png";
@@ -19,8 +24,6 @@ import sh from "src/assets/projects/DB_ML/dataset.png";
 
 // eslint-disable-next-line react/prop-types
 const DB_ML = ({ onClose }) => {
-  const [currentCertIndex, setCurrentCertIndex] = useState(0);
-  const [currentDocIndex, setCurrentDocIndex] = useState(0);
   const certificationImages = [va, vb, vc, vd, ve, vf, vg]; // Add certification images if available
   const documentationImages = [sh, sc, sd]; // Add documentation images if available
 
@@ -31,29 +34,6 @@ const DB_ML = ({ onClose }) => {
     };
   }, []);
 
-  const goToPreviousCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === 0 ? certificationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === certificationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const goToPreviousDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === 0 ? documentationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === documentationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
   return (
     <div
@@ -149,26 +129,36 @@ const DB_ML = ({ onClose }) => {
               To achieve the project goals, I utilized the following tools and technologies:
             </p>
 
-          {/* Certification Carousel */}
-          <div className="flex justify-center mb-4 relative">
-            <button
-              onClick={goToPreviousCert}
-              className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &larr;
-            </button>
-            <img
-              src={certificationImages[currentCertIndex]}
-              alt={`Certification Image ${currentCertIndex + 1}`}
-              className="w-full max-w-20 md:max-w-30 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-            />
-            <button
-              onClick={goToNextCert}
-              className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &rarr;
-            </button>
-          </div>
+            {/* Tools Carousel */}
+            <div className="mb-4">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-tools',
+                  prevEl: '.swiper-button-prev-tools',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
+              >
+                <div className="swiper-button-prev-tools absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &larr;
+                </div>
+                <div className="swiper-button-next-tools absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &rarr;
+                </div>
+                {certificationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Tools Image ${index + 1}`}
+                      className="w-full h-30 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
 
             <ul className="list-disc ml-5 space-y-2 text-left md:text-justify">
               <li>
@@ -234,30 +224,35 @@ const DB_ML = ({ onClose }) => {
                 The first step in the project was to perform <strong>Exploratory Data Analysis (EDA)</strong> to understand the dataset&apos;s structure, distribution, and relationships between features and the target variable. Below are the key steps and findings from the EDA process:
               </p>
 
-              {/* Dataset Information */}
-              <div className="space-y-2">
-                <h4 className="text-md md:text-xl font-bold mt-4 mb-2 text-white">
-                  Dataset Information
-                </h4>
-
-                <div className="flex justify-center items-center mt-6 relative">
-              <button
-                onClick={goToPreviousDoc}
-                className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
+            {/* Tools Carousel */}
+            <div className="mb-4">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-tools',
+                  prevEl: '.swiper-button-prev-tools',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
               >
-                &larr;
-              </button>
-              <img
-                src={documentationImages[currentDocIndex]}
-                alt={`Documentation Image ${currentDocIndex + 1}`}
-                className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-              />
-              <button
-                onClick={goToNextDoc}
-                className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-              >
-                &rarr;
-              </button>
+                <div className="swiper-button-prev-tools absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &larr;
+                </div>
+                <div className="swiper-button-next-tools absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &rarr;
+                </div>
+                {documentationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Tools Image ${index + 1}`}
+                      className="w-full h-60 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
 
                 <p>
@@ -423,7 +418,6 @@ const DB_ML = ({ onClose }) => {
 
         </div>
       </div>
-    </div>
   );
 };
 

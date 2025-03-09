@@ -1,4 +1,9 @@
-import  { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css'; // Swiper core styles
+import 'swiper/css/navigation'; // Navigation module styles
+import 'swiper/css/pagination'; // Pagination module styles
 import ad from "src/assets/projects/AAD/VAAD.png";
 import ada from "src/assets/projects/AAD/AR_LOGO.png";
 import adb from "src/assets/projects/AAD/P_LOGO.png";
@@ -13,8 +18,6 @@ import ab from "src/assets/projects/AAD/ab.jpeg";
 
 // eslint-disable-next-line react/prop-types
 const AAD = ({ onClose }) => {
-    const [currentDocIndex, setCurrentDocIndex] = useState(0);
-    const [currentCertIndex, setCurrentCertIndex] = useState(0);
     const documentationImages = [ada, adb, adc, add, ade];
     const certificationImages = [aa, ab]; 
 
@@ -25,29 +28,6 @@ const AAD = ({ onClose }) => {
     };
   }, []);
 
-  const goToPreviousCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === 0 ? certificationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === certificationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const goToPreviousDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === 0 ? documentationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextDoc = () => {
-    setCurrentDocIndex((prevIndex) =>
-      prevIndex === documentationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
 
   return (
     <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center overflow-hidden" onClick={onClose}>
@@ -105,24 +85,34 @@ const AAD = ({ onClose }) => {
             </p>
 
             {/* Tools Carousel */}
-            <div className="flex justify-center items-center mt-6 relative">
-              <button
-                onClick={goToPreviousDoc}
-                className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
+            <div className="mb-4">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-tools',
+                  prevEl: '.swiper-button-prev-tools',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
               >
-                &larr;
-              </button>
-              <img
-                src={documentationImages[currentDocIndex]}
-                alt={`Documentation Image ${currentDocIndex + 1}`}
-                className="w-full max-w-20 md:max-w-30rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-              />
-              <button
-                onClick={goToNextDoc}
-                className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-              >
-                &rarr;
-              </button>
+                <div className="swiper-button-prev-tools absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &larr;
+                </div>
+                <div className="swiper-button-next-tools absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &rarr;
+                </div>
+                {documentationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Tools Image ${index + 1}`}
+                      className="w-full h-30 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
 
             <ul className="list-disc ml-5 space-y-2 text-left md:text-justify">
@@ -311,26 +301,36 @@ const AAD = ({ onClose }) => {
               Conclusion
             </h3>
 
-          {/* Certification Carousel (e1 and e2) */}
-          <div className="flex justify-center mb-4 relative">
-            <button
-              onClick={goToPreviousCert}
-              className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &larr;
-            </button>
-            <img
-              src={certificationImages[currentCertIndex]}
-              alt={`Certification Image ${currentCertIndex + 1}`}
-              className="w-full max-w-60 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-            />
-            <button
-              onClick={goToNextCert}
-              className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &rarr;
-            </button>
-          </div>
+            {/* Tools Carousel */}
+            <div className="mb-4">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-tools',
+                  prevEl: '.swiper-button-prev-tools',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
+              >
+                <div className="swiper-button-prev-tools absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &larr;
+                </div>
+                <div className="swiper-button-next-tools absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &rarr;
+                </div>
+                {certificationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Tools Image ${index + 1}`}
+                      className="w-full h-80 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
 
             <p>
               The project successfully transformed the attendance tracking process in the lab. By replacing paper-based practicum cards with virtual cards and QR codes, the system significantly reduced manual effort and improved efficiency. The use of spreadsheet automation ensured accurate and real-time attendance data, while the paperless approach promoted sustainability. Although the free version of Scan-It to Office introduced minor disruptions, the overall system proved to be a resounding success.

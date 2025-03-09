@@ -307,6 +307,18 @@ const CMS = ({ onClose }) => {
               Of course, no project is without its challenges. Here’s how I
               recommend addressing them::
             </p>
+
+           {/* Video */}
+            <div className="flex flex-col items-center mb-2">
+              <video
+                controls
+                className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
+              >
+                <source src={vz} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
             <ul className="list-disc ml-5 space-y-2 text-left md:text-justify">
               <li>
                 <strong>Wake-on-LAN Issues:</strong> The system was unable to
@@ -360,22 +372,11 @@ const CMS = ({ onClose }) => {
                     <img
                       src={image}
                       alt={`Documentation Image ${index + 1}`}
-                      className="w-full h-100 rounded-lg shadow-lg object-contain mx-auto"
+                      className="w-full h-80 rounded-lg shadow-lg object-contain mx-auto"
                     />
                   </SwiperSlide>
                 ))}
               </Swiper>
-            </div>
-
-            {/* Video */}
-            <div className="flex flex-col items-center mb-2">
-              <video
-                controls
-                className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
-              >
-                <source src={vz} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
             </div>
 
             <p>

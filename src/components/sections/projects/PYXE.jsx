@@ -1,4 +1,9 @@
-import  { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css"; // Swiper core styles
+import "swiper/css/navigation"; // Navigation module styles
+import "swiper/css/pagination"; // Pagination module styles
 import VPYXE from "src/assets/projects/PYXE/VPYXE.png";
 import GUI from "src/assets/projects/PYXE/GUI.png";
 import va from "src/assets/projects/PYXE/PY_LOGO.png";
@@ -9,13 +14,9 @@ import ve from "src/assets/projects/PYXE/VS_LOGO.png";
 import vf from "src/assets/projects/PYXE/DS_LOGO.png";
 import MPYXE from "src/assets/projects/PYXE/MPYXE.mp4";
 
-
 // eslint-disable-next-line react/prop-types
 const PYXE = ({ onClose }) => {
-  const [currentCertIndex, setCurrentCertIndex] = useState(0);
-  // eslint-disable-next-line no-empty-pattern
-  const [] = useState(0);
-  const certificationImages = [va, vb, vc, vd, ve, vf]; // Add certification images if available
+  const certificationImages = [va, vb, vc, vd, ve, vf]; // Images for certification carousel
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -23,20 +24,6 @@ const PYXE = ({ onClose }) => {
       document.body.style.overflow = "auto";
     };
   }, []);
-
-  const goToPreviousCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === 0 ? certificationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === certificationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-
 
   return (
     <div
@@ -53,22 +40,22 @@ const PYXE = ({ onClose }) => {
         >
           &times;
         </button>
-        <div className="space-y-4 ">
+        <div className="space-y-4">
           {/* Title */}
           <h2 className="text-xl md:text-3xl font-bold mb-6 text-white text-center">
             Python to EXE Converter: Easily Convert Python Scripts into Custom Executables with a User-Friendly Interface
           </h2>
 
-                    {/*Image */}
-                    <div className="flex flex-col items-center mb-2">
-                      <img
-                        src={VPYXE}
-                        alt="Special Skill Machine Learning Projectificate"
-                        className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
-                      />
-                    </div>
+          {/* Image */}
+          <div className="flex flex-col items-center mb-2">
+            <img
+              src={VPYXE}
+              alt="Special Skill Machine Learning Projectificate"
+              className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
+            />
+          </div>
 
-        {/* View Button */}
+          {/* View Button */}
           <div className="transition-colors text-xs md:text-base mt-2 mb-4 text-center text-blue-500">
             <a
               href="https://github.com/Rinaldinur-14/Python-to-EXE-Converter.git"
@@ -115,34 +102,45 @@ const PYXE = ({ onClose }) => {
             </ul>
           </div>
 
-
-          {/* Why Python, Tkinter, and Pillow? */}
+          {/* Tools Used */}
           <div className="space-y-4 text-white text-xs md:text-base text-justify mt-10">
             <h3 className="text-lg md:text-2xl font-bold mt-6 mb-4 text-white text-center">
               Tools Used
             </h3>
-            To bring this project to life, I used the following tools and technologies:
+            <p>
+              To bring this project to life, I used the following tools and technologies:
+            </p>
 
-          {/* Certification Carousel */}
-          <div className="flex justify-center mb-4 relative">
-            <button
-              onClick={goToPreviousCert}
-              className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &larr;
-            </button>
-            <img
-              src={certificationImages[currentCertIndex]}
-              alt={`Certification Image ${currentCertIndex + 1}`}
-              className="w-full max-w-20 md:max-w-30 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-            />
-            <button
-              onClick={goToNextCert}
-              className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &rarr;
-            </button>
-          </div>
+            {/* Certification Carousel */}
+            <div className="mb-4">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-cert',
+                  prevEl: '.swiper-button-prev-cert',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
+              >
+                <div className="swiper-button-prev-cert absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &larr;
+                </div>
+                <div className="swiper-button-next-cert absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &rarr;
+                </div>
+                {certificationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Certification Image ${index + 1}`}
+                      className="w-full h-30 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
 
             <ul className="list-disc ml-5 space-y-2 text-left md:text-justify">
               <li>
@@ -158,7 +156,7 @@ const PYXE = ({ onClose }) => {
                 <strong>PyInstaller:</strong> This library allowed me to convert the Python script into a standalone <code>.exe</code> file, making it easy to distribute and use.
               </li>
               <li>
-                <strong>Visual Studi Code:</strong> This Integrated Development Environment (IDE) allowed me to write, debug, and test the code efficiently.
+                <strong>Visual Studio Code:</strong> This Integrated Development Environment (IDE) allowed me to write, debug, and test the code efficiently.
               </li>
               <li>
                 <strong>DeepSeek AI:</strong> An AI-powered coding assistant that helped me debug issues, optimize code, and recommend solutions for implementing features like the auto-slide banner and form validation. DeepSeek AI played a crucial role in overcoming challenges and improving the overall quality of the project.
@@ -175,14 +173,14 @@ const PYXE = ({ onClose }) => {
               The Python-to-EXE Converter was implemented using Python and several libraries to automate the process of converting Python scripts into executable files. Below are the key components of the implementation:
             </p>
 
-                    {/*Image */}
-                    <div className="flex flex-col items-center mb-2">
-                      <img
-                        src={GUI}
-                        alt="Special Skill Machine Learning Projectificate"
-                        className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
-                      />
-                    </div>
+            {/* Image */}
+            <div className="flex flex-col items-center mb-2">
+              <img
+                src={GUI}
+                alt="Special Skill Machine Learning Projectificate"
+                className="w-full max-w-md rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105 mb-4"
+              />
+            </div>
 
             <ul className="list-decimal ml-5 space-y-2 text-left md:text-justify">
               <li>

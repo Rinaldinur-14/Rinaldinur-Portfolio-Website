@@ -1,4 +1,9 @@
-import  { useEffect, useState } from "react";
+import { useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css'; // Swiper core styles
+import 'swiper/css/navigation'; // Navigation module styles
+import 'swiper/css/pagination'; // Pagination module styles
 import VRUW from "src/assets/projects/RUW/VRUW.png";
 import va from "src/assets/projects/RUW/HTML.png";
 import vb from "src/assets/projects/RUW/CSS.png";
@@ -11,9 +16,6 @@ import pfd from "src/assets/projects/RUW/PRUW.png";
 
 // eslint-disable-next-line react/prop-types
 const RUW = ({ onClose }) => {
-  const [currentCertIndex, setCurrentCertIndex] = useState(0);
-  // eslint-disable-next-line no-empty-pattern
-  const [] = useState(0);
   const certificationImages = [va, vb, vc, vd, ve, vf]; // Add certification images if available
 
   useEffect(() => {
@@ -22,19 +24,6 @@ const RUW = ({ onClose }) => {
       document.body.style.overflow = "auto";
     };
   }, []);
-
-  const goToPreviousCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === 0 ? certificationImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextCert = () => {
-    setCurrentCertIndex((prevIndex) =>
-      prevIndex === certificationImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
 
 
   return (
@@ -115,26 +104,36 @@ const RUW = ({ onClose }) => {
               Tools Used
             </h3>
 
-          {/* Certification Carousel */}
-          <div className="flex justify-center mb-4 relative">
-            <button
-              onClick={goToPreviousCert}
-              className="absolute left-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &larr;
-            </button>
-            <img
-              src={certificationImages[currentCertIndex]}
-              alt={`Certification Image ${currentCertIndex + 1}`}
-              className="w-full max-w-20 md:max-w-30 rounded-lg shadow-lg object-contain transition-transform duration-300 ease-in-out transform hover:scale-105"
-            />
-            <button
-              onClick={goToNextCert}
-              className="absolute right-0 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70"
-            >
-              &rarr;
-            </button>
-          </div>
+            {/* Tools Carousel */}
+            <div className="mb-4">
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerView={1}
+                navigation={{
+                  nextEl: '.swiper-button-next-tools',
+                  prevEl: '.swiper-button-prev-tools',
+                }}
+                pagination={{ clickable: true }}
+                className="relative"
+              >
+                <div className="swiper-button-prev-tools absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &larr;
+                </div>
+                <div className="swiper-button-next-tools absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-2xl z-10 bg-black/50 p-2 rounded-full hover:bg-black/70">
+                  &rarr;
+                </div>
+                {certificationImages.map((image, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={image}
+                      alt={`Tools Image ${index + 1}`}
+                      className="w-full h-30 rounded-lg shadow-lg object-contain mx-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
 
             <p>
               To achieve the project goals, I utilized the following tools and technologies:
