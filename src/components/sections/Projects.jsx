@@ -181,7 +181,8 @@ export const Projects = ({ isLightMode }) => {
     return matches;
   };
 
-  const isMediumScreen = useMediaQuery("(min-width: 768px)");
+  const isSmallScreen = useMediaQuery("(max-width: 350px)");
+  const isMediumScreen = useMediaQuery("(min-width: 768px && max-width: 1500px, max-height: 400px)");
 
   return (
     <section
@@ -320,7 +321,7 @@ export const Projects = ({ isLightMode }) => {
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {sortedProjects
-              .slice(0, showAll ? sortedProjects.length : isMediumScreen ? 4 : 2)
+              .slice(0, showAll ? sortedProjects.length : isSmallScreen ? 1 : isMediumScreen ? 4 : 2)
               .map((project, index) => {
                 // Determine which modal to open based on the project title
                 const handleClick = () => {

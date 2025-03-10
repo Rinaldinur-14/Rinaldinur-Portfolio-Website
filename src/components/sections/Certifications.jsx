@@ -280,7 +280,9 @@ export const Certifications = ({ isLightMode }) => {
     return matches;
   };
 
-  const isMediumScreen = useMediaQuery("(min-width: 768px)");
+  const isSmallScreen = useMediaQuery("(max-width: 350px)");
+  const isMediumScreen = useMediaQuery("(min-width: 768px && max-width: 1500px, max-height: 400px)");
+
 
   return (
     <section
@@ -419,7 +421,7 @@ export const Certifications = ({ isLightMode }) => {
           {/* Certifications Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sortedCertifications
-              .slice(0, showAll ? sortedCertifications.length : isMediumScreen ? 4 : 2)
+              .slice(0, showAll ? sortedCertifications.length : isSmallScreen? 1 : isMediumScreen ? 4 : 2)
               .map((certification, index) => {
                 // Determine which modal to open based on the certification title
                 const handleClick = () => {

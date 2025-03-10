@@ -8,6 +8,7 @@ import Accreditation from "src/components/sections/Documentation/Accreditation";
 import GIEF from "src/components/sections/Documentation/GIEF";
 import BKSTI from "src/components/sections/Documentation/BKSTI";
 import EChar from "src/components/sections/Documentation/EChar";
+import log from "src/assets/favicon.png"
 
 // eslint-disable-next-line react/prop-types
 export const About = ({ isLightMode }) => {
@@ -63,13 +64,24 @@ export const About = ({ isLightMode }) => {
               ? "border-orange-500/60 shadow-[0_2px_8px_rgba(249,115,22,0.2)] lg:border-white/10 lg:hover:border-orange-500/60 lg:hover:shadow-[0_2px_8px_rgba(249,115,22,0.2)]"
               : "border-blue-500/60 shadow-[0_2px_8px_rgba(59,130,246,0.2)] lg:border-white/10 lg:hover:border-blue-500/60 lg:hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)]"
           }`}>
+            <div className="relative w-25 h-25 mx-auto mb-6">
+            <div className={`absolute inset-0 bg-gradient-to-r rounded-[50%] blur-lg animate-gradient ${ 
+              isLightMode 
+              ? "from-orange-400 via-orange-500 to-blue-400 shadow-[0_2px_8px_rgba(249,115,22,0.5)]"
+              : "from-blue-400 via-purple-600 to-purple-400  shadow-[0_0_30px_10px_rgba(59,130,246,0.5)]" }`}></div>
+            <img
+            src={log}
+            alt="logo about me"
+            className="h-25 transition-transform mx-auto rounded-b-full duration-300 ease-in-out transform hover:scale-110"
+            />
+            </div>
+
             <p className="text-white mb-6 text-justify text-xs md:text-base">
-              Hello! My name is Rinaldi Nurhardiansyah, a recent Industrial Engineering graduate with a passion for supply chain management and data analytics.
-              My academic background has equipped me with a strong foundation in core industrial engineering principles and statistics, while my self-driven learning journey has allowed me to develop practical skills in Python, SQL, and data visualization tools.
-              Beyond academics, I have actively engaged in projects, organizations, and internships that have honed my soft skills as well as my technical expertise.
-              These experiences have shaped me into a highly motivated and results-oriented professional, driven to optimize processes and deliver data-driven solutions that create tangible value.
-              I am eager to contribute my skills and knowledge to a forward-thinking organization, where I can tackle real-world challenges, streamline operations, and deliver sustainable results.
-              Let’s connect and explore how we can collaborate to achieve success!
+            Hello! I’m Rinaldi Nurhardiansyah, an industrial engineer and data enthusiast with a passion for turning complex problems into streamlined solutions. 
+            With over 2 years of experience, I specialize in supply chain management, procurement, and logistics, leveraging tools like Python, SQL, and data visualization (Tableau & Power BI) to drive impactful results. 
+            I’ve successfully optimized processes, reduced costs, and improved efficiency by harnessing the power of data analytics and technical expertise. 
+            Proficient in Microsoft Office (Word, Excel, PowerPoint), Spreadsheet, SAP, SPSS, and Minitab, I thrive on delivering innovative solutions that enhance operational performance and sustainability. 
+            Let’s connect and explore how I can contribute to your next project!
             </p>
 
             {/* Skills Sections */}
