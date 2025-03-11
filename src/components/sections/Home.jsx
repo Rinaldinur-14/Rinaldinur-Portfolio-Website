@@ -163,7 +163,7 @@ export const Home = ({ isLightMode }) => {
                 ? "bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400"
                 : "bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600"
             }`}
-              href="https://drive.google.com/file/d/1yAp7KhPtqf9ng2ilSo0zAc6X0TkKAxkn/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Dmbu7REZjkTXJGPB7egKm8KDFhUPHCZn/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
