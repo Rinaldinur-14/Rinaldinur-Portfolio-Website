@@ -421,7 +421,7 @@ export const Certifications = ({ isLightMode }) => {
           {/* Certifications Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sortedCertifications
-              .slice(0, showAll ? sortedCertifications.length : isSmallScreen? 1 : isMediumScreen ? 4 : 2)
+              .slice(0, showAll ? sortedCertifications.length : isSmallScreen? 1 : isMediumScreen ? 2 : 4)
               .map((certification, index) => {
                 // Determine which modal to open based on the certification title
                 const handleClick = () => {

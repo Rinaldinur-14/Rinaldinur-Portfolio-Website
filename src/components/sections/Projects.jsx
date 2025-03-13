@@ -321,7 +321,7 @@ export const Projects = ({ isLightMode }) => {
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {sortedProjects
-              .slice(0, showAll ? sortedProjects.length : isSmallScreen ? 1 : isMediumScreen ? 4 : 2)
+              .slice(0, showAll ? sortedProjects.length : isSmallScreen ? 1 : isMediumScreen ? 2 : 4)
               .map((project, index) => {
                 // Determine which modal to open based on the project title
                 const handleClick = () => {
