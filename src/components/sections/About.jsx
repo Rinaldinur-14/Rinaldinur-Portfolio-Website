@@ -77,10 +77,10 @@ export const About = ({ isLightMode }) => {
             </div>
 
             <p className="text-white mb-6 text-justify text-xs md:text-base">
-            Hello! I’m Rinaldi Nurhardiansyah, an industrial engineer and data enthusiast with a passion for turning complex problems into streamlined solutions. 
-            With over 2 years of experience, I specialize in supply chain management, procurement, and logistics, leveraging tools like Python, SQL, and data visualization (Tableau & Power BI) to drive impactful results. 
-            I’ve successfully optimized processes, reduced costs, and improved efficiency by harnessing the power of data analytics and technical expertise. 
-            Proficient in Microsoft Office (Word, Excel, PowerPoint), Spreadsheet, SAP, SPSS, and Minitab, I thrive on delivering innovative solutions that enhance operational performance and sustainability. 
+            Hello! I’m Rinaldi Nurhardiansyah, an Industrial Engineer with expertise in supply chain optimization, logistics, inventory management, cost efficiency, and data-driven decision-making. 
+            Proficient in leveraging analytics tools (Excel, Python, SQL, Tableau, Power BI) to enhance operational efficiency, reduce costs, and improve inventory visibility. 
+            Skilled in collaborating with teams to align supply chain processes with organizational goals. 
+            Experienced in identifying inefficiencies, developing practical solutions, and improving workflow efficiency to ensure smooth operations.
             Let’s connect and explore how I can contribute to your next project!
             </p>
 
@@ -204,36 +204,20 @@ export const About = ({ isLightMode }) => {
                     <span>(Jan 2024 - Jan 2025)</span>
                   </div>
                   <ul className="list-disc ml-5 text-xs md:text-base">
-                    <li>Coordinated and supervised a team of 30 assistants across 6 divisions.</li>
-                    <li>Led internal projects and collaborative activities organized by Gunadarma University.</li>
-                    <li>Hired over 21 assistants.</li>
+                    <li>Led 29 assistants across 6 divisions, streamlining practicum workflows and reducing task completion time by 40%.</li>
+                    <li>Trained 21 assistants in operational protocols, achieving a 90% efficiency improvement in practicum execution.</li>
                   </ul>
                 </div>
 
                 {/* Assistant */}
                 <div className="flex justify-between items-center mb-2 text-xs md:text-base">
-                  <h5>Laboratory Assistant</h5>
-                  <span>(Aug 2022 - Jan 2025)</span>
+                  <h5>Laboratory Assistant (Maintenance Division)</h5>
+                  <span>(Aug 2022 - Jan 2024)</span>
                 </div>
                 <ul className="list-disc ml-5 text-xs md:text-base">
-                  <li>Explored and prepared practicum materials and systems for 5 practicums.</li>
-                  <li>Conducted teaching to over 600 practicum participants in total.</li>
-                  <li>Assisted in evaluating the practicum participant&apos;s assignments.</li>
+                  <li>Delivered training for 600+ students across 5 industrial engineering practicums, maintaining a 95% satisfaction rate.</li>
+                  <li>•	Automated attendance and grading tracking using Excel, cutting administrative workload by 25%.</li>
                 </ul>
-
-                {/* MT */}
-                <div>
-                  <div className="flex justify-between items-center mb-2 mt-3 text-xs md:text-base">
-                    <h5>Maintenance Division</h5>
-                    <span>(Aug 2022 - Jan 2024)</span>
-                  </div>
-                  <ul className="list-disc ml-5 text-xs md:text-base">
-                    <li>Maintained all electronic facilities and installed software for practicums.</li>
-                    <li>Created a database for practicum participant&apos;s attendance and grades.</li>
-                    <li>Monitored over 40 computers during practicum activities using Veyon Master.</li>
-                  </ul>
-                </div>
-
 
 
                 {/* Lab Documentation Button */}
@@ -262,9 +246,9 @@ export const About = ({ isLightMode }) => {
                   <span>(Mar 2024 - May 2024)</span>
                 </div>
                 <ul className="list-disc ml-5 text-xs md:text-base">
-                  <li>Created a checksheet and performed documentation for clearance activities.</li>
-                  <li>Assisted in creating Root Cause Analysis for clearance activities.</li>
-                  <li>Assisted in improving standardization for the PSD department.</li>
+                  <li>Designed a check sheet for clearance activities, reducing documentation errors by 30%.</li>
+                  <li>Learned HACCP protocols and assisted the Powder Spray Dryer (PSD) supervisor in conducting Root Cause Analysis (RCA) for production delays.</li>
+                  <li>Created Pareto diagrams to prioritize clearance activity bottlenecks, improving compliance with safety standards by 15%.</li>
                 </ul>
 
                 {/* FFI Documentation Button */}

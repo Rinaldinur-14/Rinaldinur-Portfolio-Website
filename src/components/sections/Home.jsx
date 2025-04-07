@@ -42,12 +42,15 @@ export const Home = ({ isLightMode }) => {
             <button
               onClick={handleCloseEasterEgg}
               className={`absolute top-6 right-6 bg-white bg-clip-text text-transparent transition-all duration-300 ${
-          isLightMode ? 'hover:bg-gradient-to-r hover:from-yellow-400 hover:via-orange-500 hover:to-blue-400' : 'hover:bg-gradient-to-r hover:from-blue-400 hover:via-purple-500 hover:to-blue-600'
-        } animate-gradient my-4 transform text-3xl focus:outline-none cursor-pointer`}
+                isLightMode
+                  ? "hover:bg-gradient-to-r hover:from-yellow-400 hover:via-orange-500 hover:to-blue-400"
+                  : "hover:bg-gradient-to-r hover:from-blue-400 hover:via-purple-500 hover:to-blue-600"
+              } animate-gradient my-4 transform text-3xl focus:outline-none cursor-pointer`}
             >
               &times;
             </button>
-            <MemoryGame onClose={handleCloseEasterEgg} /> {/* Render the MemoryGame component */}
+            <MemoryGame onClose={handleCloseEasterEgg} />{" "}
+            {/* Render the MemoryGame component */}
           </div>
         </div>
       )}
@@ -155,22 +158,20 @@ export const Home = ({ isLightMode }) => {
             >
               Contact Me
             </button>
-          
+
             <a
               type="submit"
               className={`flex justify-center gap-2 items-center mx-auto shadow-xl text-sm backdrop-blur-md lg:font-semibold isolation-auto transition-all duration-200 hover:-translate-y-0.5 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full border-transparent before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 z-10 px-2 py-1 overflow-hidden border-2 rounded-full group text-white font-bold animate-gradient ${
                 isLightMode
-                ? "bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400"
-                : "bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600"
-            }`}
-              href="https://drive.google.com/file/d/1Dmbu7REZjkTXJGPB7egKm8KDFhUPHCZn/view?usp=sharing"
+                  ? "bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400"
+                  : "bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600"
+              }`}
+              href="https://drive.google.com/file/d/1a_fSsKdcbIKMCkKYT7Sbpswpn9WiabtU/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >
               Resume
-              <span className="material-symbols-outlined">
-              download
-              </span>
+              <span className="material-symbols-outlined">download</span>
             </a>
           </div>
         </div>
