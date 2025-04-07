@@ -210,13 +210,13 @@ export const About = ({ isLightMode }) => {
                 </div>
 
                 {/* Assistant */}
-                <div className="flex justify-between items-center mb-2 text-xs md:text-base">
+                <div className="flex justify-between items-center mb-2 mt-3 text-xs md:text-base">
                   <h5>Laboratory Assistant (Maintenance Division)</h5>
                   <span>(Aug 2022 - Jan 2024)</span>
                 </div>
                 <ul className="list-disc ml-5 text-xs md:text-base">
                   <li>Delivered training for 600+ students across 5 industrial engineering practicums, maintaining a 95% satisfaction rate.</li>
-                  <li>•	Automated attendance and grading tracking using Excel, cutting administrative workload by 25%.</li>
+                  <li>Automated attendance and grading tracking using Excel, cutting administrative workload by 25%.</li>
                 </ul>
 
 
