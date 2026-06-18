@@ -259,6 +259,61 @@ export const About = ({ isLightMode }) => {
               title="Work Experience"
               isLightMode={isLightMode}
             >
+             {/* PT. Pertamina Persero */}
+              <div>
+                <h3
+                  className={`font-semibold mb-3 mt-10 text-sm md:text-base bg-clip-text text-transparent animate-gradient ${
+                    isLightMode
+                      ? "bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400"
+                      : "bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500"
+                  }`}
+                >
+                  PT. Pertamina Persero
+                </h3>
+                <div className="flex justify-between mb-2 text-xs md:text-base">
+                  <h5>Sea Transportation Optimisation Intern</h5>
+                  <span>(Aug 2025 - Now)</span>
+                </div>
+                <ul className="list-disc ml-5 text-xs md:text-base">
+                  <li>
+                    Monitored and compiled reports on critical depot supply for
+                    domestic and import vessels to support distribution
+                    smoothness.
+                  </li>
+                  <li>
+                    Monitored and compiled reports on tonnage fulfillment and
+                    vessel performance to support optimal and reliable sea
+                    transportation operations.
+                  </li>
+                  <li>
+                    Processed integrated port time data to identify the largest
+                    waiting times during cargo loading/unloading operations, and
+                    created data visualizations for further analysis.
+                  </li>
+                  <li>
+                    Conducted analysis and alignment of Business Requirement
+                    Documents with mock-up designs to ensure compatibility
+                    between business needs and system design.
+                  </li>
+                  <li>
+                    Monitored voyage order to ensure voyage orders were created 
+                    on time and voyage completeness requirements were fulfilled.
+                    </li>  
+
+                </ul>
+
+                {/* PT. Pertamina Persero */}
+                <div
+                  className={`transition-colors text-xs md:text-base mt-4 ${
+                    isLightMode
+                      ? "text-orange-500 hover:text-orange-400"
+                      : "text-blue-400 hover:text-blue-300"
+                  }`}
+                >
+                  <button onClick={() => setShowPTM(false)}>View Detail →</button>
+                </div>
+              </div>
+ 
               {/* Elementary Laboratory */}
               <div>
                 <h3
@@ -367,60 +422,6 @@ export const About = ({ isLightMode }) => {
                 </div>
               </div>
 
-              {/* PT. Pertamina Persero */}
-              <div>
-                <h3
-                  className={`font-semibold mb-3 mt-10 text-sm md:text-base bg-clip-text text-transparent animate-gradient ${
-                    isLightMode
-                      ? "bg-gradient-to-r from-orange-400 via-orange-500 to-blue-400"
-                      : "bg-gradient-to-r from-blue-400 via-blue-600 to-purple-500"
-                  }`}
-                >
-                  PT. Pertamina Persero
-                </h3>
-                <div className="flex justify-between mb-2 text-xs md:text-base">
-                  <h5>Sea Transportation Optimisation Intern</h5>
-                  <span>(Aug 2025 - Now)</span>
-                </div>
-                <ul className="list-disc ml-5 text-xs md:text-base">
-                  <li>
-                    Monitored and compiled reports on critical depot supply for
-                    domestic and import vessels to support distribution
-                    smoothness.
-                  </li>
-                  <li>
-                    Monitored and compiled reports on tonnage fulfillment and
-                    vessel performance to support optimal and reliable sea
-                    transportation operations.
-                  </li>
-                  <li>
-                    Processed integrated port time data to identify the largest
-                    waiting times during cargo loading/unloading operations, and
-                    created data visualizations for further analysis.
-                  </li>
-                  <li>
-                    Conducted analysis and alignment of Business Requirement
-                    Documents with mock-up designs to ensure compatibility
-                    between business needs and system design.
-                  </li>
-                  <li>
-                    Monitored voyage order to ensure voyage orders were created 
-                    on time and voyage completeness requirements were fulfilled.
-                    </li>  
-
-                </ul>
-
-                {/* PT. Pertamina Persero */}
-                <div
-                  className={`transition-colors text-xs md:text-base mt-4 ${
-                    isLightMode
-                      ? "text-orange-500 hover:text-orange-400"
-                      : "text-blue-400 hover:text-blue-300"
-                  }`}
-                >
-                  <button onClick={() => setShowPTM(false)}>View Detail →</button>
-                </div>
-              </div>
             </CollapsibleSection>
 
             {/* Organization */}
